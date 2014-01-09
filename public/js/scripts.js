@@ -52,8 +52,8 @@
 
 	//Paint Bucket Icon trigger
 	//Add icon on each boxe that have class .paint
-	$('.box.paint_hover').append('<a class="change_color_outside"><i class="paint_bucket"></i></a>');
-	$('.box.paint').append('<a class="btn change_color_outside"><i class="paint_bucket"></i></a>');
+	//$('.box.paint_hover').append('<a class="change_color_outside"><i class="paint_bucket"></i></a>');
+	//$('.box.paint').append('<a class="btn change_color_outside"><i class="paint_bucket"></i></a>');
 
 
 	// Color classes  #################################################################################
