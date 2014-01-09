@@ -1,0 +1,1194 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <title>Estúdio Som do Mar</title> 
+    <meta charset="utf-8">
+    
+    <link href='http://fonts.googleapis.com/css?family=Vidaloka' rel='stylesheet' type='text/css'> 
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'> 
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="css/reset.css"> 
+    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/layout.css"> 
+    <link rel="stylesheet" href="css/skin.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">  
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="css/html5audio.css">
+    <link rel="stylesheet" href="css/html5audio_animations.css">
+    <link rel="stylesheet" href="js/revolution/rs-plugin/css/style.css" />
+    <link rel="stylesheet" href="js/revolution/rs-plugin/css/settings.css" />
+        
+    <script type="text/javascript" src="js/jquery-1.7.1.js"></script> 
+    <script type="text/javascript" src="js/jquery-ui-1.8.23.custom.min.js"></script> 
+    <script type="text/javascript" src="js/jquery.easing.js"></script> 
+    <script type="text/javascript" src="js/superfish.js"></script> 
+    <script type="text/javascript" src="js/switcher.js"></script> 
+    <script type="text/javascript" src="js/sprites.js"></script> 
+    <script type="text/javascript" src="js/jquery.mousewheel.js"></script> 
+    <script type="text/javascript" src="js/jquery.animate-colors-min.js"></script> 
+    <script type="text/javascript" src="js/jquery.fancybox.js"></script> 
+    <script type="text/javascript" src="js/FancyBox.js"></script>  
+    <script type="text/javascript" src="js/jquery.mCustomScrollbar.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>  
+    <script type="text/javascript" src="js/forms.js"></script> 
+    <script type="text/javascript" src="js/googleMap.js"></script>
+    <script type="text/javascript" src="js/html5audio.js"></script>
+    <script type="text/javascript" src="js/site_scripts.js"></script>
+
+    <!-- jQuery KenBurn Slider  -->	
+	<script type="text/javascript" src="js/revolution/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>			
+    <script type="text/javascript" src="js/revolution/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>	
+    
+    <!--[if lt IE 9]> 
+        <script type="text/javascript" src="js/html5.js">
+        </script> 
+        <link rel="stylesheet" href="css/ie.css" type="text/css" media="all"> 
+    <![endif]--> 
+    <!--[if lt IE 8]> 
+        <div style='clear:both;text-align:center;position:relative;'> 
+            <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+                <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/>
+            </a> 
+        </div> 
+    <![endif]--> 
+    <style type="text/css">
+<!--
+.style1 {color: #0099CC}
+-->
+    </style>
+</head> 
+<body> 
+    <div class="extra"> 
+      <div class="page_spinner"></div>  
+        <div class="up-line"></div> 
+        <header> 
+            <div class="main"> 
+                <table width="329" height="242" border="1" align="left" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td><img src="img/nova_logo.jpg" width="190" height="190" border="0"></td>
+                  </tr>
+                </table>
+                <h1>&nbsp;</h1> 
+<nav class="menu"> 
+                    <ul id="menu"> 
+                        <li><a href="#!/page_home"><span class="mText">home</span></a></li> 
+                        <li class="with_ul">
+                            <a href="#!/page_about"><span class="mText">estúdio</span></a> 
+                            <ul class="submenu_1"> 
+                                <li><a href="#!/page_works">portfólio</a></li> 
+                                <li><a href="#!/page_photos">fotos</a></li> 
+                                <li><a href="#!/page_videos">vídeos</a></li> 
+                            </ul>
+                        </li> 
+                        <li><a href="#!/page_artists"><span class="mText">artistas</span></a></li>
+                        <li><a href="#!/page_contacts"><span class="mText">contato</span></a></li> 
+                    </ul> 
+              </nav> 
+
+                <div id="social" class="social">
+                    <a href="http://www.facebook.com/estudiosomdomar" target="_blank">
+                        <img src="img/icons/facebook.png" alt=""/>                    </a>
+                    <a href="https://www.youtube.com/AnfrisioRocha" target="_blank">
+                        <img src="img/icons/youtube.png" alt=""/>                    </a>                </div>
+
+              <div id="player"></div>
+          </div> 
+      </header>  
+        
+        <div class="main">  
+            <div class="bgSelector"></div> 
+            <article id="content"> 
+                <ul> 
+                    <li id="page_home"> 
+                        <article class="col1">
+                            
+                            <hgroup>
+                                <h1 class="style1" title="BEM-VINDO!">BEM-VINDO!</h1>
+								<h2>Responsabilidade, compromisso e qualidade são o nosso lema.</h2>
+                            </hgroup>
+
+                            <ul id="carousel" class="jcarousel-skin-tango"> 
+                                <li>
+                                    <a rel="home-gallery" href="img/pics/tecnica-1_b.jpg" title="Técnica">
+                                        <figure>
+                                            <img class="gall-pic" src="img/pics/tecnica-1_s.jpg" alt="Técnica">
+                                            <div class="zoom">
+                                                <img src="img/magnify.png" alt="Aquário">                                            </div>
+                                        </figure>
+                                    </a>                                </li>
+                                <li>
+                                    <a rel="home-gallery" href="img/pics/aquario-1_b.jpg" title="Aquário">
+                                        <figure>
+                                            <img class="gall-pic" src="img/pics/aquario-1_s.jpg" alt="Aquário">
+                                            <div class="zoom">
+                                                <img src="img/magnify.png" alt="Aquário">                                            </div>
+                                        </figure>
+                                    </a>                                </li> 
+                                <li>
+                                    <a rel="home-gallery" href="img/pics/bateria-4_b.jpg" title="Bateria">
+                                        <figure>
+                                            <img class="gall-pic" src="img/pics/bateria-4_s.jpg" alt="Bateria">
+                                            <div class="zoom">
+                                                <img src="img/magnify.png" alt="Técnica - Bateria">                                            </div>
+                                        </figure>
+                                    </a>                                </li>
+                                <li>
+                                    <a rel="home-gallery" href="img/pics/mesa-4_b.jpg" title="Mesa Controladora">
+                                        <figure>
+                                            <img class="gall-pic" src="img/pics/mesa-4_s.jpg" alt="Mesa Controladora">
+                                            <div class="zoom">
+                                                <img src="img/magnify.png" alt="Recepção">                                            </div>
+                                        </figure>
+                                    </a>                                </li>
+                                <li>
+                                    <a rel="home-gallery" href="img/pics/perifericos-3_b.jpg" title="Periféricos">
+                                        <figure>
+                                            <img class="gall-pic" src="img/pics/perifericos-3_s.jpg" alt="Periféricos">
+                                            <div class="zoom">
+                                                <img src="img/magnify.png" alt="Recepação">                                            </div>
+                                        </figure>
+                                    </a>                                </li>
+                            </ul> 
+                        </article> 
+                    </li> 
+<li id="page_about" class="contentPad"> 
+                        <div class="wrapper"> 
+                            <article class="col2 cont-line"> 
+                                <h2>BEM-VINDO!</h2> 
+                                <img src="img/pics/tecnica_estudio.jpg" alt="" class="imgIndent"> 
+                                <p>
+                                    O estúdio som do mar foi criado com o objetivo de realizar trabalhos sonoros para o cliente de uma forma individualizada, obedecendo as peculiaridades artísticas de cada trabalho.
+                                    Especializamo-nos em gravações de ótima qualidade, o que implica em know-how e equipamentos necessários, pelo absoluto prazer em trabalhar com música.
+                                    Marque seu horário no Estúdio Som do Mar e saia por ai fazendo sucesso. Sentimo-nos orgulhosos de participar de seus sonhos.                                </p>
+                                <a href="#!/page_more" class="ex-8">Mais sobre nós</a>                            </article> 
+
+                            <article class="col3 margLeft"> 
+                                <h2>Som do Mar</h2> 
+                                <ul class="col-icons"> 
+                                    <li class="icons bord"> 
+                                        <img src="img/icons/microphone.png" alt="Serviços" class="fleft"> 
+                                        <div>
+                                            <p class="text-icons1">Serviços</p> 
+                                            <p class="padBot">Uma gama de serviços em áudio</p> 
+                                            <a href="#!/page_more" class="read-more-butt">Saiba Mais</a>                                        </div> 
+                                    </li> 
+                                    <li class="icons bord"> 
+                                        <img src="img/icons/guitar.png" alt="Equipamentos" class="fleft"> 
+                                        <div>
+                                            <p class="text-icons1">Equipamentos</p> 
+                                            <p class="padBot">Para proporcionar o melhor som, equipamentos e instrumentos de qualidade.</p> 
+                                            <a href="#!/page_more" class="read-more-butt">Saiba Mais</a>                                        </div> 
+                                    </li> 
+                                    <li class="icons"> 
+                                        <img src="img/icons/partners.png" alt="Parcerias" class="fleft parcerias"> 
+                                        <div>
+                                            <p class="text-icons1">Parcerias</p> 
+                                            <p class="padBot">Temos a parceria certa para facilitar e assegurar a qualidade do seu projeto.</p> 
+                                            <a href="#!/page_more" class="read-more-butt">Saiba Mais</a>                                        </div> 
+                                    </li> 
+                                </ul> 
+                            </article> 
+                        </div> 
+                    </li> 
+<li id="page_works" class="contentPad"> 
+                        <div class="wrapper"> 
+                            <article class="col9"> 
+
+                                <h2>nossos trabalhos</h2>
+
+                                <nav class="sub_menu">
+                                    <ul>
+                                        <li><a class="activeMenu" href="slide_ultimos_lancamentos" data-active-menu-left-position="">últimos lançamentos</a></li>
+                                        <li><a href="slide_outros_trabalhos" data-active-menu-left-position="">outros trabalhos</a></li>
+                                        <li><a href="slide_jingles" data-active-menu-left-position="">jingles</a></li>                                        
+                                        <li><a href="slide_pessoal" data-active-menu-left-position="">pessoal</a></li>
+                                    </ul>
+                                </nav>
+
+                                <section class="sub_menu_content">
+                                    <div class="slider">
+                                        <article id="slide_ultimos_lancamentos" class="slide" data-slide-left-position="0">
+                                            <div class="scrollable">
+                                                <ul class="mainList inline"> 
+                                                    <li class="song marginBottomCD"
+                                                        data-h5a-song-artist="Janaina Castro"
+                                                        data-h5a-song-name="Restaura-me"
+                                                        data-h5a-song-url="musics/cd_janaina_castro-restaura-me.mp3"
+                                                        data-h5a-cover-url="img/cd/janaina_castro_player.jpg">
+                                                        <figure class="play" >
+                                                            <img src="img/play.png" alt="" />                                                        </figure>
+                                                        <figure class="pause" >
+                                                            <img src="img/pause.png" alt="" />                                                        </figure>
+                                                        <img src="img/cd/janaina_castro.jpg" alt="">                                                    </li>
+                                                    <li class="song marginBottomCD"
+                                                        data-h5a-song-artist="Flavinho Sousa"
+                                                        data-h5a-song-name="Caminho Estreito"
+                                                        data-h5a-song-url="musics/cd_flavinho_sousa-caminho_estreito.mp3"
+                                                        data-h5a-cover-url="img/cd/flavinho_sousa_player.jpg">
+                                                        <figure class="play" >
+                                                            <img src="img/play.png" alt="" />                                                        </figure>
+                                                        <figure class="pause" >
+                                                            <img src="img/pause.png" alt="" />                                                        </figure>
+                                                        <img src="img/cd/flavinho_sousa.jpg" alt="">                                                    </li>
+                                                    <li class="song marginBottomCD"
+                                                        data-h5a-song-artist="Ana Cléria"
+                                                        data-h5a-song-name="`Por Um Segundo"
+                                                        data-h5a-song-url="musics/cd_ana_cleria-por1seg.mp3"
+                                                        data-h5a-cover-url="img/cd/ana_cleria_player.jpg">
+                                                        <figure class="play" >
+                                                            <img src="img/play.png" alt="" />                                                        </figure>
+                                                        <figure class="pause" >
+                                                            <img src="img/pause.png" alt="" />                                                        </figure>
+                                                        <img src="img/cd/ana_cleria.jpg" alt="">                                                    </li>
+                                                    <li class="song marginBottomCD"
+                                                        data-h5a-song-artist="Priscila Ribeiro"
+                                                        data-h5a-song-name="Saudade"
+                                                        data-h5a-song-url="musics/cd_priscila_ribeiro-saudade.mp3"
+                                                        data-h5a-cover-url="img/cd/priscila_ribeiro_player.jpg">
+                                                        <figure class="play" >
+                                                            <img src="img/play.png" alt="" />                                                        </figure>
+                                                        <figure class="pause" >
+                                                            <img src="img/pause.png" alt="" />                                                        </figure>
+                                                        <img src="img/cd/priscila_ribeiro.jpg" alt="">                                                    </li>
+                                                    <li class="song marginBottomCD"
+                                                        data-h5a-song-artist="Rodrigo Cardozo"
+                                                        data-h5a-song-name="Pegada Eletrônica"
+                                                        data-h5a-song-url="musics/cd_rodrigo_cardozo-pegada_eletronica.mp3"
+                                                        data-h5a-cover-url="img/cd/rodrigo_cardozo_player.jpg">
+                                                        <figure class="play" >
+                                                            <img src="img/play.png" alt="" />                                                        </figure>
+                                                        <figure class="pause" >
+                                                            <img src="img/pause.png" alt="" />                                                        </figure>
+                                                        <img src="img/cd/rodrigo_cardozo.jpg" alt="">                                                    </li><!--
+                                                    <li class="song marginBottomCD"
+                                                        data-h5a-song-artist="Márcio Cardoso"
+                                                        data-h5a-song-name="A Melhor Parte"
+                                                        data-h5a-song-url="musics/cd_marcio_cardoso-a_melhor_parte.mp3"
+                                                        data-h5a-cover-url="img/cd/marcio_cardoso_player.jpg">
+                                                        <figure class="play" >
+                                                            <img src="img/play.png" alt="" />
+                                                        </figure>
+                                                        <figure class="pause" >
+                                                            <img src="img/pause.png" alt="" />
+                                                        </figure>
+                                                        <img src="img/cd/marcio_cardoso.jpg" alt="">
+                                                    </li>-->
+                                                </ul>
+                                            </div>
+                                        </article>
+                                        <article id="slide_outros_trabalhos" class="slide" data-slide-left-position="-860">
+                                            <div class="scrollable">
+                                                <ul class="mainList listHoverFX simpleSongs"> 
+                                                    <li class="song"
+                                                        data-h5a-song-artist="Daniel Costa"
+                                                        data-h5a-song-name="Demo"
+                                                        data-h5a-song-url="musics/cd_daniel_costa.mp3">
+                                                        <div class="controls">
+                                                            <img src="img/play.png" alt="" class="play" />
+                                                            <img src="img/pause.png" alt="" class="pause" />                                                        </div>
+                                                        <p>Daniel Costa</p>
+                                                    </li>
+                                                    <li class="song"
+                                                        data-h5a-song-artist="Dudu Portela"
+                                                        data-h5a-song-name="Demo"
+                                                        data-h5a-song-url="musics/cd_dudu_portela.mp3">
+                                                        <div class="controls">
+                                                            <img src="img/play.png" alt="" class="play" />
+                                                            <img src="img/pause.png" alt="" class="pause" />                                                        </div>
+                                                        <p>Dudu Portela</p>
+                                                    </li>
+                                                    <li class="song"
+                                                        data-h5a-song-artist="Eder Rocky"
+                                                        data-h5a-song-name="Demo"
+                                                        data-h5a-song-url="musics/cd_eder_rocky.mp3">
+                                                        <div class="controls">
+                                                            <img src="img/play.png" alt="" class="play" />
+                                                            <img src="img/pause.png" alt="" class="pause" />                                                        </div>
+                                                        <p>Eder Rocky</p>
+                                                    </li>
+                                                    <li class="song"
+                                                        data-h5a-song-artist="Homero Neto"
+                                                        data-h5a-song-name="Demo"
+                                                        data-h5a-song-url="musics/cd_homero_neto.mp3">
+                                                        <div class="controls">
+                                                            <img src="img/play.png" alt="" class="play" />
+                                                            <img src="img/pause.png" alt="" class="pause" />                                                        </div>
+                                                        <p>Homero Neto</p>
+                                                    </li>
+                                                    <li class="song"
+                                                        data-h5a-song-artist="Juninho Pafume"
+                                                        data-h5a-song-name="Demo"
+                                                        data-h5a-song-url="musics/cd_juninho_pafume.mp3">
+                                                        <div class="controls">
+                                                            <img src="img/play.png" alt="" class="play" />
+                                                            <img src="img/pause.png" alt="" class="pause" />                                                        </div>
+                                                        <p>Juninho Pafume</p>
+                                                    </li>
+                                                    <li class="song"
+                                                        data-h5a-song-artist="Kaca Maciel"
+                                                        data-h5a-song-name="Demo"
+                                                        data-h5a-song-url="musics/cd_kaca_maciel.mp3">
+                                                        <div class="controls">
+                                                            <img src="img/play.png" alt="" class="play" />
+                                                            <img src="img/pause.png" alt="" class="pause" />                                                        </div>
+                                                        <p>Kaca Maciel</p>
+                                                    </li>
+                                                    <li class="song"
+                                                        data-h5a-song-artist="Luiz Vianna"
+                                                        data-h5a-song-name="Demo"
+                                                        data-h5a-song-url="musics/cd_luiz_vianna.mp3">
+                                                        <div class="controls">
+                                                            <img src="img/play.png" alt="" class="play" />
+                                                            <img src="img/pause.png" alt="" class="pause" />                                                        </div>
+                                                        <p>Luiz Vianna</p>
+                                                    </li>
+                                                    <li class="song"
+                                                        data-h5a-song-artist="Márcio Cardoso"
+                                                        data-h5a-song-name="Demo"
+                                                        data-h5a-song-url="musics/cd_marcio_cardoso.mp3">
+                                                        <div class="controls">
+                                                            <img src="img/play.png" alt="" class="play" />
+                                                            <img src="img/pause.png" alt="" class="pause" />                                                        </div>
+                                                        <p>Márcio Cardoso</p>
+                                                    </li>
+                                                    <li class="song"
+                                                        data-h5a-song-artist="Paulo César"
+                                                        data-h5a-song-name="Demo"
+                                                        data-h5a-song-url="musics/cd_paulo_cesar.mp3">
+                                                        <div class="controls">
+                                                            <img src="img/play.png" alt="" class="play" />
+                                                            <img src="img/pause.png" alt="" class="pause" />                                                        </div>
+                                                        <p>Paulo César</p>
+                                                    </li>
+                                                    <li class="song"
+                                                        data-h5a-song-artist="Sarquis Fermanian"
+                                                        data-h5a-song-name="Demo"
+                                                        data-h5a-song-url="musics/cd_sarquis_fermanian.mp3">
+                                                        <div class="controls">
+                                                            <img src="img/play.png" alt="" class="play" />
+                                                            <img src="img/pause.png" alt="" class="pause" />                                                        </div>
+                                                        <p>Sarquis Fermanian</p>
+                                                    </li>
+                                                    <li class="song"
+                                                        data-h5a-song-artist="Yule Matos"
+                                                        data-h5a-song-name="Demo"
+                                                        data-h5a-song-url="musics/cd_yule_matos.mp3">
+                                                        <div class="controls">
+                                                            <img src="img/play.png" alt="" class="play" />
+                                                            <img src="img/pause.png" alt="" class="pause" />                                                        </div>
+                                                        <p>Yule Matos</p>
+                                                    </li>                                                    
+                                                </ul>
+                                            </div>
+                                        </article>
+                                        <article id="slide_jingles" class="slide" data-slide-left-position="-1720">
+                                            <!--<p>Fender, Taylor, Condor e etc. Para proporcionar o melhor som, equipamentos de qualidade e instrumentos de marcas renomadas.</p>-->
+
+                                            <div class="col5 padRight cont-line descricao">
+                                                <p>O Som do Mar produz para os mais variados ramos da publicidade, desde rádio e TV até campanhas políticas e publicitárias.</p>
+                                                <p>Ouça ao lado alguns trabalhos que produzimos.</p>
+                                            </div>
+
+                                            <div class="col6A margLeft scrollable">
+                                                <ul class="mainList listHoverFX simpleSongs">
+                                                    <li class="song"
+                                                        data-h5a-song-artist="Artur Bruno"
+                                                        data-h5a-song-name="1313"
+                                                        data-h5a-song-url="musics/jingle-artur_bruno_1313.mp3">
+                                                        <div class="controls">
+                                                            <img src="img/play.png" alt="" class="play" />
+                                                            <img src="img/pause.png" alt="" class="pause" />                                                        </div>
+                                                        <p>Campanha Política de Artur Bruno para Deputado Federal - 1313</p>
+                                                    </li>
+                                                    <li class="song"
+                                                        data-h5a-song-artist="Concessionária Jangada"
+                                                        data-h5a-song-name="Jingle"
+                                                        data-h5a-song-url="musics/jingle-jangada.mp3">
+                                                        <div class="controls">
+                                                            <img src="img/play.png" alt="" class="play" />
+                                                            <img src="img/pause.png" alt="" class="pause" />                                                        </div>
+                                                        <p>Concessionária Jangada</p>
+                                                    </li>
+                                                    <li class="song"
+                                                        data-h5a-song-artist="Apiguana"
+                                                        data-h5a-song-name="Jingles"
+                                                        data-h5a-song-url="musics/jingle-apiguana.mp3">
+                                                        <div class="controls">
+                                                            <img src="img/play.png" alt="" class="play" />
+                                                            <img src="img/pause.png" alt="" class="pause" />                                                        </div>
+                                                        <p>Apiguana</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </article>
+                                        <article id="slide_pessoal" class="slide" data-slide-left-position="-2580">
+                                            <!--<p>No Som do Mar você encontrará os serviços ideais que trazem a melhor qualidade sonora aliada à experiência de um produtor renomado no cenário musical.</p>-->
+
+                                            <div class="col5 padRight cont-line descricao">
+                                                <p>Anfrisio, Diretor e proprietário do Estudio Som do Mar é músico com uma grande história em eventos musicais no Ceará e com trabalhos feitos pelo Brasil à fora.</p>
+                                                <p>Profissional com larga experiência em música, Formado em Licenciatura em Música, sua vida inteira foi dedicar-se à música, fazendo disso sua principal função na vida. É Multi-instrumentista e dono de grande habilidade com os instrumentos.</p>
+                                                <p>Anfrisio é arranjador, compositor, produtor e diretor de seu próprio estúdio em Fortaleza, a Cidade Bela de todos nós.</p>
+                                            </div>
+
+                                            <div class="col6A margLeft scrollable">
+                                                <ul class="mainList inline">
+                                                    <li class="song marginBottomCD"
+                                                        data-h5a-song-artist="Anfrísio Rocha"
+                                                        data-h5a-song-name="Recomeço"
+                                                        data-h5a-song-url="musics/cd_recomeco-recomeco.mp3"
+                                                        data-h5a-cover-url="img/cd/anfrisio_rocha_recomeco_player.jpg">
+                                                        <figure class="play" >
+                                                            <img src="img/play.png" alt="" />                                                        </figure>
+                                                        <figure class="pause" >
+                                                            <img src="img/pause.png" alt="" />                                                        </figure>
+                                                        <img src="img/cd/anfrisio_rocha_recomeco.jpg" alt="">                                                    </li>
+                                                    <li class="song marginBottomCD"
+                                                        data-h5a-song-artist="Anfrísio Rocha"
+                                                        data-h5a-song-name="Trechos"
+                                                        data-h5a-song-url="musics/cd_hora_de_dormir-mix.mp3"
+                                                        data-h5a-cover-url="img/cd/anfrisio_rocha_hora_de_dormir_player.jpg">
+                                                        <figure class="play" >
+                                                            <img src="img/play.png" alt="" />                                                        </figure>
+                                                        <figure class="pause" >
+                                                            <img src="img/pause.png" alt="" />                                                        </figure>
+                                                        <img src="img/cd/anfrisio_rocha_hora_de_dormir.jpg" alt="">                                                    </li>                                                     
+                                                </ul>
+                                            </div>
+                                        </article>                                        
+                                    </div>
+                                </section>
+                                <!--
+                                <ul id="carousel2" class="jcarousel-skin-tango2"> 
+                                    <li> 
+                                        <div class="picHold">
+                                            <a href="img/cd/audio_adrenaline.jpg">
+                                                <span class="playSong"></span>
+                                                <img src="img/cd/audio_adrenaline.jpg" alt="Audio Adrenaline">
+                                            </a>
+                                        </div> 
+                                        <div class="picHold">
+                                            <a href="img/cd/jaci_velasquez.jpg">
+                                                <span class="playSong"></span>
+                                                <img src="img/cd/jaci_velasquez.jpg" alt="Jaci Velasquez">
+                                            </a>
+                                        </div> 
+                                    </li>
+                                    <li> 
+                                        <div class="picHold">
+                                            <a href="img/cd/priscila_ribeiro.jpg">
+                                                <span class="playSong"></span>
+                                                <img src="img/cd/priscila_ribeiro.jpg" alt="Priscila Ribeiro">
+                                            </a>
+                                        </div> 
+                                        <div class="picHold">
+                                            <a href="img/cd/flavinho_sousa.jpg">
+                                                <span class="playSong"></span>
+                                                <img src="img/cd/flavinho_sousa.jpg" alt="Flavinho Sousa">
+                                            </a>
+                                        </div> 
+                                    </li> 
+                                    <li> 
+                                        <div class="picHold">
+                                            <a href="img/cd/ana_cleria.jpg">
+                                                <span class="playSong"></span>
+                                                <img src="img/cd/ana_cleria.jpg" alt="Ana Cléria">
+                                            </a>
+                                        </div> 
+                                        <div class="picHold">
+                                            <a href="img/cd/janaina_castro.jpg">
+                                                <span class="playSong"></span>
+                                                <img src="img/cd/janaina_castro.jpg" alt="Janaína Castro">
+                                            </a>
+                                        </div> 
+                                    </li> 
+                                    <li> 
+                                        <div class="picHold">
+                                            <a href="img/cd/marcio_cardoso.jpg">
+                                                <span class="playSong"></span>
+                                                <img src="img/cd/marcio_cardoso.jpg" alt="Márcio Cardoso">
+                                            </a>
+                                        </div> 
+                                        <div class="picHold">
+                                            <a href="img/cd/kaka_maciel.jpg">
+                                                <span class="playSong"></span>
+                                                <img src="img/cd/kaka_maciel.jpg" alt="Kaká Maciel">
+                                            </a>
+                                        </div> 
+                                    </li> 
+                                    <li> 
+                                        <div class="picHold">
+                                            <a href="img/cd/rodrigo_cardoso.jpg">
+                                                <span class="playSong"></span>
+                                                <img src="img/cd/rodrigo_cardoso.jpg" alt="Rodrigo Cardoso">
+                                            </a>
+                                        </div> 
+                                    </li> 
+                                </ul> -->
+                            </article> 
+                        </div> 
+                    </li> 
+
+                    <li id="page_videos" class="contentPad"> 
+                        <div class="wrapper"> 
+                            <article class="col4"> 
+                                <h2>vídeos</h2>
+                                <ul id="carousel3" class="jcarousel-skin-tango2"> 
+
+                                    <%
+                                    
+                                    var quantidadeDeVideosPorColuna = 2
+                                        quantidadeDeLI = 0;
+
+                                    if (viewModel.videos.length <= quantidadeDeVideosPorColuna) {
+                                        quantidadeDeLI = 1;
+                                    } else {
+                                        quantidadeDeLI = Math.ceil(viewModel.videos.length / quantidadeDeVideosPorColuna);
+                                    }
+
+                                    for (var liIndex = 0; liIndex < quantidadeDeLI; liIndex++) {
+
+                                    %>
+
+                                    <li>
+                                      
+                                        <%
+                                    
+                                        var quantidadeDeDIV = 0,
+                                            ehUltimaColuna = (liIndex + 1) === quantidadeDeLI;
+
+                                        if (ehUltimaColuna) {
+                                            quantidadeDeDIV = viewModel.videos.length;
+                                        } else {
+                                            quantidadeDeDIV = quantidadeDeVideosPorColuna * (liIndex + 1);
+                                        }
+
+                                        for (var divIndex = liIndex * quantidadeDeVideosPorColuna; divIndex < quantidadeDeDIV; divIndex++) {
+
+                                        %>
+
+                                        <div class="videoHold">
+                                            <iframe width="277" height="157" src="http:<%= viewModel.videos[divIndex].url %>?rel=0" frameborder="0" allowfullscreen></iframe>
+                                        </div> 
+                                        
+                                        <% } %>
+
+                                    </li> 
+
+                                    <% } %>
+                                </ul>
+                            </article>
+                        </div> 
+                    </li> 
+<li id="page_photos" class="contentPad"> 
+                        <div class="wrapper"> 
+                            <article class="col9">
+                                <h2>fotos</h2>
+
+                                <nav class="sub_menu">
+                                    <ul>
+                                        <li><a class="activeMenu" href="slide_fotos_estudio" data-active-menu-left-position="">estúdio</a></li>
+                                        <li><a href="slide_fotos_musicos" data-active-menu-left-position="">músicos</a></li>
+                                        <li><a href="slide_fotos_participacoes" data-active-menu-left-position="">participações</a></li>
+                                    </ul>
+                                </nav>
+                                
+                                <section class="sub_menu_content picList">
+                                    <div class="slider">
+                                        <article id="slide_fotos_estudio" class="slide scrollable" data-slide-left-position="0">
+                                            <a href="img/pics/aquario-1_b.jpg" title="Aquário">
+                                                <figure>
+                                                    <img src="img/pics/aquario-1_xs.jpg" alt="Arquário" />                                                </figure>
+                                                <figure class="picZoom">
+                                                    <img src="img/magnify.png" alt="" />                                                </figure>
+                                            </a>
+                                            <a href="img/pics/aquario-2_b.jpg" title="Arquário">
+                                                <figure>
+                                                    <img src="img/pics/aquario-2_xs.jpg" alt="" />                                                </figure>
+                                                <figure class="picZoom">
+                                                    <img src="img/magnify.png" alt="" />                                                </figure>
+                                            </a>
+                                            <a href="img/pics/bateria-1_b.jpg" title="Bateria">
+                                                <figure>
+                                                    <img src="img/pics/bateria-1_xs.jpg" alt="Bateria" />                                                </figure>
+                                                <figure class="picZoom">
+                                                    <img src="img/magnify.png" alt="" />                                                </figure>
+                                            </a>
+                                            <a href="img/pics/bateria-3_b.jpg" title="Bateria">
+                                                <figure>
+                                                    <img src="img/pics/bateria-3_xs.jpg" alt="" />                                                </figure>
+                                                <figure class="picZoom">
+                                                    <img src="img/magnify.png" alt="" />                                                </figure>
+                                            </a>
+                                            <a href="img/pics/bateria-4_b.jpg" title="Bateria">
+                                                <figure>
+                                                    <img src="img/pics/bateria-4_xs.jpg" alt="" />                                                </figure>
+                                                <figure class="picZoom">
+                                                    <img src="img/magnify.png" alt="" />                                                </figure>
+                                            </a>
+                                            <a href="img/pics/instrumentos-1_b.jpg" title="Instrumentos">
+                                                <figure>
+                                                    <img src="img/pics/instrumentos-1_xs.jpg" alt="" />                                                </figure>
+                                                <figure class="picZoom">
+                                                    <img src="img/magnify.png" alt="" />                                                </figure>
+                                            </a>
+                                            <a href="img/pics/mesa-2_b.jpg" title="Mesa">
+                                                <figure>
+                                                    <img src="img/pics/mesa-2_xs.jpg" alt="" />                                                </figure>
+                                                <figure class="picZoom">
+                                                    <img src="img/magnify.png" alt="" />                                                </figure>
+                                            </a>
+                                            <a href="img/pics/mesa-3_b.jpg" title="Mesa">
+                                                <figure>
+                                                    <img src="img/pics/mesa-3_xs.jpg" alt="" />                                                </figure>
+                                                <figure class="picZoom">
+                                                    <img src="img/magnify.png" alt="" />                                                </figure>
+                                            </a>
+                                            <a href="img/pics/mesa-4_b.jpg" title="Mesa">
+                                                <figure>
+                                                    <img src="img/pics/mesa-4_xs.jpg" alt="" />                                                </figure>
+                                                <figure class="picZoom">
+                                                    <img src="img/magnify.png" alt="" />                                                </figure>
+                                            </a>
+                                            <a href="img/pics/microfone_b.jpg" title="Microfone">
+                                                <figure>
+                                                    <img src="img/pics/microfone_xs.jpg" alt="" />                                                </figure>
+                                                <figure class="picZoom">
+                                                    <img src="img/magnify.png" alt="" />                                                </figure>
+                                            </a>
+                                            <a href="img/pics/perifericos-2_b.jpg" title="Periféricos">
+                                                <figure>
+                                                    <img src="img/pics/perifericos-2_xs.jpg" alt="" />                                                </figure>
+                                                <figure class="picZoom">
+                                                    <img src="img/magnify.png" alt="" />                                                </figure>
+                                            </a>
+                                            <a href="img/pics/perifericos-3_b.jpg" title="Periféricos">
+                                                <figure>
+                                                    <img src="img/pics/perifericos-3_xs.jpg" alt="" />                                                </figure>
+                                                <figure class="picZoom">
+                                                    <img src="img/magnify.png" alt="" />                                                </figure>
+                                            </a>
+                                            <a href="img/pics/perifericos-4_b.jpg" title="Periféricos">
+                                                <figure>
+                                                    <img src="img/pics/perifericos-4_xs.jpg" alt="" />                                                </figure>
+                                                <figure class="picZoom">
+                                                    <img src="img/magnify.png" alt="" />                                                </figure>
+                                            </a>
+                                            <a href="img/pics/recepcao_b.jpg" title="Recepção">
+                                                <figure>
+                                                    <img src="img/pics/recepcao_xs.jpg" alt="" />                                                </figure>
+                                                <figure class="picZoom">
+                                                    <img src="img/magnify.png" alt="" />                                                </figure>
+                                            </a>
+                                            <a href="img/pics/teclado_b.jpg" title="Teclado">
+                                                <figure>
+                                                    <img src="img/pics/teclado_xs.jpg" alt="" />                                                </figure>
+                                                <figure class="picZoom">
+                                                    <img src="img/magnify.png" alt="" />                                                </figure>
+                                            </a>
+                                            <a href="img/pics/tecnica-1_b.jpg" title="Técnica">
+                                                <figure>
+                                                    <img src="img/pics/tecnica-1_xs.jpg" alt="" />                                                </figure>
+                                                <figure class="picZoom">
+                                                    <img src="img/magnify.png" alt="" />                                                </figure>
+                                            </a>
+                                            <a href="img/pics/tecnica-2_b.jpg" title="Técnica">
+                                                <figure>
+                                                    <img src="img/pics/tecnica-2_xs.jpg" alt="" />                                                </figure>
+                                                <figure class="picZoom">
+                                                    <img src="img/magnify.png" alt="" />                                                </figure>
+                                            </a>                                        </article>
+                                        <article id="slide_fotos_musicos" class="slide scrollable" data-slide-left-position="-860">
+                                            <a href="img/pics/musico-aristides_cavalcante_b.jpg" title="Aristides Cavalcante">
+                                                <figure>
+                                                    <img src="img/pics/musico-aristides_cavalcante_xs.jpg" alt="" />                                                </figure>
+                                                <figure class="picZoom">
+                                                    <img src="img/magnify.png" alt="" />                                                </figure>
+                                            </a>
+                                            <a href="img/pics/musico-jr_finnis_b.jpg" title="Jr Finnis">
+                                                <figure>
+                                                    <img src="img/pics/musico-jr_finnis_xs.jpg" alt="" />                                                </figure>
+                                                <figure class="picZoom">
+                                                    <img src="img/magnify.png" alt="" />                                                </figure>
+                                            </a>
+                                            <a href="img/pics/musico-ronald_melo_b.jpg" title="Ronald Melo">
+                                                <figure>
+                                                    <img src="img/pics/musico-ronald_melo_xs.jpg" alt="" />                                                </figure>
+                                                <figure class="picZoom">
+                                                    <img src="img/magnify.png" alt="" />                                                </figure>
+                                            </a>
+                                            <a href="img/pics/musico-rodrigo_cardozo_b.jpg" title="Rodrigo Cardozo">
+                                                <figure>
+                                                    <img src="img/pics/musico-rodrigo_cardozo_xs.jpg" alt="" />                                                </figure>
+                                                <figure class="picZoom">
+                                                    <img src="img/magnify.png" alt="" />                                                </figure>
+                                            </a>
+                                            <a href="img/pics/musico-thisudan_b.jpg" title="Thiago, Suelen e Daniel">
+                                                <figure>
+                                                    <img src="img/pics/musico-thisudan_xs.jpg" alt="" />                                                </figure>
+                                                <figure class="picZoom">
+                                                    <img src="img/magnify.png" alt="" />                                                </figure>
+                                            </a>                                        </article>
+                                        <article id="slide_fotos_participacoes" class="slide scrollable" data-slide-left-position="-1720">
+                                            <a href="img/pics/participacoes-anfrisio_e_nelson_b.jpg" title="Anfrísio Rocha e Nelson Bomilcar">
+                                                <figure>
+                                                    <img src="img/pics/participacoes-anfrisio_e_nelson_xs.jpg" alt="" />                                                </figure>
+                                                <figure class="picZoom">
+                                                    <img src="img/magnify.png" alt="" />                                                </figure>
+                                            </a>                                        </article>
+                                    </div>
+                                </section>                                
+                            </article>                            
+                        </div> 
+                    </li> 
+<li id="page_artists" class="contentPad"> 
+                        <div class="wrapper"> 
+                            <article class="col9">
+                                <h2>artistas</h2>
+
+                                <div class="scrollable">
+                                    <a href="artistas/anacleria/home.html" target="_blank">
+                                        <figure>
+                                            <img src="img/pics/artistas_ana_flauta.jpg" alt="" />
+                                            <figcaption>
+                                                <span>Ana Cléria</span>                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                    <a href="artistas/exodo7/home.html" target="_blank">
+                                        <figure>
+                                            <img src="img/pics/artistas_exodo7.jpg" alt="" />
+                                            <figcaption>
+                                                <span>Êxodo 7</span>                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                    <a href="artistas/flavinho/home.html" target="_blank">
+                                        <figure>
+                                            <img src="img/pics/artistas_flavinho.jpg" alt="" />
+                                            <figcaption>
+                                                <span>Flavinho Souza</span>                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                    <a href="artistas/janainacastro/home.html" target="_blank">
+                                        <figure>
+                                            <img src="img/pics/artistas_janaina_castro.jpg" alt="" />
+                                            <figcaption>
+                                                <span>Janaína Castro</span>                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                    <a href="artistas/kacamaciel/index.html" target="_blank">
+                                        <figure>
+                                            <img src="img/pics/artistas_kaca_maciel.jpg" alt="" />
+                                            <figcaption>
+                                                <span>Kaca Maciel</span>                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                    
+                                    <a href="artistas/marciocardoso/home.html" target="_blank">
+                                        <figure>
+                                            <img src="img/pics/artistas_marcio_cardoso.jpg" alt="" />
+                                            <figcaption>
+                                                <span>Márcio Cardoso</span>                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                    <a href="artistas/marciorocha/home.html" target="_blank">
+                                        <figure>
+                                            <img src="img/pics/artistas_marcio_rocha.jpg" alt="" />
+                                            <figcaption>
+                                                <span>Márcio Rocha</span>                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                    <a href="artistas/priscilaribeiro/index.html" target="_blank">
+                                        <figure>
+                                            <img src="img/pics/artistas_priscila_ribeiro.jpg" alt="" />
+                                            <figcaption>
+                                                <span>Priscila Ribeiro</span>                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                    
+                                    <a href="artistas/rodrigocardozo/home.html" target="_blank">
+                                        <figure>
+                                            <img src="img/pics/artistas_rodrigo_cardozo.jpg" alt="" />
+                                            <figcaption>
+                                                <span>Rodrigo Cardozo</span>                                            </figcaption>
+                                        </figure>
+                                    </a>                                </div>
+                            </article>                            
+                        </div> 
+                    </li> 
+<li id="page_contacts" class="contentPad"> 
+                        <div class="wrapper">                             
+                            
+                            <article class="colContacts margRight cont-line"> 
+                                <h2>contatos</h2> 
+                                
+                                <!--<div id="map">
+                                    <figure class="map">
+                                        <iframe width="270" height="331" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.br/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=Avenida+Almirante+Barroso,+911,+Fortaleza+-+Cear%C3%A1&amp;aq=0&amp;oq=almirante+barroso,+911&amp;sll=-3.720204,-38.514816&amp;sspn=0.000764,0.001321&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=Av.+Alm.+Barroso,+911+-+Praia+de+Iracema,+Fortaleza+-+Cear%C3%A1,+60060-440&amp;ll=-3.719861,-38.513346&amp;spn=0.007088,0.005772&amp;z=16&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com.br/maps?f=q&amp;source=embed&amp;hl=pt-BR&amp;geocode=&amp;q=Avenida+Almirante+Barroso,+911,+Fortaleza+-+Cear%C3%A1&amp;aq=0&amp;oq=almirante+barroso,+911&amp;sll=-3.720204,-38.514816&amp;sspn=0.000764,0.001321&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=Av.+Alm.+Barroso,+911+-+Praia+de+Iracema,+Fortaleza+-+Cear%C3%A1,+60060-440&amp;ll=-3.719861,-38.513346&amp;spn=0.007088,0.005772&amp;z=16&amp;iwloc=A" style="color:#0000FF;text-align:left">Exibir mapa ampliado</a></small>
+                                    </figure>
+                                </div> -->
+                                
+                                <div class="contacts"> 
+                                    <!--<p class="contactText_1">Av. Almirante Barroso, 911 ,2º andar - Praia de Iracema</p> -->
+                                    <p class="contactText_1 margBot">Fortaleza - CE. Brasil</p> 
+                                    <p class="contact-info"> 
+                                       <strong> <span class="phone contactText_2">OI:</span>
+                                        <span class="contactText_2">85 8690.9040</span>
+                                        <br/> 
+                                        <span class="phone contactText_2">TIM:</span>
+                                        <span class="contactText_2">85 9985.5193</span>
+                                        <br/> 
+                                        <span class="phone contactText_2">FIXO:</span>
+                                        <span class="contactText_2">85 3067-6885</span></strong>
+                                        <br/> 
+                                        <span class="mail contactText_2">E-mail: </span>
+                                        <a href="mailto:anfrisiorocha@hotmail.com" class="contactText_3">anfrisiorocha@hotmail.com</a>                                    </p> 
+
+                                    <p class="contactText_1 margTop margBot">Encontre-nos nas redes sociais</p> 
+
+                                    <div class="social">
+                                        <a href="http://www.facebook.com/estudiosomdomar" target="_blank">
+                                            <img src="img/icons/facebook.png" alt=""/>                                        </a>
+                                        <a href="https://www.youtube.com/AnfrisioRocha" target="_blank">
+                                            <img src="img/icons/youtube.png" alt=""/>                                        </a>                                    </div>
+                                </div> 
+                            </article> 
+                            <article class="colMessages"> 
+                                <h2>fale conosco</h2>      
+                                <iframe id="contatoIframe" src="http://webservices-3.apphb.com/EstudioSomDoMar/Contato"></iframe>
+                            </article> 
+                        </div> 
+                    </li> 
+<li id="page_privacy" class="contentPad"> 
+                        <div class="wrapper"> 
+                            <article class="col9"> 
+                                <h2>Privacy policy</h2> 
+                                
+                                <p class="margBot2">
+                                    <span class="color">No Som do Mar você encontrará os serviços ideais que trazem a melhor qualidade sonora aliada à experiência de um produtor renomado no cenário musical.</span>
+                                    <br/>
+                                    No Som do Mar você encontrará os serviços ideais que trazem a melhor qualidade sonora aliada à experiência de um produtor renomado no cenário musical.                                </p> 
+                                <p class="margBot3">
+                                    <span class="color">Maecenas tristique orci ac sem. Duis ultricies pharetra magna.</span>
+                                    <br/>
+                                    Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem.                                </p> 
+                                <p>
+                                    <a href="#!">privacy@demolink.org</a>                                </p> 
+                            </article> 
+                        </div> 
+                    </li> 
+<li id="page_more" class="contentPad"> 
+                        <div class="wrapper">
+                            <article class="col9"> 
+                                <h2>Estúdio Som do Mar</h2> 
+                                
+                                <nav class="sub_menu">
+                                    <ul>
+                                        <li><a class="activeMenu" href="slide_servicos" data-active-menu-left-position="">serviços</a></li>
+                                        <li><a href="slide_equipamentos" data-active-menu-left-position="">equipamentos</a></li>
+                                        <li><a href="slide_parcerias" data-active-menu-left-position="">parcerias</a></li>
+                                    </ul>
+                                </nav>
+
+                                <section class="sub_menu_content">
+                                    <div class="slider">
+                                        <article id="slide_servicos" class="slide" data-slide-left-position="0">
+                                            <!--<p>No Som do Mar você encontrará os serviços ideais que trazem a melhor qualidade sonora aliada à experiência de um produtor renomado no cenário musical.</p>-->
+
+                                            <div class="scrollable">
+                                                <ul class="mainList listHoverFX">
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Gravação de CD</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Gravação de Demos</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Criação e Edição de Trilhas para Teatro e Dança</p>
+                                                    </li>                                                    
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Criação de Arranjos para Cantores Solo e Bandas</p>
+                                                    </li>                                                    
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Direção Musical</p>
+                                                    </li>  
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Mixagem e Masterização</p>
+                                                    </li> 
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Locuções para Carro de Som</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Jingles, Spots e Vinhetas para Rádio e TV</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Gravação para Campanha Política</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Produção e Gravação através da Internet</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Dublagem</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </article>
+                                        <article id="slide_equipamentos" class="slide" data-slide-left-position="-860">
+                                            <!--<p>Fender, Taylor, Condor e etc. Para proporcionar o melhor som, equipamentos de qualidade e instrumentos de marcas renomadas.</p>-->
+
+                                            <div class="scrollable">
+                                                <ul class="mainList listHoverFX">
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>PC Intel Core 2 duo 3.0 - 4gb ram - HDs 80 + 160 + 1tera (x2)</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Nuendo 3 e Cubase 3, 4 e 5</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Placa M-audio Profire LightBrigde (suporta até 32 canais)</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Pré-amplificador e compressor Focusrite</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Compressor Valvulado Behringer</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Conversores ADA 8000</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Conversores Octopré Focusrite</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Amplificador Sansui</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Monitores Yamaha NS-10M, Behringer MS-40, Marantz</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Bateria Sonor Force 2007 (20, 14,10,12,14)</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Sintetizador Yamaha CS2X</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Controlador Behringer</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Guitarra Yamaha Strato EG303</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Guitarra Fender Stratocaster Eric Clapton Signature</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Guitarra Condor LesPaul</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Baixo Eagle com captação Fender</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Baixo Condor 5 cordas</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Baixo Fretless Condor 4 cordas</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Violão Taylor Aço</p>
+                                                    </li>
+                                                    <li>
+                                                        <img src="img/icons/guitar-pick.png" alt="">
+                                                        <p>Microfones: Neumann TLM 103, CAD M-179, Marshall MXL 770, Superlux condenser, Shure SM-57,. AKG C-418, Shure Beta 98 D/S</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </article>
+                                        <article id="slide_parcerias" class="slide" data-slide-left-position="-1720">
+                                            <section class="threeDContainer">
+                                                <div class="card">
+                                                    <div class="face front">
+                                                        <h3>Fotografia</h3>
+                                                    </div>
+
+                                                    <div class="face back">
+                                                        <ul>
+                                                            <li>
+                                                                <img src="img/icons/camera.png" alt=""/>
+                                                                <p>Encarte de CD</p></li>
+                                                            <li>
+                                                                <img src="img/icons/camera.png" alt=""/>
+                                                                <p>Shows de Lançamento</p>
+                                                            </li>
+                                                            <li>
+                                                                <img src="img/icons/camera.png" alt=""/>
+                                                                <p>Making Of da gravação</p>
+                                                            </li>
+                                                        </ul>
+                                                    
+
+                                                        <footer>
+                                                            <h4>Contatos</h4>
+                                                            <div class="content">
+                                                                <p><a href="mailto:milemar@yahoo.com.br">milemar@yahoo.com.br</a></p>
+                                                                <p><a href="http://www.milenamarquesfotografia.com.br/">milenamarquesfotografia.com.br</a></p>
+                                                            </div>
+                                                        </footer>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="threeDContainer">
+                                                <div class="card">
+                                                    <div class="face front">
+                                                        <h3>Fonoaudiologia</h3>
+                                                    </div>
+
+                                                    <div class="face back">
+                                                        <ul>
+                                                            <li>
+                                                                <img src="img/icons/mic.png" alt=""/>
+                                                                <p>Preparação Vocal</p>
+                                                            </li>
+                                                            <li>
+                                                                <img src="img/icons/mic.png" alt=""/>
+                                                                <p>Aulas de Canto</p>
+                                                            </li>
+                                                        </ul>
+
+                                                        <footer>
+                                                            <h4>Contatos</h4>
+                                                            <div class="content">
+                                                                <p><a href="http://espacovozeexpressao.blogspot.com/">espacovozeexpressao.blogspot.com</a></p>
+                                                                <p><a href="http://www.facebook.com/pages/Espa%C3%A7o-Voz-e-Express%C3%A3o/161313133977545">Facebook de Priscila Ribeiro</a></p>
+                                                            </div>
+                                                        </footer>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="threeDContainer">
+                                                <div class="card">
+                                                    <div class="face front">
+                                                        <h3>Loja</h3>
+                                                    </div>
+
+                                                    <div class="face back">
+                                                        <ul>
+                                                            <li>
+                                                                <img src="img/icons/cart.png" alt=""/>
+                                                                <p>Instrumentos Musicais</p>
+                                                            </li>
+                                                            <li>
+                                                                <img src="img/icons/cart.png" alt=""/>
+                                                                <p>Equipamentos</p>
+                                                            </li>
+                                                        </ul>
+
+                                                        <footer>
+                                                            <h4>Contatos</h4>
+                                                            <div class="content">
+                                                                <p><a href="http://www.interartemusical.com.br/">interartemusical.com.br</a></p>
+                                                            </div>
+                                                        </footer>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="threeDContainer">
+                                                <div class="card">
+                                                    <div class="face front">
+                                                        <h3>Website</h3>
+                                                    </div>
+
+                                                    <div class="face back">
+                                                        <ul>
+                                                            <li>
+                                                                <img src="img/icons/chrome.png" alt=""/>
+                                                                <p>Site personalizado</p></li>
+                                                            <li>
+                                                                <img src="img/icons/chrome.png" alt=""/>
+                                                                <p>Integração com redes sociais</p>
+                                                            </li>
+                                                        </ul>
+
+                                                        <footer>
+                                                            <h4>Contatos</h4>
+                                                            <div class="content">
+                                                                <p><a href="mailto:danilobjr@gmail.com">danilobjr@gmail.com</a></p>
+                                                            </div>
+                                                        </footer>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </article>
+                                    </div>
+                                </section>
+                            </article> 
+                        </div> 
+                    </li> 
+              </ul> 
+            </article>  
+        </div> 
+         
+        <footer> 
+            <div class="main"> 
+                <div class="privacy">
+                    <span class="color">Estúdio Som do Mar</span> &copy; <span class="anoAtual"></span> | Fortaleza - CE. Brasil
+                    <div class="design">
+                        <div class="designerBox">
+                            <span class="color designerContact">Entre em contato</span>
+                            <span><a href="mailto:danilobje@gmail.com" target="_blank">danilobjr@gmail.com</a></span>
+                            <div class="social">
+                                <a href="http://twitter.com/danilojrr" target="_blank"><img src="img/icons/twitter.png" alt="Twitter" /></a>
+                                <a href="http://facebook.com/danilo.juniorr" target="_blank"><img src="img/icons/facebook.png" alt="Facebook" /></a>
+                                <a href="http://youtube.com/danilobjrr" target="_blank"><img src="img/icons/youtube.png" alt="YouTube" /></a>
+                            </div>
+                            <div class="arrowDown">
+                                <div class="arrowDownBorder"></div>
+                            </div>
+                        </div>
+                        <span>design by: <span class="color">Danilo Jr.</span></span>
+                    </div>
+                </div> 
+            </div>  
+        </footer> 
+         
+        <div class="glow"></div> 
+    </div> 
+<script>
+    $(window).load(function () {
+        $('.page_spinner').delay(250).fadeOut(800);
+        $('body').css({ overflow: 'visible' });
+    });
+</script>
+
+<script type="text/javascript" src="js/anoAtual.js"></script>
+
+</body> 
+</html>

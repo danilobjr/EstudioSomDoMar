@@ -1,0 +1,127 @@
+<contexto>
+  <paginas>
+    <pagina>
+      <id>1</id>
+      <descricao>Home</descricao>
+      <titulo>Bem-vindo!</titulo>
+      <subtitulo>Responsabilidade, compromisso e qualidade são o nosso lema</subtitulo>
+      <banners>
+        <banner>
+          <id>1</id>
+          <grande>/img/site/foto/tecnica-1_b.jpg</grande>
+          <pequeno>/img/site/foto/tecnica-1_s.jpg</pequeno>
+          <legenda>Técnica</legenda>
+        </banner>
+        <banner>
+          <id>2</id>
+          <grande>/img/site/foto/aquario-1_b.jpg</grande>
+          <pequeno>/img/site/foto/aquario-1_s.jpg</pequeno>
+          <legenda>Aquário</legenda>
+        </banner>
+        <banner>
+          <id>3</id>
+          <grande>/img/site/foto/bateria-4_b.jpg</grande>
+          <pequeno>/img/site/foto/bateria-4_s.jpg</pequeno>
+          <legenda>Bateria</legenda>
+        </banner>
+        <banner>
+          <id>4</id>
+          <grande>/img/site/foto/mesa-4_b.jpg</grande>
+          <pequeno>/img/site/foto/mesa-4_s.jpg</pequeno>
+          <legenda>Mesa</legenda>
+        </banner>
+        <banner>
+          <id>5</id>
+          <grande>/img/site/foto/perifericos-3_b.jpg</grande>
+          <pequeno>/img/site/foto/perifericos-3_s.jpg</pequeno>
+          <legenda>Periféricos</legenda>
+        </banner>
+      </banners>
+    </pagina>
+    <pagina>
+      <id>2</id>
+      <descricao>Admin</descricao>
+      <titulo>Dashboard</titulo>
+      <subtitulo></subtitulo>
+      <dica>
+        <titulo>Bem-vindo ao modo Administrador!</titulo>
+        <descricao>Aqui você poderá modificar seu site com facilidade. Esteja sempre atento às instruções. Qualquer dúvida entre em contato conosco.</descricao>
+      </dica>
+    </pagina>
+  </paginas>
+  <artistas>
+    <artista>
+      <id>1</id>
+      <nome>Priscila Ribeiro</nome>
+      <dados>
+        <site>www.priscilaribeiro.com.br</site>
+        <email>priscilabribeiro@hotmail.com</email>
+        <fones>
+          <oi>(85) 8883.6480</oi>
+        </fones>
+        <social>
+          <facebook>www.facebook.com/profile.php?id=1012718819&amp;ref=ts</facebook>
+        </social>
+      </dados>
+      <musicas>
+        <musica>
+          <nome>Saudade</nome>
+          <mp3Url>saudade.mp3</mp3Url>
+          <capaAlbumUrl>o_amor_e_suas_cancoes.jpg</capaAlbumUrl>
+        </musica>
+        <musica>
+          <nome>Ah, o amor</nome>
+          <mp3Url>ah_o_amor.mp3</mp3Url>
+          <capaAlbumUrl>ensaio_sobre_a_dor.jpg</capaAlbumUrl>
+        </musica>
+      </musicas>
+    </artista>
+    <artista>
+      <id>2</id>
+      <nome>Flavinho Souza</nome>
+      <dados>
+        <email>flavioiconio@hotmail.com</email>
+        <fones>
+          <oi>(85) 8680.5250</oi>
+        </fones>
+        <social>
+          <facebook>www.facebook.com/profile.php?id=100002334138787&amp;ref=ts</facebook>
+        </social>
+      </dados>
+      <musicas>
+        <musica>
+          <nome>Caminho Estreito</nome>
+          <mp3Url>caminho estreito.mp3</mp3Url>
+          <capaAlbumUrl>caminho estreito.jpg</capaAlbumUrl>
+        </musica>
+      </musicas>
+    </artista>
+  </artistas>
+  <videos>
+    <video>
+      <id>1</id>
+      <titulo>Flavinho Souza | Pseudo Amor</titulo>
+      <url>//www.youtube.com/embed/sX1EmPOwBsU</url>
+    </video>
+    <video>
+      <id>2</id>
+      <titulo>Som do Mar | Anfrísio Rocha</titulo>
+      <url>//www.youtube.com/embed/u6wWBzDvZcE</url>
+    </video>
+    <video>
+      <id>4</id>
+      <titulo>Espera | Anfrísio Rocha</titulo>
+      <url>//www.youtube.com/embed/6gUCAy6rWKU</url>
+    </video>
+    <video>
+      <id>5</id>
+      <titulo>Sarquis Fermanian - Fast Track</titulo>
+      <url>//www.youtube.com/embed/2vPa1TT-3xY</url>
+    </video>
+    <video>
+      <id>6</id>
+      <titulo>Estúdio Som do Mar | Institucional</titulo>
+      <url>//www.youtube.com/embed/RWOLnEuKGWA</url>
+    </video>
+  </videos>
+</contexto>
