@@ -99,29 +99,9 @@
   </artistas>
   <videos>
     <video>
-      <id>1</id>
-      <titulo>Flavinho Souza | Pseudo Amor</titulo>
-      <url>//www.youtube.com/embed/sX1EmPOwBsU</url>
-    </video>
-    <video>
-      <id>2</id>
-      <titulo>Som do Mar | Anfrísio Rocha</titulo>
-      <url>//www.youtube.com/embed/u6wWBzDvZcE</url>
-    </video>
-    <video>
-      <id>4</id>
-      <titulo>Espera | Anfrísio Rocha</titulo>
-      <url>//www.youtube.com/embed/6gUCAy6rWKU</url>
-    </video>
-    <video>
-      <id>5</id>
-      <titulo>Sarquis Fermanian - Fast Track</titulo>
-      <url>//www.youtube.com/embed/2vPa1TT-3xY</url>
-    </video>
-    <video>
-      <id>6</id>
-      <titulo>Estúdio Som do Mar | Institucional</titulo>
-      <url>//www.youtube.com/embed/RWOLnEuKGWA</url>
+      <titulo>Novo Vídeo</titulo>
+      <url>//www.youtube.com/embed/AJCxRct5csU</url>
+      <id>7</id>
     </video>
   </videos>
 </contexto>

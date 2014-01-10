@@ -233,11 +233,28 @@ var contexto = (function () {
 
         var obterVideoPorId = function (id) {
             var contexto = xml.obterContexto();
+            var videoEncontrado = undefined;
+
             for (var cont in contexto.videos) {
                 if (contexto.videos[cont].id.toString() === id) {
-                    return contexto.videos[cont];
+                    videoEncontrado = contexto.videos[cont];
                 }
             }
+
+            return videoEncontrado;
+        };
+
+        var obterVideoPorTitulo = function (titulo) {
+            var contexto = xml.obterContexto();
+            var videoEncontrado = undefined;
+
+            for (var cont in contexto.videos) {
+                if (contexto.videos[cont].titulo === titulo) {
+                    videoEncontrado = contexto.videos[cont];
+                }
+            }
+
+            return videoEncontrado;
         };
 
         var incluirNovoVideo = function (novoVideo) {
@@ -281,6 +298,7 @@ var contexto = (function () {
             videos: {
                 obterTodos: obterTodosOsVideos,
                 obterPorId: obterVideoPorId,
+                obterPorTitulo: obterVideoPorTitulo,
                 incluir: incluirNovoVideo,
                 excluirPorId: excluirVideoPorId
             }

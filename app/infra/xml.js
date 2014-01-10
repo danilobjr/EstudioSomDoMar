@@ -22,7 +22,7 @@ var corrigirJSONContexto = function (contexto) {
         contexto.artistas[i].musicas = contexto.artistas[i].musicas.musica;
 
         if (!util.isArray(contexto.artistas[i].musicas)) {
-            contexto.artistas[i].musicas = [ contexto.artistas[i].musicas ];
+            contexto.artistas[i].musicas = [contexto.artistas[i].musicas];
         }
     }
 
@@ -31,6 +31,10 @@ var corrigirJSONContexto = function (contexto) {
     //console.log(contexto.artistas[1]);
 
     contexto.videos = contexto.videos.video;
+
+    if (!util.isArray(contexto.videos)) {
+        contexto.videos = [contexto.videos];
+    }
 }
 
 var tornarDadosBrutos = function (dados) {

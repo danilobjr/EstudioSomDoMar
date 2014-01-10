@@ -19,7 +19,8 @@ exports.incluir = function (req, res) {
         };
         var videoCriado = videoGerente.incluir(novoVideo);
         resultado.sucesso = true;
-        resultado.mensagem = 'Vídeo ' + videoExcluido.titulo + ' incluído com sucesso';
+        resultado.mensagem = 'Vídeo incluído com sucesso';
+        //'Vídeo <b>' + videoExcluido.titulo + '</b> incluído com sucesso';
     } catch (error) {
         resultado.mensagem = 'Erro ao incluir vídeo: ' + error;
     }
@@ -41,7 +42,8 @@ exports.excluir = function (req, res) {
         }
 
         resultado.sucesso = true;
-        resultado.mensagem = 'Vídeo ' + videoExcluido.titulo + ' excluído com sucesso';
+        resultado.mensagem = 'Vídeo excluído com sucesso';
+        //'Vídeo <b>' + videoExcluido.titulo + '</b> excluído com sucesso';
     } catch (error) {
         resultado.mensagem = 'Erro ao excluir vídeo: ' + error;
     }
