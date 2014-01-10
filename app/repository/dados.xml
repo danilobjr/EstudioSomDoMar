@@ -76,6 +76,26 @@
         </musica>
       </musicas>
     </artista>
+    <artista>
+      <id>2</id>
+      <nome>Flavinho Souza</nome>
+      <dados>
+        <email>flavioiconio@hotmail.com</email>
+        <fones>
+          <oi>(85) 8680.5250</oi>
+        </fones>
+        <social>
+          <facebook>www.facebook.com/profile.php?id=100002334138787&amp;ref=ts</facebook>
+        </social>
+      </dados>
+      <musicas>
+        <musica>
+          <nome>Caminho Estreito</nome>
+          <mp3Url>caminho estreito.mp3</mp3Url>
+          <capaAlbumUrl>caminho estreito.jpg</capaAlbumUrl>
+        </musica>
+      </musicas>
+    </artista>
   </artistas>
   <videos>
     <video>

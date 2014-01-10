@@ -5,9 +5,9 @@ exports.index = function (req, res) {
     res.render('artistaIndex', { viewModel: artistas });
 };
 
-//exports.novo = function (req, res) {
-//    res.render('videoNovo');
-//};
+exports.novo = function (req, res) {
+    res.render('artistaNovo');
+};
 
 //exports.incluir = function (req, res) {
 //    var resultado = { sucesso: false, mensagem: '' };
