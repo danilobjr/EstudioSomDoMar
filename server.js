@@ -4,7 +4,8 @@ var express = require('express'),
     path = require('path'),
     home = require('./routes/home'),
     admin = require('./routes/admin'),
-    video = require('./routes/video');
+    video = require('./routes/video'),
+    artista = require('./routes/artista');
 
 var app = express();
 
@@ -33,6 +34,8 @@ app.get('/', home.index);
 app.get('/admin', admin.index);
 app.get('/admin/videos', video.index);
 app.get('/admin/video/novo', video.novo);
+app.get('/admin/artistas', artista.index);
+//app.get('/admin/artista/novo', artista.novo);
 
 // actions
 

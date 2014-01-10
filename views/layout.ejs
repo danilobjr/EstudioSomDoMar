@@ -54,9 +54,6 @@
     <!-- Flot charts --> 
     <script src="/js/plugins/flot/jquery.flot.js"></script> 
     <script src="/js/plugins/flot/jquery.flot.resize.js"></script> 
-
-    <!-- Data tables --> 
-    <script src="/js/plugins/datatables/js/jquery.dataTables.js"></script> 
 </head>
 
 <body>
@@ -87,7 +84,7 @@
     <div class="viewport ">
         <div class="overview collapse">
             <div class="search row-fluid container">
-                <h2>Search</h2>
+                <h2>Busca</h2>
                 <form class="form-search">
                     <div class="input-append">
                         <input type="text" class=" search-query" placeholder="">
@@ -97,7 +94,11 @@
             </div>
 
             <ul id="sidebar_menu" class="navbar nav nav-list container full">
-                <li class="accordion-group active color_4"> <a class="dashboard" href="/admin"><img src="/img/menu_icons/dashboard.png"><span>Dashboard</span></a> </li>
+                <li class="accordion-group active color_4"> 
+                    <a class="dashboard" href="/admin">
+                        <img src="/img/menu_icons/dashboard.png"><span>Dashboard</span>
+                    </a> 
+                </li>
                 <li class="accordion-group color_4"> 
                     <a class="accordion-toggle widgets collapsed " data-toggle="collapse" data-parent="#sidebar_menu" href="#collapse1"> 
                         <img src="/img/menu_icons/gallery.png" alt="" />
@@ -106,6 +107,16 @@
                     <ul id="collapse1" class="accordion-body collapse">
                         <li><a href="/admin/videos">Todos</a></li>
                         <li><a href="/admin/video/novo">Novo</a></li>
+                    </ul>
+                </li>
+                <li class="accordion-group color_12"> 
+                    <a class="accordion-toggle widgets collapsed " data-toggle="collapse" data-parent="#sidebar_menu" href="#collapse2"> 
+                        <img src="/img/menu_icons/gallery.png" alt="" />
+                        <span>Artistas</span>
+                    </a>
+                    <ul id="collapse2" class="accordion-body collapse">
+                        <li><a href="/admin/artistas">Todos</a></li>
+                        <li><a href="/admin/artista/novo">Novo</a></li>
                     </ul>
                 </li>
                 <!--

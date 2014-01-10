@@ -6976,6 +6976,12 @@ table.fc-border-separate {
     margin-bottom: 3px;
 }
 
+/* CUSTOM */
+
+.dataTable {
+    width: 100%;
+}
+
 .dataTables_wrapper {
     position: relative;
     clear: both;
