@@ -19,19 +19,19 @@ module.exports = function () {
     //    }
     //};
 
-    //var excluirPorVideoId = function (id) {
-    //    var videoExcluido = contexto.videos.excluirPorId(id);
+    var excluirPorId = function (id) {
+        var artistaExcluido = contexto.artistas.excluirPorId(id);
 
-    //    if (!videoExcluido) {
-    //        throw new Error('Vídeo já excluído ou não encontrado');
-    //    }
+        if (!artistaExcluido) {
+            throw new Error('Artista já excluído ou não encontrado');
+        }
 
-    //    return videoExcluido;
-    //};
+        return artistaExcluido;
+    };
 
     return {
-        obterTodos: obterTodos
-        //excluirPorId: excluirPorId,
+        obterTodos: obterTodos,
+        excluirPorId: excluirPorId
         //incluir: incluir
     };
 } ();

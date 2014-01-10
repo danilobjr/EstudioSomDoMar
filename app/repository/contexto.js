@@ -224,6 +224,30 @@ var contexto = (function () {
             return contexto.artistas;
         };
 
+        var excluirArtistaPorId = function (id) {
+            var contexto = xml.obterContexto();
+
+            var artistaProcurado = undefined;
+
+            for (var i = 0; i < contexto.artistas.length; i++) {
+                if (contexto.artistas[i].id == id) {
+                    artistaProcurado = contexto.artistas[i];
+                }
+            }
+
+            if (artistaProcurado) {
+                if (contexto.artistas.length > 1) {
+                    var indiceArtista = contexto.artistas.indexOf(artistaProcurado);
+                    contexto.artistas.splice(indiceArtista, 1);
+                    xml.salvar(contexto);
+                } else {
+                    throw new Error('Não é permitido excluir todos os artistas');
+                }
+            }
+
+            return artistaProcurado;
+        };
+
         // Vídeos
 
         var obterTodosOsVideos = function () {
@@ -297,7 +321,8 @@ var contexto = (function () {
                 obterPorDescricao: obterPaginaPorDescricao
             },
             artistas: {
-                obterTodos: obterTodosOsArtistas
+                obterTodos: obterTodosOsArtistas,
+                excluirPorId: excluirArtistaPorId
             },
             videos: {
                 obterTodos: obterTodosOsVideos,

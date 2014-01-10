@@ -41,6 +41,7 @@ app.get('/admin/artistas', artista.index);
 
 app.post('/admin/video/novo', video.incluir);
 app.get('/admin/video/excluir/:id', video.excluir);
+app.get('/admin/artista/excluir/:id', artista.excluir);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

@@ -30,21 +30,21 @@ exports.index = function (req, res) {
 //    res.render('videoIndex', { viewModel: videos, resultado: resultado });
 //};
 
-//exports.excluir = function (req, res) {
-//    var resultado = { sucesso: false, mensagem: '' };
-//    var videos = [];
+exports.excluir = function (req, res) {
+    var resultado = { sucesso: false, mensagem: '' };
+    var artistas = [];
 
-//    try {
-//        var videoExcluido = artistaGerente.excluirPorId(req.params.id);
+    try {
+        var artistaExcluido = artistaGerente.excluirPorId(req.params.id);
 
-//        resultado.sucesso = true;
-//        resultado.mensagem = 'Vídeo excluído com sucesso';
-//        //'Vídeo <b>' + videoExcluido.titulo + '</b> excluído com sucesso';
-//    } catch (error) {
-//        resultado.mensagem = 'Erro ao excluir vídeo: ' + error;
-//    }
+        resultado.sucesso = true;
+        resultado.mensagem = 'Artista excluído com sucesso';
+        //'Artista <b>' + artistaExcluido.nome + '</b> excluído com sucesso';
+    } catch (error) {
+        resultado.mensagem = 'Erro ao excluir artista: ' + error;
+    }
 
-//    videos = artistaGerente.obterTodos();
+    artistas = artistaGerente.obterTodos();
 
-//    res.render('videoIndex', { viewModel: videos, resultado: resultado });
-//};
+    res.render('artistaIndex', { viewModel: artistas, resultado: resultado });
+};

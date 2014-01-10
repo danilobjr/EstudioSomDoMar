@@ -26,9 +26,9 @@
                         <td><%= viewModel[index].nome %></td>
                         <td class="ms ">
                             <div class="btn-group"> 
-                                <a class="btn btn-small" rel="tooltip" data-placement="left" data-original-title=" Edit "><i class="gicon-edit"></i></a> 
-                                <a class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="View"><i class="gicon-eye-open"></i></a> 
-                                <a class="btn  btn-small" rel="tooltip" data-placement="bottom" data-original-title="Remove"><i class="gicon-remove "></i></a> 
+                                <a class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Editar"><i class="gicon-edit"></i></a> 
+                                <a class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Ver detalhes"><i class="gicon-eye-open"></i></a> 
+                                <a href="#exclusaoModal" class="btn btn-small" data-url-exclusao="/admin/artista/excluir/<%= viewModel[index].id %>" data-toggle="modal" rel="tooltip" data-placement="top" data-original-title="Excluir"><i class="gicon-remove "></i></a> 
                             </div>
                         </td>
                     </tr>
@@ -44,7 +44,7 @@
 </div>
 
 <!-- Modal -->
-<div class="modal hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal hide fade" id="exclusaoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></button>
         <h3 id="myModalLabel">Confirmação</h3>
@@ -95,6 +95,13 @@
             }
         });
 
+        $('a[href=#exclusaoModal]').on('click', function (e) {
+            e.preventDefault();
+            var _this = $(e.currentTarget);
+            var urlExclusao = _this.data().urlExclusao;
+            $('a.confirmarExclusao').attr('href', urlExclusao);
+        });
+
         //$.extend( $.fn.dataTableExt.oStdClasses, {
         //"s`": "dataTables_wrapper form-inline"
         //} );
@@ -104,15 +111,6 @@
 
         //});
     });
-
-    //jQuery(function () {
-    //    $('a.excluir').on('click', function (e) {
-    //        e.preventDefault();
-    //        var _this = $(e.currentTarget);
-    //        var urlExclusao = _this.data().urlExclusao;
-    //        $('a.confirmarExclusao').attr('href', urlExclusao);
-    //    });
-    //});
 </script>
 
 <% include partial/mensagem %>

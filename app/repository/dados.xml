@@ -76,32 +76,37 @@
         </musica>
       </musicas>
     </artista>
-    <artista>
-      <id>2</id>
-      <nome>Flavinho Souza</nome>
-      <dados>
-        <email>flavioiconio@hotmail.com</email>
-        <fones>
-          <oi>(85) 8680.5250</oi>
-        </fones>
-        <social>
-          <facebook>www.facebook.com/profile.php?id=100002334138787&amp;ref=ts</facebook>
-        </social>
-      </dados>
-      <musicas>
-        <musica>
-          <nome>Caminho Estreito</nome>
-          <mp3Url>caminho estreito.mp3</mp3Url>
-          <capaAlbumUrl>caminho estreito.jpg</capaAlbumUrl>
-        </musica>
-      </musicas>
-    </artista>
   </artistas>
   <videos>
     <video>
-      <titulo>Novo Vídeo</titulo>
-      <url>//www.youtube.com/embed/AJCxRct5csU</url>
-      <id>7</id>
+      <id>1</id>
+      <titulo>Flavinho Souza | Pseudo Amor</titulo>
+      <url>//www.youtube.com/embed/sX1EmPOwBsU</url>
+    </video>
+    <video>
+      <id>2</id>
+      <titulo>Som do Mar | Anfrísio Rocha</titulo>
+      <url>//www.youtube.com/embed/u6wWBzDvZcE</url>
+    </video>
+    <video>
+      <id>3</id>
+      <titulo>Banda Frequencia 33 || Making Of Gravação</titulo>
+      <url>//www.youtube.com/embed/J3ODdCOAY5E</url>
+    </video>
+    <video>
+      <id>4</id>
+      <titulo>Espera | Anfrísio Rocha</titulo>
+      <url>//www.youtube.com/embed/6gUCAy6rWKU</url>
+    </video>
+    <video>
+      <id>5</id>
+      <titulo>Sarquis Fermanian - Fast Track</titulo>
+      <url>//www.youtube.com/embed/2vPa1TT-3xY</url>
+    </video>
+    <video>
+      <id>6</id>
+      <titulo>Estúdio Som do Mar | Institucional</titulo>
+      <url>//www.youtube.com/embed/RWOLnEuKGWA</url>
     </video>
   </videos>
 </contexto>

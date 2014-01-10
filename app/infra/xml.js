@@ -16,6 +16,10 @@ var corrigirJSONContexto = function (contexto) {
     contexto.paginas[0].banners = contexto.paginas[0].banners.banner;
     contexto.artistas = contexto.artistas.artista;
 
+    if (!util.isArray(contexto.artistas)) {
+        contexto.artistas = [contexto.artistas];
+    }
+
     for (var i = 0; i < contexto.artistas.length; i++) {
         //console.log('Musica ' + i + ': ');
         //console.log(contexto.artistas[i].musicas);
