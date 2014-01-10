@@ -37,10 +37,6 @@ exports.excluir = function (req, res) {
     try {
         var videoExcluido = videoGerente.excluirPorId(req.params.id);
 
-        if (!videoExcluido) {
-            throw new Error('Vídeo já excluído ou não encontrado');
-        }
-
         resultado.sucesso = true;
         resultado.mensagem = 'Vídeo excluído com sucesso';
         //'Vídeo <b>' + videoExcluido.titulo + '</b> excluído com sucesso';

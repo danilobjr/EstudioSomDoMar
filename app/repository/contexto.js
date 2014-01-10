@@ -279,9 +279,13 @@ var contexto = (function () {
             }
 
             if (videoProcurado) {
-                var indiceVideo = contexto.videos.indexOf(videoProcurado);
-                contexto.videos.splice(indiceVideo, 1);
-                xml.salvar(contexto);
+                if (contexto.videos.length > 1) {
+                    var indiceVideo = contexto.videos.indexOf(videoProcurado);
+                    contexto.videos.splice(indiceVideo, 1);
+                    xml.salvar(contexto);
+                } else {
+                    throw new Error('Não é permitido excluir todos os vídeos');
+                }
             }
 
             return videoProcurado;

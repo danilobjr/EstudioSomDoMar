@@ -13,14 +13,20 @@ module.exports = function () {
         var videoJahExiste = obterPorTitulo(novoVideo.titulo);
 
         if (videoJahExiste) {
-            throw new Error('Vídeo já existe');            
+            throw new Error('Vídeo já existe');
         } else {
             return contexto.videos.incluir(novoVideo);
         }
     };
 
     var excluirPorVideoId = function (id) {
-        return contexto.videos.excluirPorId(id);
+        var videoExcluido = contexto.videos.excluirPorId(id);
+
+        if (!videoExcluido) {
+            throw new Error('Vídeo já excluído ou não encontrado');
+        }
+
+        return videoExcluido;
     };
 
     return {
