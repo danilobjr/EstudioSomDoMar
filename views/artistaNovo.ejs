@@ -31,11 +31,11 @@
                         </div>
                     </div>
                     <div class="form-row control-group row-fluid">
-                        <label class="control-label span3" for="fone1">Telefone</label>
+                        <label class="control-label span3" for="fone">Telefones</label>
                         <div class="controls span3">
                             <div class="input-prepend row-fluid">
-                                <!--<input type="tel" id="tipoFone1" name="tipoFone1" class="row-fluid" />-->
-                                <select id="tipoFone1" name="tipoFone1" class="row-fluid">
+                                <!--<input type="tel" id="tipoFone" name="tipoFone" class="row-fluid" />-->
+                                <select id="tipoFone" name="tipoFone" class="row-fluid">
                                     <option value="residencial">Residencial</option>
                                     <option value="oi">Oi</option>
                                     <option value="tim">TIM</option>
@@ -44,15 +44,18 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="controls span5">
+                        <div class="controls span4">
                             <div class="input-prepend row-fluid"> <span class="add-on"><i class="icon-phone"></i></span>
-                                <input type="tel" id="fone1" name="fone1" class="row-fluid" />
+                                <input type="tel" id="fone" name="fone" class="row-fluid" />
                             </div>
                         </div>
-                        <div class="controls span1">
-                            <div class="input-prepend row-fluid"> 
-                                <span class="add-on"><i class="icon-plus"></i></span>
-                            </div>
+                        <div class="btn-controls btn-group inline span1">
+                            <a class="btn adicionarTelefone" href="#">
+                                <span class="icon-plus"></span>
+                            </a>
+                            <!--<a class="btn removerTelefone" href="#">
+                                <span class="icon-minus"></span>
+                            </a>-->
                         </div>
                     </div>
                     <div class="form-row control-group row-fluid">
@@ -69,15 +72,15 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="controls span5">
+                        <div class="controls span4">
                             <div class="input-prepend row-fluid"> <span class="add-on"><i class="icon-facebook"></i></span>
                                 <input type="url" id="social1" name="social1" class="row-fluid" />
                             </div>
                         </div>
-                        <div class="controls span1">
-                            <div class="input-prepend row-fluid"> 
-                                <span class="add-on"><i class="icon-plus"></i></span>
-                            </div>
+                        <div class="btn-controls btn-group inline span1">
+                            <a class="btn adicionarSocial" href="#">
+                                <span class="icon-plus"></span>
+                            </a>
                         </div>
                     </div>
                     <div class="form-actions row-fluid">
@@ -119,20 +122,21 @@
 <script src="/js/jquery.validate.min.js"></script>
 
 <script>
-
-    //$.validator.addMethod(
-    //    "regex",
-    //    function (value, element, regexp) {
-    //        var check = false;
-    //        var re = new RegExp(regexp);
-    //        return this.optional(element) || re.test(value);
-    //    },
-    //    "O código de compartilhamento gerado não é válido"
-    //);
-    //$("form").validate({ debug: true });
-    //$("#article_text").rules("add", { regex: "<iframe" })
-
     $(function () {
+        // Validate form
+
+        //$.validator.addMethod(
+        //    "regex",
+        //    function (value, element, regexp) {
+        //        var check = false;
+        //        var re = new RegExp(regexp);
+        //        return this.optional(element) || re.test(value);
+        //    },
+        //    "O código de compartilhamento gerado não é válido"
+        //);
+        //$("form").validate({ debug: true });
+        //$("#article_text").rules("add", { regex: "<iframe" })
+
         $("#formNovoArtista").validate({
             rules: {
                 nome: {
@@ -167,5 +171,49 @@
         //    var iframe = $(codigoDeCompartilhamento);
         //    campoUrl.val(iframe.attr('src'));
         //});
+
+        // Comportamento dos botões para dicionar controles
+
+        $(document).on('click', '.adicionarTelefone', function (e) {
+            var _this = $(e.currentTarget);
+            var controle = _this.parent().parent();
+            var clone = controle.clone();
+            clone.addClass('offset3');
+            clone.find('label').remove();
+            var controleDeRemocaoExiste = clone.find('.btn-controls').find('.removerTelefone').length;
+
+            if (!controleDeRemocaoExiste) {
+                var controleDeRemocao = $('<a class="btn removerTelefone" href="#"><span class="icon-minus"></span></a>');
+                clone.find('.btn-controls').append(controleDeRemocao);
+            }
+
+            clone.insertAfter(controle);
+        });
+
+        $(document).on('click', '.removerTelefone', function (e) {
+            var _this = $(e.currentTarget);
+            _this.parent().parent().remove();
+        });
+
+        $(document).on('click', '.adicionarSocial', function (e) {
+            var _this = $(e.currentTarget);
+            var controle = _this.parent().parent();
+            var clone = controle.clone();
+            clone.addClass('offset3');
+            clone.find('label').remove();
+            var controleDeRemocaoExiste = clone.find('.btn-controls').find('.removerSocial').length;
+
+            if (!controleDeRemocaoExiste) {
+                var controleDeRemocao = $('<a class="btn removerSocial" href="#"><span class="icon-minus"></span></a>');
+                clone.find('.btn-controls').append(controleDeRemocao);
+            }
+
+            clone.insertAfter(controle);
+        });
+
+        $(document).on('click', '.removerSocial', function (e) {
+            var _this = $(e.currentTarget);
+            _this.parent().parent().remove();
+        });
     });
 </script>
