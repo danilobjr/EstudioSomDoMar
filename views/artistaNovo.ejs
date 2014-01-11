@@ -14,6 +14,8 @@
                         </label>
                         <div class="controls span8">
                             <input id="nome" name="nome" type="text" class="span12"/>
+                            <label for="fone" class="error errorRequired" style="display: none;">Por favor, informe o telefone</label>
+                            <label for="fone" class="error errorMinlength" style="display: none;">O nome precisa ter pelo menos 2 caracteres</label>
                         </div>
                     </div>
                     <div class="form-row control-group row-fluid">
@@ -25,7 +27,7 @@
                         </div>
                     </div>
                     <div class="form-row control-group row-fluid">
-                        <label class="control-label span3" for="email">Email</label>
+                        <label class="control-label span3" for="email">Email *</label>
                         <div class="controls span8">
                             <input id="email" name="email" type="email" class="span12"/>
                         </div>
@@ -46,7 +48,8 @@
                         </div>
                         <div class="controls span4">
                             <div class="input-prepend row-fluid"> <span class="add-on"><i class="icon-phone"></i></span>
-                                <input type="tel" id="fone" name="fone" class="row-fluid" />
+                                <input type="tel" id="fone" name="fone" class="row-fluid ignore" />
+                                <label for="fone" class="error errorRequired" style="display: none;">Por favor, informe o telefone</label>
                             </div>
                         </div>
                         <div class="btn-controls btn-group inline span1">
@@ -137,40 +140,126 @@
         //$("form").validate({ debug: true });
         //$("#article_text").rules("add", { regex: "<iframe" })
 
-        $("#formNovoArtista").validate({
-            rules: {
-                nome: {
-                    required: true,
-                    minlength: 2
-                },
-                site: {
-                    minlength: 4
-                },
-                email: {
-                    minlength: 6
-                }
-            },
-            messages: {
-                nome: {
-                    required: "Por favor, informe o nome do artista",
-                    minlength: "O título precisa conter pelo menos 2 caracteres"
-                },
-                site: {
-                    minlength: "O site precisa conter pelo menos 4 caracteres",
-                    url: 'A URL informada não é válida'
-                },
-                email: {
-                    minlength: "O email precisa conter pelo menos 6 caracteres"
-                }
+        //$("#formNovoArtista").validate({
+        //    rules: {
+        //        nome: {
+        //            required: true,
+        //            minlength: 2
+        //        },
+        //        site: {
+        //            minlength: 4
+        //        },
+        //        email: {
+        //            required: true,
+        //            minlength: 6
+        //        }
+        //        //fone: {
+        //        //    required: true,
+        //        //    minlength: 10
+        //        //}
+        //    },
+        //    messages: {
+        //        nome: {
+        //            required: "Por favor, informe o nome do artista",
+        //            minlength: "O título precisa conter pelo menos 2 caracteres"
+        //        },
+        //        site: {
+        //            minlength: "A URL precisa conter pelo menos 4 caracteres",
+        //            url: 'O URL informada não é válida'
+        //        },
+        //        email: {
+        //            required: 'Por favor, informe o email',
+        //            minlength: "O email precisa conter pelo menos 6 caracteres",
+        //            email: 'O email informado não é válido'
+        //        }
+        //        //fone: {
+        //        //    required: 'Por favor, informe o telefone'
+        //        //}
+        //    },
+        //    ignore: '.ignore',
+        //    ignoreTitle: true
+        //});
+
+        // Erros customizados
+
+        //var gerarErroApenasParaPrimeiroCampoTelefone = function () {
+        //    var haErros = false;
+
+        //    var primeiroTelefone = $('[name=fone]').first();
+
+        //    if (primeiroTelefone.val() === '') {
+        //        haErros = true;
+        //        primeiroTelefone.addClass('error');
+        //        primeiroTelefone.siblings().filter('.errorRequired').show();
+        //    } else {
+        //        primeiroTelefone.removeClass('error');
+        //        primeiroTelefone.siblings().filter('.errorRequired').hide();
+        //    }
+
+        //    return haErros;
+        //};
+
+        var gerarErroRequired = function (e) {
+            var haErros = false;
+            var campo = $(e.currentTarget);
+
+            if (campo.val() === '') {
+                haErros = true;
+                campo.addClass('error');
+                campo.siblings('.error').hide();
+                campo.siblings().filter('.errorRequired').show();
+            } else {
+                campo.removeClass('error');
+                campo.siblings().filter('.errorRequired').hide();
+            }
+
+            return haErros;
+        };
+
+        var gerarErroMinlength = function (e, minlength) {
+            var haErros = false;
+            var campo = $(e.currentTarget);
+
+            if (campo.val().length < minlength) {
+                haErros = true;
+                campo.addClass('error');
+                campo.siblings('.error').hide();
+                campo.siblings().filter('.errorMinlength').show();
+            } else {
+                campo.removeClass('error');
+                campo.siblings().filter('.errorMinlength').hide();
+            }
+
+            return haErros;
+        };
+
+        // campos
+
+        var campoPrimeiroTelefone = $('[name=fone]').first();
+        var campoNome = $('[name=nome]');
+
+        campoPrimeiroTelefone.on('keyup', function (e) { gerarErroRequired(e); });
+        campoNome.on('keyup', function (e) {
+            var haErro = false;
+            debugger;
+            haErro = gerarErroRequired(e);
+
+            if (!haErro) {
+                gerarErroMinlength(e, 2);
             }
         });
 
-        //$("#formNovoVideo").on('submit', function (e) {
-        //    var campoUrl = $('[name=url]');
-        //    var codigoDeCompartilhamento = campoUrl.val();
-        //    var iframe = $(codigoDeCompartilhamento);
-        //    campoUrl.val(iframe.attr('src'));
-        //});
+        $("#formNovoArtista").on('submit', function (e) {
+            debugger;
+            var haErros = false;
+
+            haErros = gerarErroRequired({ currentTarget: campoPrimeiroTelefone });
+            if (haErros) { gerarErroRequired({ currentTarget: campoNome }) } else { haErros = gerarErroRequired({ currentTarget: campoNome }); }
+
+            if (haErros) {
+                e.preventDefault();
+            }
+        });
 
         // Comportamento dos botões para dicionar controles
 
@@ -180,6 +269,11 @@
             var clone = controle.clone();
             clone.addClass('offset3');
             clone.find('label').remove();
+            clone.find('.error').remove();
+            clone.find('select option:selected').removeAttr('selected');
+            var input = clone.find('input');
+            input.val('');
+
             var controleDeRemocaoExiste = clone.find('.btn-controls').find('.removerTelefone').length;
 
             if (!controleDeRemocaoExiste) {
@@ -188,6 +282,7 @@
             }
 
             clone.insertAfter(controle);
+            input.focus();
         });
 
         $(document).on('click', '.removerTelefone', function (e) {
@@ -201,6 +296,11 @@
             var clone = controle.clone();
             clone.addClass('offset3');
             clone.find('label').remove();
+            clone.find('.error').remove();
+            clone.find('select option:selected').removeAttr('selected');
+            var input = clone.find('input');
+            input.val('');
+
             var controleDeRemocaoExiste = clone.find('.btn-controls').find('.removerSocial').length;
 
             if (!controleDeRemocaoExiste) {
@@ -209,6 +309,7 @@
             }
 
             clone.insertAfter(controle);
+            input.focus();
         });
 
         $(document).on('click', '.removerSocial', function (e) {
