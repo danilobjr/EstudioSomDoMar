@@ -55,6 +55,7 @@
                             <div class="input-prepend row-fluid"> <span class="add-on"><i class="icon-phone"></i></span>
                                 <input type="tel" id="telefone" name="telefone" class="row-fluid ignore" alt="phone" placeholder="Número"/>
                                 <label class="error errorRequired" style="display: none;">Por favor, informe o telefone</label>
+                                <label class="error errorMinlength" style="display: none;">O telefone precisa ter pelo menos 14 caracteres</label>
                             </div>
                         </div>
                         <div class="btn-controls btn-group inline span1">
@@ -212,7 +213,7 @@
 
         // campos
 
-        var campoNome = $('[name=nome]');
+        var campoNome = $('[name=nome]').focus();
         var campoSite = $('[name=site]');
         var campoEmail = $('[name=email]');
         var campoPrimeiroTelefone = $('[name=telefone]');
@@ -224,7 +225,16 @@
 
         // eventos
 
-        var verificarErrosDoCampoTelefone = function (e) { gerarErroRequired(e); };
+        var verificarErrosDoCampoTelefone = function (e) { 
+            var haErro = false;
+            haErro = gerarErroRequired(e);
+
+            if (!haErro) {
+                haErro = gerarErroMinlength(e, 14);
+            }
+
+            return haErro;
+        };
         var verificarErrosDoCampoNome = function (e) {
             var haErro = false;
             haErro = gerarErroRequired(e);
@@ -286,18 +296,18 @@
             haErros = verificarErrosDoCampoNome({ currentTarget: campoNome });
             if (haErros) { verificarErrosDoCampoSite({ currentTarget: campoSite }); } else { haErros = verificarErrosDoCampoSite({ currentTarget: campoSite }); }
             if (haErros) { verificarErrosDoCampoEmail({ currentTarget: campoEmail }); } else { haErros = verificarErrosDoCampoEmail({ currentTarget: campoEmail }); }
-            if (haErros) { verificarErrosDoCampoTelefone({ currentTarget: campoPrimeiroTelefone }); } else { haErros = verificarErrosDoCampoTelefone({ currentTarget: campoPrimeiroTelefone }); }
-            //if (haErros) {
-            //    $('[name=telefone]').each(function (i, obj) {
-            //        var _this = $(obj);
-            //        verificarErrosDoCampoTelefone({ currentTarget: _this });
-            //    });
-            //} else {
-            //    $('[name=telefone]').each(function (i, obj) {
-            //        var _this = $(obj);
-            //        haErros = verificarErrosDoCampoTelefone({ currentTarget: campoPrimeiroTelefone });
-            //    });
-            //}
+            //if (haErros) { verificarErrosDoCampoTelefone({ currentTarget: campoPrimeiroTelefone }); } else { haErros = verificarErrosDoCampoTelefone({ currentTarget: campoPrimeiroTelefone }); }
+            if (haErros) {
+                $('[name=telefone]').each(function (i, obj) {
+                    var _this = $(obj);
+                    verificarErrosDoCampoTelefone({ currentTarget: _this });
+                });
+            } else {
+                $('[name=telefone]').each(function (i, obj) {
+                    var _this = $(obj);
+                    haErros = verificarErrosDoCampoTelefone({ currentTarget: _this });
+                });
+            }
             if (haErros) {
                 $('[name=redeSocial]').each(function (i, obj) {
                     var _this = $(obj);
@@ -329,12 +339,13 @@
             var clone = controle.clone();
             clone.addClass('offset3');
             clone.find('label:first').remove();
-            clone.find('.error').remove();
+            //clone.find('.error').remove();
             var select = clone.find('select');
             select.children(':selected').removeAttr('selected');
             var input = clone.find('input');
             input.val('');
             input.setMask();
+            input.on('keyup', verificarErrosDoCampoTelefone);
 
             var controleDeRemocaoExiste = clone.find('.btn-controls').find('.removerTelefone').length;
 

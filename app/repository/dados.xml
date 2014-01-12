@@ -105,16 +105,16 @@
       </musicas>
     </artista>
     <artista>
-      <nome>Fulano de Tal</nome>
-      <site>www.fulano.com</site>
-      <email>fulano@tal.com</email>
+      <nome>Danilo Jr.</nome>
+      <site>www.minhamarcaonline.com</site>
+      <email>danilobjr@gmail.com</email>
       <telefones>
         <telefone>
-          <numero>8532224455</numero>
+          <numero>(85) 3281-5661</numero>
           <tipo>residencial</tipo>
         </telefone>
         <telefone>
-          <numero>8588889999</numero>
+          <numero>(85) 8809-3634</numero>
           <tipo>oi</tipo>
         </telefone>
       </telefones>
