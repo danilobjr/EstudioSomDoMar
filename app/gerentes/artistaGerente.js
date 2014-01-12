@@ -9,6 +9,10 @@ module.exports = function () {
         return contexto.artistas.obterPorNome(nome);
     };
 
+    var obterPorId = function (id) {
+        return contexto.artistas.obterPorId(id);
+    };
+
     var incluir = function (novoArtista) {
         var artistaJahExiste = obterPorNome(novoArtista.nome);
         
@@ -31,6 +35,7 @@ module.exports = function () {
 
     return {
         obterTodos: obterTodos,
+        obterPorId: obterPorId,
         excluirPorId: excluirPorId,
         incluir: incluir
     };

@@ -66,6 +66,13 @@ exports.incluir = function (req, res) {
     res.render('artistaIndex', { viewModel: artistas, resultado: resultado });
 };
 
+exports.editar = function (req, res) {
+    var idArtista = req.params.id;
+    var artista = artistaGerente.obterPorId(idArtista);
+
+    res.render('artistaAlteracao', { viewModel: artista });
+};
+
 exports.excluir = function (req, res) {
     var resultado = { sucesso: false, mensagem: '' };
 

@@ -248,6 +248,15 @@ var contexto = (function () {
             return contexto.artistas;
         };
 
+        var obterArtistaPorId = function (id) {
+            var contexto = xml.obterContexto();
+            for (var cont in contexto.artistas) {
+                if (contexto.artistas[cont].id.toString() === id) {
+                    return contexto.artistas[cont];
+                }
+            }
+        };
+
         var obterArtistaPorNome = function (nome) {
             var contexto = xml.obterContexto();
             var artistaEncontrado = undefined;
@@ -369,6 +378,7 @@ var contexto = (function () {
             },
             artistas: {
                 obterTodos: obterTodosOsArtistas,
+                obterPorId: obterArtistaPorId,
                 obterPorNome: obterArtistaPorNome,
                 incluir: incluirNovoArtista,
                 excluirPorId: excluirArtistaPorId
