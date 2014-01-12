@@ -8,12 +8,9 @@
             <div class="content">
                 <form id="formNovoArtista" method="post" action="/admin/artista/novo" class="form-horizontal cmxform" autocomplete="off">
                     <div class="form-row control-group row-fluid">
-                        <label class="control-label span3" for="nome">
-                            Nome *
-                            <!--<span class="help-block">*</span>-->
-                        </label>
+                        <label class="control-label span3" for="nome">Nome *</label>
                         <div class="controls span8">
-                            <input id="nome" name="nome" type="text" class="span12"/>
+                            <input id="nome" name="nome" type="text" class="span12" />
                             <label class="error errorRequired" style="display: none;">Por favor, informe o telefone</label>
                             <label class="error errorMinlength" style="display: none;">O nome precisa ter pelo menos 2 caracteres</label>
                         </div>
@@ -22,7 +19,7 @@
                         <label class="control-label span3" for="site">Site</label>
                         <div class="controls span8">
                             <div class="input-prepend row-fluid"> <span class="add-on"><i class="icon-link"></i></span>
-                                <input class="row-fluid" type="text" id="site" name="site">
+                                <input class="row-fluid" type="text" id="site" name="site" />
                                 <label class="error errorMinlength" style="display: none;">O site precisa ter pelo menos 5 caracteres</label>
                                 <label class="error errorUrl" style="display: none;">A URL informada não é válida</label>
                             </div>
@@ -31,7 +28,7 @@
                     <div class="form-row control-group row-fluid">
                         <label class="control-label span3" for="email">Email *</label>
                         <div class="controls span8">
-                            <input id="email" name="email" type="text" class="span12"/>
+                            <input id="email" name="email" type="text" class="span12" />
                             <label class="error errorRequired" style="display: none;">Por favor, informe o email</label>
                             <label class="error errorMinlength" style="display: none;">O email precisa ter pelo menos 6 caracteres</label>
                             <label class="error errorEmail" style="display: none;">O email informado não é válido</label>
@@ -41,7 +38,6 @@
                         <label class="control-label span3" for="telefone">Telefones *</label>
                         <div class="controls span3">
                             <div class="input-prepend row-fluid">
-                                <!--<input type="tel" id="tipoTelefone" name="tipoTelefone" class="row-fluid" />-->
                                 <select id="tipoTelefone" name="tipoTelefone" class="row-fluid">
                                     <option value="residencial">Residencial</option>
                                     <option value="oi">Oi</option>
@@ -53,7 +49,7 @@
                         </div>
                         <div class="controls span4">
                             <div class="input-prepend row-fluid"> <span class="add-on"><i class="icon-phone"></i></span>
-                                <input type="tel" id="telefone" name="telefone" class="row-fluid ignore" alt="phone" placeholder="Número"/>
+                                <input type="tel" id="telefone" name="telefone" class="row-fluid ignore" alt="phone" placeholder="Número" />
                                 <label class="error errorRequired" style="display: none;">Por favor, informe o telefone</label>
                                 <label class="error errorMinlength" style="display: none;">O telefone precisa ter pelo menos 14 caracteres</label>
                             </div>
@@ -62,16 +58,12 @@
                             <a class="btn adicionarTelefone" href="#">
                                 <span class="icon-plus"></span>
                             </a>
-                            <!--<a class="btn removerTelefone" href="#">
-                                <span class="icon-minus"></span>
-                            </a>-->
                         </div>
                     </div>
                     <div class="form-row control-group row-fluid">
                         <label class="control-label span3" for="redeSocial">Rede Social</label>
                         <div class="controls span3">
                             <div class="input-prepend row-fluid">
-                                <!--<input type="tel" id="tipoRedeSocial" name="tipoRedeSocial" class="row-fluid" />-->
                                 <select id="tipoRedeSocial" name="tipoRedeSocial" class="row-fluid">
                                     <option value="facebook">Facebook</option>
                                     <option value="twitter">Twitter</option>
@@ -83,7 +75,7 @@
                         </div>
                         <div class="controls span4">
                             <div class="input-prepend row-fluid"> <span class="add-on"><i class="icon-facebook"></i></span>
-                                <input type="text" id="redeSocial" name="redeSocial" class="row-fluid" placeholder="Link de acesso ao perfil"/>
+                                <input type="text" id="redeSocial" name="redeSocial" class="row-fluid" placeholder="Link de acesso ao perfil" />
                                 <label class="error errorMinlength" style="display: none;">O link precisa ter pelo menos 10 caracteres</label>
                                 <label class="error errorUrl" style="display: none;">O link informado não é válido</label>
                             </div>
@@ -96,7 +88,7 @@
                     </div>
                     <div class="form-actions row-fluid">
                         <div class="span12">
-                            <button type="reset" class="btn btn-large btn-secondary pull-right">Cancelar</button>
+                            <a href="/admin/artistas" class="btn btn-large btn-secondary pull-right">Cancelar</a>
                             <button type="submit" class="btn btn-large btn-success pull-right">Salvar</button>
                         </div>
                     </div>
@@ -137,8 +129,6 @@
 
 <script>
     $(function () {
-
-
         // validações
 
         var gerarErroRequired = function (e) {

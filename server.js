@@ -43,6 +43,7 @@ app.get('/admin/artista/alterar/:id', artista.editar);
 app.post('/admin/video/novo', video.incluir);
 app.get('/admin/video/excluir/:id', video.excluir);
 app.post('/admin/artista/novo', artista.incluir);
+app.post('/admin/artista/alterar/dados-pessoais', artista.alterarDadosPessoais);
 app.get('/admin/artista/excluir/:id', artista.excluir);
 
 http.createServer(app).listen(app.get('port'), function(){

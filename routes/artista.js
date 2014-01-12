@@ -73,6 +73,13 @@ exports.editar = function (req, res) {
     res.render('artistaAlteracao', { viewModel: artista });
 };
 
+exports.alterarDadosPessoais = function (req, res) {
+    //var idArtista = req.params.id;
+    //var artista = artistaGerente.obterPorId(idArtista);
+
+    //res.render('artistaAlteracao', { viewModel: artista });
+};
+
 exports.excluir = function (req, res) {
     var resultado = { sucesso: false, mensagem: '' };
 

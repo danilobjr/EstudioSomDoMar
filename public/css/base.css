@@ -3756,9 +3756,15 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini {
     clear: both;
 }
 
+/* CUSTOM */
+
 .tab-content {
-    overflow: auto;
+    /*overflow: auto;*/
+    overflow-x: hidden;
+    overflow-y: auto;
 }
+
+/* END CUSTOM */
 
 .tabs-below>.nav-tabs,.tabs-right>.nav-tabs,.tabs-left>.nav-tabs {
     border-bottom: 0;
