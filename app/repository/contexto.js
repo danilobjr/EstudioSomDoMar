@@ -80,15 +80,15 @@ var contexto = (function () {
                         site: 'www.priscilaribeiro.com.br',
                         email: 'priscilabribeiro@hotmail.com',
                         telefones: [
-                            { 
-                                telefone: { 
+                            {
+                                telefone: {
                                     numero: '(85) 8883.6480',
                                     tipo: 'oi'
                                 }
                             }
                         ],
                         redesSociais: [
-                            { 
+                            {
                                 redeSocial: {
                                     link: 'www.facebook.com/profile.php?id=1012718819&ref=ts',
                                     tipo: 'facebook'
@@ -119,15 +119,15 @@ var contexto = (function () {
                         nome: 'Flavinho Souza',
                         email: 'flavioiconio@hotmail.com',
                         telefones: [
-                            { 
-                                telefone: { 
+                            {
+                                telefone: {
                                     numero: '(85) 8883.6480',
                                     tipo: 'oi'
                                 }
                             }
                         ],
                         redesSociais: [
-                            { 
+                            {
                                 redeSocial: {
                                     link: 'www.facebook.com/profile.php?id=1012718819&ref=ts',
                                     tipo: 'facebook'
@@ -240,6 +240,29 @@ var contexto = (function () {
             return contexto.artistas;
         };
 
+        var obterArtistaPorNome = function (nome) {
+            var contexto = xml.obterContexto();
+            var artistaEncontrado = undefined;
+
+            for (var cont in contexto.artistas) {
+                if (contexto.artistas[cont].nome === nome) {
+                    artistaEncontrado = contexto.artistas[cont];
+                }
+            }
+
+            return artistaEncontrado;
+        };
+
+        var incluirNovoArtista = function (novoArtista) {
+            var contexto = xml.obterContexto();
+            var novoId = obterNovoId(contexto.artistas);
+            novoArtista.id = novoId;
+            contexto.artistas.push(novoArtista);
+            xml.salvar(contexto);
+
+            return novoArtista;
+        };
+
         var excluirArtistaPorId = function (id) {
             var contexto = xml.obterContexto();
 
@@ -338,6 +361,8 @@ var contexto = (function () {
             },
             artistas: {
                 obterTodos: obterTodosOsArtistas,
+                obterPorNome: obterArtistaPorNome,
+                incluir: incluirNovoArtista,
                 excluirPorId: excluirArtistaPorId
             },
             videos: {

@@ -25,7 +25,10 @@ var corrigirJSONContexto = function (contexto) {
         //console.log(contexto.artistas[i].musicas);
         contexto.artistas[i].telefones = contexto.artistas[i].telefones.telefone;
         contexto.artistas[i].redesSociais = contexto.artistas[i].redesSociais.redeSocial;
-        contexto.artistas[i].musicas = contexto.artistas[i].musicas.musica;
+
+        if (contexto.artistas[i].musicas) {
+            contexto.artistas[i].musicas = contexto.artistas[i].musicas.musica;
+        }
 
         if (!util.isArray(contexto.artistas[i].telefones)) {
             contexto.artistas[i].telefones = [contexto.artistas[i].telefones];
@@ -35,7 +38,7 @@ var corrigirJSONContexto = function (contexto) {
             contexto.artistas[i].redesSociais = [contexto.artistas[i].redesSociais];
         }
 
-        if (!util.isArray(contexto.artistas[i].musicas)) {
+        if (contexto.artistas[i].musicas && !util.isArray(contexto.artistas[i].musicas)) {
             contexto.artistas[i].musicas = [contexto.artistas[i].musicas];
         }
     }
@@ -67,8 +70,10 @@ var tornarDadosBrutos = function (dados) {
         dados.artistas[i] = { artista: dados.artistas[i] };
     }
 
-    //console.log('# ANTES: dados.artistas[0].artista.musicas');
-    //console.log(dados.artistas[0].artista.musicas);
+    //console.log('# ANTES: dados.artistas[2]');
+    //console.log(dados.artistas[2].artista.telefones);
+    //console.log(dados.artistas[2].artista.redesSociais);
+    //console.log(dados.artistas[2].artista.musicas);
 
     for (var i = 0; i < dados.artistas.length; i++) {
         for (var k = 0; k < dados.artistas[i].artista.telefones.length; k++) {
@@ -76,11 +81,13 @@ var tornarDadosBrutos = function (dados) {
         }
 
         for (var k = 0; k < dados.artistas[i].artista.redesSociais.length; k++) {
-            dados.artistas[i].artista.redeSociais[k] = { redeSocial: dados.artistas[i].artista.redeSociais[k] };
+            dados.artistas[i].artista.redesSociais[k] = { redeSocial: dados.artistas[i].artista.redesSociais[k] };
         }
 
-        for (var k = 0; k < dados.artistas[i].artista.musicas.length; k++) {
-            dados.artistas[i].artista.musicas[k] = { musica: dados.artistas[i].artista.musicas[k] };
+        if (dados.artistas[i].artista.musicas) {
+            for (var k = 0; k < dados.artistas[i].artista.musicas.length; k++) {
+                dados.artistas[i].artista.musicas[k] = { musica: dados.artistas[i].artista.musicas[k] };
+            }
         }
     }
 

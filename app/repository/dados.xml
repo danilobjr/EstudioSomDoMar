@@ -104,6 +104,32 @@
         </musica>
       </musicas>
     </artista>
+    <artista>
+      <nome>Fulano de Tal</nome>
+      <site>www.fulano.com</site>
+      <email>fulano@tal.com</email>
+      <telefones>
+        <telefone>
+          <numero>8532224455</numero>
+          <tipo>residencial</tipo>
+        </telefone>
+        <telefone>
+          <numero>8588889999</numero>
+          <tipo>oi</tipo>
+        </telefone>
+      </telefones>
+      <redesSociais>
+        <redeSocial>
+          <link>facebook.com</link>
+          <tipo>facebook</tipo>
+        </redeSocial>
+        <redeSocial>
+          <link>twitter.com</link>
+          <tipo>twitter</tipo>
+        </redeSocial>
+      </redesSociais>
+      <id>3</id>
+    </artista>
   </artistas>
   <videos>
     <video>

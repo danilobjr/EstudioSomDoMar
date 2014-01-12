@@ -13,9 +13,6 @@ exports.novo = function (req, res) {
 exports.incluir = function (req, res) {
     var resultado = { sucesso: false, mensagem: '' };
 
-    console.log('POST: ');
-    console.log(req.body);
-
     try {
         var novoArtista = {
             nome: req.body.nome,
@@ -57,13 +54,9 @@ exports.incluir = function (req, res) {
             });
         }
 
-        console.log('Novo Artista: ');
-        console.log(novoArtista);
-
-        //var videoCriado = artistaGerente.incluir(novoVideo);
+        var artistaCriado = artistaGerente.incluir(novoArtista);
         resultado.sucesso = true;
         resultado.mensagem = 'Artista incluído com sucesso';
-        //'Vídeo <b>' + videoExcluido.titulo + '</b> incluído com sucesso';
     } catch (error) {
         resultado.mensagem = 'Erro ao incluir artista: ' + error;
     }
