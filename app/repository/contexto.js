@@ -77,16 +77,24 @@ var contexto = (function () {
                     artista: {
                         id: 1,
                         nome: 'Priscila Ribeiro',
-                        dados: {
-                            site: 'www.priscilaribeiro.com.br',
-                            email: 'priscilabribeiro@hotmail.com',
-                            fones: [
-                                { oi: '(85) 8883.6480' }
-                            ],
-                            social: [
-                                { facebook: 'www.facebook.com/profile.php?id=1012718819&ref=ts' }
-                            ]
-                        },
+                        site: 'www.priscilaribeiro.com.br',
+                        email: 'priscilabribeiro@hotmail.com',
+                        telefones: [
+                            { 
+                                telefone: { 
+                                    numero: '(85) 8883.6480',
+                                    tipo: 'oi'
+                                }
+                            }
+                        ],
+                        redesSociais: [
+                            { 
+                                redeSocial: {
+                                    link: 'www.facebook.com/profile.php?id=1012718819&ref=ts',
+                                    tipo: 'facebook'
+                                }
+                            }
+                        ],
                         musicas: [
                             {
                                 musica: {
@@ -109,15 +117,23 @@ var contexto = (function () {
                     artista: {
                         id: 2,
                         nome: 'Flavinho Souza',
-                        dados: {
-                            email: 'flavioiconio@hotmail.com',
-                            fones: [
-                                { oi: '(85) 8680.5250' }
-                            ],
-                            social: [
-                                { facebook: 'www.facebook.com/profile.php?id=100002334138787&ref=ts' }
-                            ]
-                        },
+                        email: 'flavioiconio@hotmail.com',
+                        telefones: [
+                            { 
+                                telefone: { 
+                                    numero: '(85) 8883.6480',
+                                    tipo: 'oi'
+                                }
+                            }
+                        ],
+                        redesSociais: [
+                            { 
+                                redeSocial: {
+                                    link: 'www.facebook.com/profile.php?id=1012718819&ref=ts',
+                                    tipo: 'facebook'
+                                }
+                            }
+                        ],
                         musicas: [
                             {
                                 musica: {

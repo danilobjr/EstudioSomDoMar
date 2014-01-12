@@ -32,7 +32,6 @@ exports.incluir = function (req, res) {
 
 exports.excluir = function (req, res) {
     var resultado = { sucesso: false, mensagem: '' };
-    var videos = [];
 
     try {
         var videoExcluido = videoGerente.excluirPorId(req.params.id);
@@ -44,7 +43,7 @@ exports.excluir = function (req, res) {
         resultado.mensagem = 'Erro ao excluir vídeo: ' + error;
     }
 
-    videos = videoGerente.obterTodos();
+    var videos = videoGerente.obterTodos();
 
     res.render('videoIndex', { viewModel: videos, resultado: resultado });
 };

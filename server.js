@@ -41,6 +41,7 @@ app.get('/admin/artista/novo', artista.novo);
 
 app.post('/admin/video/novo', video.incluir);
 app.get('/admin/video/excluir/:id', video.excluir);
+app.post('/admin/artista/novo', artista.incluir);
 app.get('/admin/artista/excluir/:id', artista.excluir);
 
 http.createServer(app).listen(app.get('port'), function(){

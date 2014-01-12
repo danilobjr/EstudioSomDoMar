@@ -23,7 +23,17 @@ var corrigirJSONContexto = function (contexto) {
     for (var i = 0; i < contexto.artistas.length; i++) {
         //console.log('Musica ' + i + ': ');
         //console.log(contexto.artistas[i].musicas);
+        contexto.artistas[i].telefones = contexto.artistas[i].telefones.telefone;
+        contexto.artistas[i].redesSociais = contexto.artistas[i].redesSociais.redeSocial;
         contexto.artistas[i].musicas = contexto.artistas[i].musicas.musica;
+
+        if (!util.isArray(contexto.artistas[i].telefones)) {
+            contexto.artistas[i].telefones = [contexto.artistas[i].telefones];
+        }
+
+        if (!util.isArray(contexto.artistas[i].redesSociais)) {
+            contexto.artistas[i].redesSociais = [contexto.artistas[i].redesSociais];
+        }
 
         if (!util.isArray(contexto.artistas[i].musicas)) {
             contexto.artistas[i].musicas = [contexto.artistas[i].musicas];
@@ -61,6 +71,14 @@ var tornarDadosBrutos = function (dados) {
     //console.log(dados.artistas[0].artista.musicas);
 
     for (var i = 0; i < dados.artistas.length; i++) {
+        for (var k = 0; k < dados.artistas[i].artista.telefones.length; k++) {
+            dados.artistas[i].artista.telefones[k] = { telefone: dados.artistas[i].artista.telefones[k] };
+        }
+
+        for (var k = 0; k < dados.artistas[i].artista.redesSociais.length; k++) {
+            dados.artistas[i].artista.redeSociais[k] = { redeSocial: dados.artistas[i].artista.redeSociais[k] };
+        }
+
         for (var k = 0; k < dados.artistas[i].artista.musicas.length; k++) {
             dados.artistas[i].artista.musicas[k] = { musica: dados.artistas[i].artista.musicas[k] };
         }
@@ -99,12 +117,15 @@ exports.obterContexto = function (callback) {
 
     xmlParser.parseString(contexto, function (err, result) {
         contexto = JSON.parse(JSON.stringify(result));
-        //console.log('obterContexto():');
-        //console.log(contexto.contexto.paginas.pagina[0].banners);
+        //console.log('obterContexto() [dados puros]:');
+        //console.log(contexto.contexto.artistas.artista[0]);
         contexto = contexto.contexto;
     });
 
     corrigirJSONContexto(contexto);
+
+    //console.log('obterContexto() [dados corrigidos]:');
+    //console.log(contexto.artistas[0].redesSociais);
 
     return contexto;
 };

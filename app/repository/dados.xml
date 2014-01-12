@@ -53,16 +53,20 @@
     <artista>
       <id>1</id>
       <nome>Priscila Ribeiro</nome>
-      <dados>
-        <site>www.priscilaribeiro.com.br</site>
-        <email>priscilabribeiro@hotmail.com</email>
-        <fones>
-          <oi>(85) 8883.6480</oi>
-        </fones>
-        <social>
-          <facebook>www.facebook.com/profile.php?id=1012718819&amp;ref=ts</facebook>
-        </social>
-      </dados>
+      <site>www.priscilaribeiro.com.br</site>
+      <email>priscilabribeiro@hotmail.com</email>
+      <telefones>
+        <telefone>
+          <numero>(85) 8883.6480</numero>
+          <tipo>oi</tipo>
+        </telefone>
+      </telefones>
+      <redesSociais>
+        <redeSocial>
+          <link>www.facebook.com/profile.php?id=1012718819&amp;ref=ts</link>
+          <tipo>facebook</tipo>
+        </redeSocial>
+      </redesSociais>
       <musicas>
         <musica>
           <nome>Saudade</nome>
@@ -79,15 +83,19 @@
     <artista>
       <id>2</id>
       <nome>Flavinho Souza</nome>
-      <dados>
-        <email>flavioiconio@hotmail.com</email>
-        <fones>
-          <oi>(85) 8680.5250</oi>
-        </fones>
-        <social>
-          <facebook>www.facebook.com/profile.php?id=100002334138787&amp;ref=ts</facebook>
-        </social>
-      </dados>
+      <email>flavioiconio@hotmail.com</email>
+      <telefones>
+        <telefone>
+          <numero>(85) 8883.6480</numero>
+          <tipo>oi</tipo>
+        </telefone>
+      </telefones>
+      <redesSociais>
+        <redeSocial>
+          <link>www.facebook.com/profile.php?id=1012718819&amp;ref=ts</link>
+          <tipo>facebook</tipo>
+        </redeSocial>
+      </redesSociais>
       <musicas>
         <musica>
           <nome>Caminho Estreito</nome>

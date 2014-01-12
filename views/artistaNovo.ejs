@@ -38,11 +38,11 @@
                         </div>
                     </div>
                     <div class="form-row control-group row-fluid">
-                        <label class="control-label span3" for="fone">Telefones *</label>
+                        <label class="control-label span3" for="telefone">Telefones *</label>
                         <div class="controls span3">
                             <div class="input-prepend row-fluid">
-                                <!--<input type="tel" id="tipoFone" name="tipoFone" class="row-fluid" />-->
-                                <select id="tipoFone" name="tipoFone" class="row-fluid">
+                                <!--<input type="tel" id="tipoTelefone" name="tipoTelefone" class="row-fluid" />-->
+                                <select id="tipoTelefone" name="tipoTelefone" class="row-fluid">
                                     <option value="residencial">Residencial</option>
                                     <option value="oi">Oi</option>
                                     <option value="tim">TIM</option>
@@ -53,7 +53,7 @@
                         </div>
                         <div class="controls span4">
                             <div class="input-prepend row-fluid"> <span class="add-on"><i class="icon-phone"></i></span>
-                                <input type="tel" id="fone" name="fone" class="row-fluid ignore" placeholder="Número"/>
+                                <input type="tel" id="telefone" name="telefone" class="row-fluid ignore" placeholder="Número"/>
                                 <label class="error errorRequired" style="display: none;">Por favor, informe o telefone</label>
                             </div>
                         </div>
@@ -67,11 +67,11 @@
                         </div>
                     </div>
                     <div class="form-row control-group row-fluid">
-                        <label class="control-label span3" for="social">Rede Social</label>
+                        <label class="control-label span3" for="redeSocial">Rede Social</label>
                         <div class="controls span3">
                             <div class="input-prepend row-fluid">
-                                <!--<input type="tel" id="tipoSocial" name="tipoSocial" class="row-fluid" />-->
-                                <select id="tipoSocial" name="tipoSocial" class="row-fluid">
+                                <!--<input type="tel" id="tipoRedeSocial" name="tipoRedeSocial" class="row-fluid" />-->
+                                <select id="tipoRedeSocial" name="tipoRedeSocial" class="row-fluid">
                                     <option value="facebook">Facebook</option>
                                     <option value="twitter">Twitter</option>
                                     <option value="googleplus">Google+</option>
@@ -82,7 +82,7 @@
                         </div>
                         <div class="controls span4">
                             <div class="input-prepend row-fluid"> <span class="add-on"><i class="icon-facebook"></i></span>
-                                <input type="text" id="social" name="social" class="row-fluid" placeholder="Link de acesso ao perfil"/>
+                                <input type="text" id="redeSocial" name="redeSocial" class="row-fluid" placeholder="Link de acesso ao perfil"/>
                                 <label class="error errorMinlength" style="display: none;">O link precisa ter pelo menos 5 caracteres</label>
                                 <label class="error errorUrl" style="display: none;">O link informado não é válido</label>
                             </div>
@@ -133,79 +133,6 @@
 
 <script>
     $(function () {
-        // Validate form
-
-        //$.validator.addMethod(
-        //    "regex",
-        //    function (value, element, regexp) {
-        //        var check = false;
-        //        var re = new RegExp(regexp);
-        //        return this.optional(element) || re.test(value);
-        //    },
-        //    "O código de compartilhamento gerado não é válido"
-        //);
-        //$("form").validate({ debug: true });
-        //$("#article_text").rules("add", { regex: "<iframe" })
-
-        //$("#formNovoArtista").validate({
-        //    rules: {
-        //        nome: {
-        //            required: true,
-        //            minlength: 2
-        //        },
-        //        site: {
-        //            minlength: 4
-        //        },
-        //        email: {
-        //            required: true,
-        //            minlength: 6
-        //        }
-        //        //fone: {
-        //        //    required: true,
-        //        //    minlength: 10
-        //        //}
-        //    },
-        //    messages: {
-        //        nome: {
-        //            required: "Por favor, informe o nome do artista",
-        //            minlength: "O título precisa conter pelo menos 2 caracteres"
-        //        },
-        //        site: {
-        //            minlength: "A URL precisa conter pelo menos 4 caracteres",
-        //            url: 'O URL informada não é válida'
-        //        },
-        //        email: {
-        //            required: 'Por favor, informe o email',
-        //            minlength: "O email precisa conter pelo menos 6 caracteres",
-        //            email: 'O email informado não é válido'
-        //        }
-        //        //fone: {
-        //        //    required: 'Por favor, informe o telefone'
-        //        //}
-        //    },
-        //    ignore: '.ignore',
-        //    ignoreTitle: true
-        //});
-
-        // Erros customizados
-
-        //var gerarErroApenasParaPrimeiroCampoTelefone = function () {
-        //    var haErros = false;
-
-        //    var primeiroTelefone = $('[name=fone]').first();
-
-        //    if (primeiroTelefone.val() === '') {
-        //        haErros = true;
-        //        primeiroTelefone.addClass('error');
-        //        primeiroTelefone.siblings().filter('.errorRequired').show();
-        //    } else {
-        //        primeiroTelefone.removeClass('error');
-        //        primeiroTelefone.siblings().filter('.errorRequired').hide();
-        //    }
-
-        //    return haErros;
-        //};
-
         var gerarErroRequired = function (e) {
             var haErros = false;
             var campo = $(e.currentTarget);
@@ -283,8 +210,8 @@
         var campoNome = $('[name=nome]');
         var campoSite = $('[name=site]');
         var campoEmail = $('[name=email]');
-        var campoPrimeiroTelefone = $('[name=fone]').first();
-        var campoPrimeiraRedeSocial = $('[name=social]');
+        var campoPrimeiroTelefone = $('[name=telefone]').first();
+        var campoPrimeiraRedeSocial = $('[name=redeSocial]');
 
         // eventos
 
@@ -323,7 +250,7 @@
 
             return haErro;
         };
-        
+
         var verificarErrosDoCampoRedeSocial = function (e) {
             var haErro = false;
             haErro = gerarErroMinlength(e, 5);
@@ -347,10 +274,31 @@
             var haErros = false;
 
             haErros = verificarErrosDoCampoNome({ currentTarget: campoNome });
-            if (haErros) { verificarErrosDoCampoSite({ currentTarget: campoSite }) } else { haErros = verificarErrosDoCampoSite({ currentTarget: campoSite }); }
-            if (haErros) { verificarErrosDoCampoEmail({ currentTarget: campoEmail }) } else { haErros = verificarErrosDoCampoEmail({ currentTarget: campoEmail }); }
-            if (haErros) { verificarErrosDoCampoTelefone({ currentTarget: campoPrimeiroTelefone }) } else { haErros = verificarErrosDoCampoTelefone({ currentTarget: campoPrimeiroTelefone }); }
-            if (haErros) { verificarErrosDoCampoRedeSocial({ currentTarget: campoPrimeiraRedeSocial }) } else { haErros = verificarErrosDoCampoRedeSocial({ currentTarget: campoPrimeiraRedeSocial }); }
+            if (haErros) { verificarErrosDoCampoSite({ currentTarget: campoSite }); } else { haErros = verificarErrosDoCampoSite({ currentTarget: campoSite }); }
+            if (haErros) { verificarErrosDoCampoEmail({ currentTarget: campoEmail }); } else { haErros = verificarErrosDoCampoEmail({ currentTarget: campoEmail }); }
+            if (haErros) { verificarErrosDoCampoTelefone({ currentTarget: campoPrimeiroTelefone }); } else { haErros = verificarErrosDoCampoTelefone({ currentTarget: campoPrimeiroTelefone }); }
+            //if (haErros) {
+            //    $('[name=telefone]').each(function (i, obj) {
+            //        var _this = $(obj);
+            //        verificarErrosDoCampoTelefone({ currentTarget: _this });
+            //    });
+            //} else {
+            //    $('[name=telefone]').each(function (i, obj) {
+            //        var _this = $(obj);
+            //        haErros = verificarErrosDoCampoTelefone({ currentTarget: campoPrimeiroTelefone });
+            //    });
+            //}
+            if (haErros) {
+                $('[name=redeSocial]').each(function (i, obj) {
+                    var _this = $(obj);
+                    verificarErrosDoCampoRedeSocial({ currentTarget: _this });
+                });
+            } else { 
+                $('[name=redeSocial]').each(function (i, obj) {
+                    var _this = $(obj);
+                    haErros = verificarErrosDoCampoRedeSocial({ currentTarget: _this });
+                });
+            }
 
             var haAlgumaMensagemDeErroSendoExposta = $(e.currentTarget).find('.error:visible').length;
 
@@ -370,7 +318,7 @@
             var controle = _this.parent().parent();
             var clone = controle.clone();
             clone.addClass('offset3');
-            clone.find('label').remove();
+            clone.find('label:first').remove();
             clone.find('.error').remove();
             clone.find('select option:selected').removeAttr('selected');
             var input = clone.find('input');
@@ -397,11 +345,13 @@
             var controle = _this.parent().parent();
             var clone = controle.clone();
             clone.addClass('offset3');
-            clone.find('label').remove();
-            clone.find('.error').remove();
+            clone.find('label:first').remove();
+            //clone.find('.error').remove();
             clone.find('select option:selected').removeAttr('selected');
             var input = clone.find('input');
             input.val('');
+            debugger;
+            input.on('keyup', verificarErrosDoCampoRedeSocial);
 
             var controleDeRemocaoExiste = clone.find('.btn-controls').find('.removerSocial').length;
 
