@@ -95,6 +95,10 @@ var contexto = (function () {
                                 }
                             }
                         ],
+                        background: {
+                            color: '#ffffff',
+                            imagem: ''
+                        },
                         musicas: [
                             {
                                 musica: {
@@ -134,6 +138,10 @@ var contexto = (function () {
                                 }
                             }
                         ],
+                        background: {
+                            color: '#ffffff',
+                            imagem: ''
+                        },
                         musicas: [
                             {
                                 musica: {

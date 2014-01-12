@@ -10,6 +10,7 @@
                 <thead>
                     <tr role="row">
                         <th style="width: 274px;">Nome</th>
+                        <th style="width: 74px;">Perfil Completo</th>
                         <th class="ms no_sort sorting_disabled" aria-label="Actions" style="width: 100px;">Ações</th>
                     </tr>
                 </thead>
@@ -24,6 +25,17 @@
 
                     <tr>
                         <td><%= viewModel[index].nome %></td>
+                        <td>
+                            <% if (typeof viewModel[index].background != 'undefined' && typeof viewModel[index].musicas != 'undefined') { %> 
+
+                                Sim
+
+                            <% } else { %>
+
+                                Não
+
+                            <% } %>
+                        </td>
                         <td class="ms ">
                             <div class="btn-group"> 
                                 <a class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Editar"><i class="gicon-edit"></i></a> 

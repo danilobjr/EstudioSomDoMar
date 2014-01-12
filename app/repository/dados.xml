@@ -67,6 +67,10 @@
           <tipo>facebook</tipo>
         </redeSocial>
       </redesSociais>
+      <background>
+        <color>#ffffff</color>
+        <imagem></imagem>
+      </background>
       <musicas>
         <musica>
           <nome>Saudade</nome>
@@ -96,6 +100,10 @@
           <tipo>facebook</tipo>
         </redeSocial>
       </redesSociais>
+      <background>
+        <color>#ffffff</color>
+        <imagem></imagem>
+      </background>
       <musicas>
         <musica>
           <nome>Caminho Estreito</nome>
