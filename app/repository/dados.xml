@@ -67,20 +67,23 @@
           <tipo>facebook</tipo>
         </redeSocial>
       </redesSociais>
-      <background>
-        <color>#ffffff</color>
-        <imagem></imagem>
-      </background>
+      <imagens>
+        <perfil>imagem.jpg</perfil>
+        <background>
+          <cor>#ffffff</cor>
+          <imagem></imagem>
+        </background>
+      </imagens>
       <musicas>
         <musica>
           <nome>Saudade</nome>
-          <mp3Url>saudade.mp3</mp3Url>
-          <capaAlbumUrl>o_amor_e_suas_cancoes.jpg</capaAlbumUrl>
+          <nomeArquivoMusica>saudade.mp3</nomeArquivoMusica>
+          <nomeArquivoCapaAlbum>o_amor_e_suas_cancoes.jpg</nomeArquivoCapaAlbum>
         </musica>
         <musica>
           <nome>Ah, o amor</nome>
-          <mp3Url>ah_o_amor.mp3</mp3Url>
-          <capaAlbumUrl>ensaio_sobre_a_dor.jpg</capaAlbumUrl>
+          <nomeArquivoMusica>ah_o_amor.mp3</nomeArquivoMusica>
+          <nomeArquivoCapaAlbum>ensaio_sobre_a_dor.jpg</nomeArquivoCapaAlbum>
         </musica>
       </musicas>
     </artista>
@@ -100,21 +103,24 @@
           <tipo>facebook</tipo>
         </redeSocial>
       </redesSociais>
-      <background>
-        <color>#ffffff</color>
-        <imagem></imagem>
-      </background>
+      <imagens>
+        <perfil>imagem.jpg</perfil>
+        <background>
+          <cor>#ffffff</cor>
+          <imagem></imagem>
+        </background>
+      </imagens>
       <musicas>
         <musica>
           <nome>Caminho Estreito</nome>
-          <mp3Url>caminho estreito.mp3</mp3Url>
-          <capaAlbumUrl>caminho estreito.jpg</capaAlbumUrl>
+          <nomeArquivoMusica>caminho estreito.mp3</nomeArquivoMusica>
+          <nomeArquivoCapaAlbum>caminho estreito.jpg</nomeArquivoCapaAlbum>
         </musica>
       </musicas>
     </artista>
     <artista>
       <nome>Danilo Jr.</nome>
-      <site>www.minhamarcaonline.com</site>
+      <site>http://www.about.me/danilojrr</site>
       <email>danilobjr@gmail.com</email>
       <telefones>
         <telefone>
@@ -128,14 +134,19 @@
       </telefones>
       <redesSociais>
         <redeSocial>
-          <link>facebook.com</link>
+          <link>http://www.facebook.com/danilo.juniorr</link>
           <tipo>facebook</tipo>
         </redeSocial>
         <redeSocial>
-          <link>twitter.com</link>
+          <link>http://www.twitter.com/danilojrr</link>
           <tipo>twitter</tipo>
         </redeSocial>
       </redesSociais>
+      <imagens>
+        <background>
+          <cor>#fff</cor>
+        </background>
+      </imagens>
       <id>3</id>
     </artista>
   </artistas>

@@ -15,10 +15,18 @@ module.exports = function () {
 
     var incluir = function (novoArtista) {
         var artistaJahExiste = obterPorNome(novoArtista.nome);
-        
+
         if (artistaJahExiste) {
             throw new Error('Artista já existe');
         } else {
+            novoArtista.imagens = {
+                //perfil: '',
+                background: {
+                    cor: '#fff'
+                    //imagem: ''
+                }
+            };
+
             return contexto.artistas.incluir(novoArtista);
         }
     };

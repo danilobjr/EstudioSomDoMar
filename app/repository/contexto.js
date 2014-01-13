@@ -95,9 +95,12 @@ var contexto = (function () {
                                 }
                             }
                         ],
-                        background: {
-                            color: '#ffffff',
-                            imagem: ''
+                        imagens: {
+                            perfil: 'imagem.jpg',
+                            background: {
+                                cor: '#ffffff',
+                                imagem: 'imagem.jpg'
+                            }
                         },
                         musicas: [
                             {
@@ -138,9 +141,12 @@ var contexto = (function () {
                                 }
                             }
                         ],
-                        background: {
-                            color: '#ffffff',
-                            imagem: ''
+                        imagens: {
+                            perfil: 'imagem.jpg',
+                            background: {
+                                cor: '#ffffff',
+                                imagem: 'imagem.jpg'
+                            }
                         },
                         musicas: [
                             {

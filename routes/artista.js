@@ -80,6 +80,24 @@ exports.alterarDadosPessoais = function (req, res) {
     //res.render('artistaAlteracao', { viewModel: artista });
 };
 
+exports.alterarImagemPerfil = function (req, res) {
+    var idArtista = req.body.idArtista;
+    var nomeArquivoImagemPerfil = req.body.imagemPerfil;
+
+    console.log(idArtista);
+    console.log(nomeArquivoImagemPerfil);
+    //var artista = artistaGerente.obterPorId(idArtista);
+
+    //res.render('artistaAlteracao', { viewModel: artista });
+};
+
+exports.alterarBackground = function (req, res) {
+    //var idArtista = req.params.id;
+    //var artista = artistaGerente.obterPorId(idArtista);
+
+    //res.render('artistaAlteracao', { viewModel: artista });
+};
+
 exports.excluir = function (req, res) {
     var resultado = { sucesso: false, mensagem: '' };
 
