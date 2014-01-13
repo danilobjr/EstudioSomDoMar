@@ -103,15 +103,15 @@ var contexto = (function () {
                             {
                                 musica: {
                                     nome: 'Saudade',
-                                    mp3Url: 'saudade.mp3',
-                                    capaAlbumUrl: 'o_amor_e_suas_cancoes.jpg'
+                                    nomeArquivoMusica: 'saudade.mp3',
+                                    nomeArquivoCapaAlbum: 'o_amor_e_suas_cancoes.jpg'
                                 }
                             },
                             {
                                 musica: {
                                     nome: 'Ah, o amor',
-                                    mp3Url: 'ah_o_amor.mp3',
-                                    capaAlbumUrl: 'ensaio_sobre_a_dor.jpg'
+                                    nomeArquivoMusica: 'ah_o_amor.mp3',
+                                    nomeArquivoCapaAlbum: 'ensaio_sobre_a_dor.jpg'
                                 }
                             }
                         ]
@@ -146,8 +146,8 @@ var contexto = (function () {
                             {
                                 musica: {
                                     nome: 'Caminho Estreito',
-                                    mp3Url: 'caminho estreito.mp3',
-                                    capaAlbumUrl: 'caminho estreito.jpg'
+                                    nomeArquivoMusica: 'caminho estreito.mp3',
+                                    nomeArquivoCapaAlbum: 'caminho estreito.jpg'
                                 }
                             }
                         ]
