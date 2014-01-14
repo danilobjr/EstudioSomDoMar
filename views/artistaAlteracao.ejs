@@ -345,7 +345,7 @@
                                 <input id="imagemPerfil" name="imagemPerfil" type="text" class="span12" placeholder="Exemplo: imagem_de_perfil.jpg"
                                     <% if (typeof viewModel.imagens.perfil != 'undefined') { %> value="<%= viewModel.imagens.perfil %>" <% } %>/>
                                 <label class="error errorRequired" style="display: none;">Por favor, informe o nome do arquivo referente à imagem</label>
-                                <label class="error errorMinlength" style="display: none;">O nome precisa ter pelo menos 5 caracteres</label>
+                                <label class="error errorMinlength" style="display: none;">O nome do arquivo precisa ter pelo menos 5 caracteres</label>
                             </div>
                         </div>
                         <div class="form-actions row-fluid">
@@ -357,28 +357,30 @@
                     </form>
                 </div>
                 <div class="tab-pane fade" id="background">
-                    <% if (typeof viewModel.imagens == 'undefined') { %>
-                        
-                        <h4>Ainda não há imagens vinculadas a este artista. Vincular pelo menos a imagem de perfil é uma das etapas necessárias para ativar a visualização deste artista no site.</h4>
-
-                    <% } else { %>
-
-                        <% if (typeof viewModel.imagens.perfil == 'undefined') { %>
-                        <% } else { %>
-                        <% } %>
-                        <!--
-                        <form id="formBackground" method="post" action="/admin/artista/alterar/background" class="form-horizontal cmxform" autocomplete="off">
-                            <input type="hidden" name="idArtista" value="<%= viewModel.id %>" />
-                            <div class="form-row control-group row-fluid">
-                                <label class="control-label span3" for="nome">Nome *</label>
-                                <div class="controls span8">
-                                    <input id="nome" name="nome" type="text" class="span12" value="<%= viewModel.nome %>"/>
-                                    <label class="error errorRequired" style="display: none;">Por favor, informe o telefone</label>
-                                    <label class="error errorMinlength" style="display: none;">O nome precisa ter pelo menos 2 caracteres</label>
-                                </div>
+                    <form id="formBackground" method="post" action="/admin/artista/alterar/background" class="form-horizontal cmxform" autocomplete="off">
+                        <input type="hidden" name="idArtista" value="<%= viewModel.id %>" />
+                        <div class="form-row control-group row-fluid">
+                            <label class="control-label span3" for="corFundo">Cor de fundo *</label>
+                            <div class="controls span8">
+                                <input id="corFundo" name="corFundo" type="color" class="span12"
+                                    <% if (typeof viewModel.imagens.background.cor != 'undefined') { %> value="<%= viewModel.imagens.background.cor %>" <% } %>/>
                             </div>
-                        -->
-                    <% } %>
+                        </div>
+                        <div class="form-row control-group row-fluid">
+                            <label class="control-label span3" for="imagemBackground">Imagem de Background</label>
+                            <div class="controls span8">
+                                <input id="imagemBackground" name="imagemBackground" type="text" class="span12" placeholder="Exemplo: artista_background.jpg"
+                                    <% if (typeof viewModel.imagens.background.imagem != 'undefined') { %> value="<%= viewModel.imagens.background.imagem %>" <% } %>/>
+                                <label class="error errorMinlength" style="display: none;">O nome do arquivo precisa ter pelo menos 5 caracteres</label>
+                            </div>
+                        </div>
+                        <div class="form-actions row-fluid">
+                            <div class="span12">
+                                <a href="/admin/artistas" class="btn btn-large btn-secondary pull-right">Cancelar</a>
+                                <button type="submit" class="btn btn-large btn-success pull-right">Salvar</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -419,80 +421,83 @@
 <script src="/js/app/formImagemPerfil.js"></script>
 
 <script>
-    //$(function () {
-    //    // validações
+    $(function () {
+        // validações
 
-    //    var gerarErroRequired = function (e) {
-    //        var haErros = false;
-    //        var campo = $(e.currentTarget);
+        //var gerarErroRequired = function (e) {
+        //    var haErros = false;
+        //    var campo = $(e.currentTarget);
 
-    //        if (campo.val() === '') {
-    //            haErros = true;
-    //            campo.addClass('error');
-    //            campo.siblings('.error').hide();
-    //            campo.siblings().filter('.errorRequired').show();
-    //        } else {
-    //            campo.removeClass('error');
-    //            campo.siblings().filter('.errorRequired').hide();
-    //        }
+        //    if (campo.val() === '') {
+        //        haErros = true;
+        //        campo.addClass('error');
+        //        campo.siblings('.error').hide();
+        //        campo.siblings().filter('.errorRequired').show();
+        //    } else {
+        //        campo.removeClass('error');
+        //        campo.siblings().filter('.errorRequired').hide();
+        //    }
 
-    //        return haErros;
-    //    };
+        //    return haErros;
+        //};
 
-    //    var gerarErroMinlength = function (e, minlength) {
-    //        var haErros = false;
-    //        var campo = $(e.currentTarget);
+        var gerarErroMinlength = function (e, minlength) {
+            var haErros = false;
+            var campo = $(e.currentTarget);
 
-    //        if (campo.val() !== '' && campo.val().length < minlength) {
-    //            haErros = true;
-    //            campo.addClass('error');
-    //            campo.siblings('.error').hide();
-    //            campo.siblings().filter('.errorMinlength').show();
-    //        } else {
-    //            campo.removeClass('error');
-    //            campo.siblings().filter('.errorMinlength').hide();
-    //        }
+            if (campo.val() !== '' && campo.val().length < minlength) {
+                haErros = true;
+                campo.addClass('error');
+                campo.siblings('.error').hide();
+                campo.siblings().filter('.errorMinlength').show();
+            } else {
+                campo.removeClass('error');
+                campo.siblings().filter('.errorMinlength').hide();
+            }
 
-    //        return haErros;
-    //    };
+            return haErros;
+        };
 
-    //    // campos 
+        alert('fazer regex para nomes de arquivos com extensões');
+        [a-zA-Z0-9\.\-\_]{1,}\.{1}[a-zA-Z0-9\.\-\_]{1,4}
 
-    //    var campoImagemPerfil = $('[name=imagemPerfil]');
+        // campos 
 
-    //    // eventos
+        var campoImagemBackground = $('[name=imagemBackground]');
 
-    //    var verificarErrosDoCampoImagemPerfil = function (e) {
-    //        var haErro = false;
-    //        haErro = gerarErroRequired(e);
+        // eventos
 
-    //        if (!haErro) {
-    //            haErro = gerarErroMinlength(e, 5);
-    //        }
+        var verificarErrosDoCampoImagemBackground = function (e) {
+            var haErro = false;
+            //haErro = gerarErroRequired(e);
 
-    //        return haErro;
-    //    };
+            //if (!haErro) {
+                haErro = gerarErroMinlength(e, 5);
+            //}
 
-    //    // bind de eventos
+            return haErro;
+        };
 
-    //    campoImagemPerfil.on('keyup', verificarErrosDoCampoImagemPerfil);
+        // bind de eventos
 
-    //    // disparar verificação de validação de campos no submit do form
+        campoImagemBackground.on('keyup', verificarErrosDoCampoImagemBackground);
 
-    //    $("#formImagemPerfil").on('submit', function (e) {
-    //        var haErros = false;
+        // disparar verificação de validação de campos no submit do form
 
-    //        haErros = verificarErrosDoCampoImagemPerfil({ currentTarget: campoImagemPerfil });
+        $("#formBackground").on('submit', function (e) {
+            var haErros = false;
 
-    //        var haAlgumaMensagemDeErroSendoExposta = $(e.currentTarget).find('.error:visible').length;
+            haErros = verificarErrosDoCampoImagemBackground({ currentTarget: campoImagemBackground });
 
-    //        if (!haErros && haAlgumaMensagemDeErroSendoExposta) {
-    //            haErros = true;
-    //        }
+            var haAlgumaMensagemDeErroSendoExposta = $(e.currentTarget).find('.error:visible').length;
 
-    //        if (haErros) {
-    //            e.preventDefault();
-    //        }
-    //    });
-    //});
+            if (!haErros && haAlgumaMensagemDeErroSendoExposta) {
+                haErros = true;
+            }
+
+            if (haErros) {
+                e.preventDefault();
+            }
+        });
+    });
 </script>
