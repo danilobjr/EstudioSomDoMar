@@ -1,23 +1,6 @@
 $(function () {
     // validações
 
-    var gerarErroRequired = function (e) {
-        var haErros = false;
-        var campo = $(e.currentTarget);
-
-        if (campo.val() === '') {
-            haErros = true;
-            campo.addClass('error');
-            campo.siblings('.error').hide();
-            campo.siblings().filter('.errorRequired').show();
-        } else {
-            campo.removeClass('error');
-            campo.siblings().filter('.errorRequired').hide();
-        }
-
-        return haErros;
-    };
-
     var gerarErroMinlength = function (e, minlength) {
         var haErros = false;
         var campo = $(e.currentTarget);
@@ -39,7 +22,7 @@ $(function () {
         var haErros = false;
         var campo = $(e.currentTarget);
 
-        var regexp = /[a-zA-Z0-9\.\-\_]{1,}\.{1}[a-zA-Z0-9\.\-\_]{1,4}/;
+        var regexp = /[a-zA-Z0-9\.\-\_]{1,}\.{1}[a-zA-Z0-9\.\-\_]{1,4}$/;
 
         if (campo.val() !== '' && !regexp.test(campo.val())) {
             haErros = true;
@@ -56,17 +39,17 @@ $(function () {
 
     // campos 
 
-    var campoImagemPerfil = $('[name=imagemPerfil]');
+    var campoImagemBackground = $('[name=imagemBackground]');
 
     // eventos
 
-    var verificarErrosDoCampoImagemPerfil = function (e) {
+    var verificarErrosDoCampoImagemBackground = function (e) {
         var haErro = false;
-        haErro = gerarErroRequired(e);
+        //haErro = gerarErroRequired(e);
 
-        if (!haErro) {
+        //if (!haErro) {
             haErro = gerarErroMinlength(e, 5);
-        }
+        //}
 
         if (!haErro) {
             haErro = gerarErroNomeArquivo(e);
@@ -77,14 +60,14 @@ $(function () {
 
     // bind de eventos
 
-    campoImagemPerfil.on('keyup', verificarErrosDoCampoImagemPerfil);
+    campoImagemBackground.on('keyup', verificarErrosDoCampoImagemBackground);
 
     // disparar verificação de validação de campos no submit do form
 
-    $("#formImagemPerfil").on('submit', function (e) {
+    $("#formBackground").on('submit', function (e) {
         var haErros = false;
 
-        haErros = verificarErrosDoCampoImagemPerfil({ currentTarget: campoImagemPerfil });
+        haErros = verificarErrosDoCampoImagemBackground({ currentTarget: campoImagemBackground });
 
         var haAlgumaMensagemDeErroSendoExposta = $(e.currentTarget).find('.error:visible').length;
 

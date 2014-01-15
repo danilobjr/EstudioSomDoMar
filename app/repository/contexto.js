@@ -213,6 +213,12 @@ var contexto = (function () {
         var recriar = false;
         xml.criar(dados, recriar);
 
+        // contexto
+
+        var obterInstancia = function () {
+            return xml.obterContexto();
+        };
+
         // métodos úteis
 
         var obterNovoId = function (array) {
@@ -254,8 +260,11 @@ var contexto = (function () {
             return contexto.artistas;
         };
 
-        var obterArtistaPorId = function (id) {
-            var contexto = xml.obterContexto();
+        var obterArtistaPorId = function (id, contexto) {
+            if (!contexto) {
+                contexto = xml.obterContexto();
+            }
+
             for (var cont in contexto.artistas) {
                 if (contexto.artistas[cont].id.toString() === id) {
                     return contexto.artistas[cont];
@@ -284,6 +293,32 @@ var contexto = (function () {
             xml.salvar(contexto);
 
             return novoArtista;
+        };
+
+        var alterarDadosPessoais = function (artistaAlterado) {
+            var contexto = xml.obterContexto();
+            var artistaExistente = obterArtistaPorId(artistaAlterado.id, contexto);
+
+            artistaExistente.nome = artistaAlterado.nome;
+            artistaExistente.site = artistaAlterado.site;
+            artistaExistente.email = artistaAlterado.email;
+            artistaExistente.telefones = artistaAlterado.telefones;
+            artistaExistente.redesSociais = artistaAlterado.redesSociais;
+
+            xml.salvar(contexto);
+
+            return obterArtistaPorId(artistaAlterado.id, contexto);
+        };
+
+        var alterarNomeArquivoImagemPerfil = function (idArtista, nomeArquivoImagemPerfil) {
+            var contexto = xml.obterContexto();
+            var artistaExistente = obterArtistaPorId(idArtista, contexto);
+
+            artistaExistente.imagens.perfil = nomeArquivoImagemPerfil;
+
+            xml.salvar(contexto);
+
+            return obterArtistaPorId(idArtista);
         };
 
         var excluirArtistaPorId = function (id) {
@@ -378,6 +413,7 @@ var contexto = (function () {
         };
 
         return {
+            obterInstancia: obterInstancia,
             paginas: {
                 obterPorId: obterPaginaPorId,
                 obterPorDescricao: obterPaginaPorDescricao
@@ -387,6 +423,8 @@ var contexto = (function () {
                 obterPorId: obterArtistaPorId,
                 obterPorNome: obterArtistaPorNome,
                 incluir: incluirNovoArtista,
+                alterarDadosPessoais: alterarDadosPessoais,
+                alterarNomeArquivoImagemPerfil: alterarNomeArquivoImagemPerfil,
                 excluirPorId: excluirArtistaPorId
             },
             videos: {

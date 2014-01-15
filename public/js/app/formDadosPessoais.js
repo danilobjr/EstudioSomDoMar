@@ -87,7 +87,7 @@ $(function () {
 
     // eventos
 
-    var verificarErrosDoCampoTelefone = function (e) { 
+    var verificarErrosDoCampoTelefone = function (e) {
         var haErro = false;
         haErro = gerarErroRequired(e);
 
@@ -134,7 +134,7 @@ $(function () {
 
     var verificarErrosDoCampoRedeSocial = function (e) {
         var haErro = false;
-            
+
         haErro = gerarErroMinlength(e, 10);
 
         //if (!haErro) {
@@ -200,7 +200,7 @@ $(function () {
         var controle = _this.parent().parent();
         var clone = controle.clone();
         clone.addClass('offset3');
-        clone.find('label:first').remove();
+        clone.children('label').remove();
         //clone.find('.error').remove();
         var select = clone.find('select');
         select.children(':selected').removeAttr('selected');
@@ -230,13 +230,12 @@ $(function () {
         var controle = _this.parent().parent();
         var clone = controle.clone();
         clone.addClass('offset3');
-        clone.find('label:first').remove();
+        clone.children('label').remove();
         //clone.find('.error').remove();
         var select = clone.find('select');
         select.children(':selected').removeAttr('selected');
         var input = clone.find('input');
         input.val('');
-        debugger;
         input.on('keyup', verificarErrosDoCampoRedeSocial);
 
         var controleDeRemocaoExiste = clone.find('.btn-controls').find('.removerSocial').length;

@@ -71,7 +71,7 @@
         <perfil>imagem.jpg</perfil>
         <background>
           <cor>#ffffff</cor>
-          <imagem></imagem>
+          <imagem>imagem.jpg</imagem>
         </background>
       </imagens>
       <musicas>
@@ -107,7 +107,7 @@
         <perfil>imagem.jpg</perfil>
         <background>
           <cor>#ffffff</cor>
-          <imagem></imagem>
+          <imagem>imagem.jpg</imagem>
         </background>
       </imagens>
       <musicas>
@@ -120,7 +120,7 @@
     </artista>
     <artista>
       <nome>Danilo Jr.</nome>
-      <site>http://www.about.me/danilojrr</site>
+      <site>www.minhamarcaonline.com</site>
       <email>danilobjr@gmail.com</email>
       <telefones>
         <telefone>
@@ -144,8 +144,9 @@
       </redesSociais>
       <imagens>
         <background>
-          <cor>#fff</cor>
+          <cor>#ffffff</cor>
         </background>
+        <perfil>imagem_de_perfil.jpeg</perfil>
       </imagens>
       <id>3</id>
     </artista>

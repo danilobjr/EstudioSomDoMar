@@ -180,7 +180,7 @@
                                 <a class="btn adicionarSocial" href="#">
                                     <span class="icon-plus"></span>
                                 </a>
-                                <a class="btn removerTelefone" href="#">
+                                <a class="btn removerSocial" href="#">
                                     <span class="icon-minus"></span>
                                 </a>
                             </div>
@@ -346,6 +346,7 @@
                                     <% if (typeof viewModel.imagens.perfil != 'undefined') { %> value="<%= viewModel.imagens.perfil %>" <% } %>/>
                                 <label class="error errorRequired" style="display: none;">Por favor, informe o nome do arquivo referente à imagem</label>
                                 <label class="error errorMinlength" style="display: none;">O nome do arquivo precisa ter pelo menos 5 caracteres</label>
+                                <label class="error errorNomeArquivo" style="display: none;">Não é permitio espaços, apenas '-' e '_'. É necessário um '.' separando o nome da extensão do arquivo.</label>
                             </div>
                         </div>
                         <div class="form-actions row-fluid">
@@ -372,6 +373,7 @@
                                 <input id="imagemBackground" name="imagemBackground" type="text" class="span12" placeholder="Exemplo: artista_background.jpg"
                                     <% if (typeof viewModel.imagens.background.imagem != 'undefined') { %> value="<%= viewModel.imagens.background.imagem %>" <% } %>/>
                                 <label class="error errorMinlength" style="display: none;">O nome do arquivo precisa ter pelo menos 5 caracteres</label>
+                                <label class="error errorNomeArquivo" style="display: none;">Não é permitio espaços, apenas '-' e '_'. É necessário um '.' separando o nome da extensão do arquivo.</label>
                             </div>
                         </div>
                         <div class="form-actions row-fluid">
@@ -419,85 +421,6 @@
 <script src="/js/jquery.meio.mask.min.js"></script>
 <script src="/js/app/formDadosPessoais.js"></script>
 <script src="/js/app/formImagemPerfil.js"></script>
+<script src="/js/app/formBackground.js"></script>
 
-<script>
-    $(function () {
-        // validações
-
-        //var gerarErroRequired = function (e) {
-        //    var haErros = false;
-        //    var campo = $(e.currentTarget);
-
-        //    if (campo.val() === '') {
-        //        haErros = true;
-        //        campo.addClass('error');
-        //        campo.siblings('.error').hide();
-        //        campo.siblings().filter('.errorRequired').show();
-        //    } else {
-        //        campo.removeClass('error');
-        //        campo.siblings().filter('.errorRequired').hide();
-        //    }
-
-        //    return haErros;
-        //};
-
-        var gerarErroMinlength = function (e, minlength) {
-            var haErros = false;
-            var campo = $(e.currentTarget);
-
-            if (campo.val() !== '' && campo.val().length < minlength) {
-                haErros = true;
-                campo.addClass('error');
-                campo.siblings('.error').hide();
-                campo.siblings().filter('.errorMinlength').show();
-            } else {
-                campo.removeClass('error');
-                campo.siblings().filter('.errorMinlength').hide();
-            }
-
-            return haErros;
-        };
-
-        alert('fazer regex para nomes de arquivos com extensões');
-        [a-zA-Z0-9\.\-\_]{1,}\.{1}[a-zA-Z0-9\.\-\_]{1,4}
-
-        // campos 
-
-        var campoImagemBackground = $('[name=imagemBackground]');
-
-        // eventos
-
-        var verificarErrosDoCampoImagemBackground = function (e) {
-            var haErro = false;
-            //haErro = gerarErroRequired(e);
-
-            //if (!haErro) {
-                haErro = gerarErroMinlength(e, 5);
-            //}
-
-            return haErro;
-        };
-
-        // bind de eventos
-
-        campoImagemBackground.on('keyup', verificarErrosDoCampoImagemBackground);
-
-        // disparar verificação de validação de campos no submit do form
-
-        $("#formBackground").on('submit', function (e) {
-            var haErros = false;
-
-            haErros = verificarErrosDoCampoImagemBackground({ currentTarget: campoImagemBackground });
-
-            var haAlgumaMensagemDeErroSendoExposta = $(e.currentTarget).find('.error:visible').length;
-
-            if (!haErros && haAlgumaMensagemDeErroSendoExposta) {
-                haErros = true;
-            }
-
-            if (haErros) {
-                e.preventDefault();
-            }
-        });
-    });
-</script>
+<% include partial/mensagem %>

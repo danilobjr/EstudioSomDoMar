@@ -19,16 +19,24 @@ module.exports = function () {
         if (artistaJahExiste) {
             throw new Error('Artista já existe');
         } else {
+
+            // propriedades padrão na criação de um novo artista
             novoArtista.imagens = {
-                //perfil: '',
                 background: {
-                    cor: '#fff'
-                    //imagem: ''
+                    cor: '#ffffff'
                 }
             };
 
             return contexto.artistas.incluir(novoArtista);
         }
+    };
+
+    var alterarDadosPessoais = function (artistaAlterado) {
+        return contexto.artistas.alterarDadosPessoais(artistaAlterado);
+    };
+
+    var alterarNomeArquivoImagemPerfil = function (idArtista, nomeArquivoImagemPerfil) {
+        return contexto.artistas.alterarNomeArquivoImagemPerfil(idArtista, nomeArquivoImagemPerfil);
     };
 
     var excluirPorId = function (id) {
@@ -44,7 +52,9 @@ module.exports = function () {
     return {
         obterTodos: obterTodos,
         obterPorId: obterPorId,
-        excluirPorId: excluirPorId,
-        incluir: incluir
+        incluir: incluir,
+        alterarDadosPessoais: alterarDadosPessoais,
+        alterarNomeArquivoImagemPerfil: alterarNomeArquivoImagemPerfil,
+        excluirPorId: excluirPorId
     };
 } ();

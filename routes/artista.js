@@ -74,21 +74,86 @@ exports.editar = function (req, res) {
 };
 
 exports.alterarDadosPessoais = function (req, res) {
-    //var idArtista = req.params.id;
-    //var artista = artistaGerente.obterPorId(idArtista);
+    var idArtista = req.body.idArtista;
+    var artistaAlterado = {};
+    var resultado = { sucesso: false, mensagem: '' };
 
-    //res.render('artistaAlteracao', { viewModel: artista });
+    try {
+        artistaAlterado = {
+            id: idArtista,
+            nome: req.body.nome,
+            site: req.body.site,
+            email: req.body.email,
+            telefones: [],
+            redesSociais: []
+        };
+
+        if (util.isArray(req.body.telefone)) {
+            var telefones = req.body.telefone;
+            var tiposTelefone = req.body.tipoTelefone;
+            for (var i = 0; i < telefones.length; i++) {
+                artistaAlterado.telefones.push({
+                    numero: telefones[i],
+                    tipo: tiposTelefone[i]
+                });
+            }
+        } else {
+            artistaAlterado.telefones.push({
+                numero: req.body.telefone,
+                tipo: req.body.tipoTelefone
+            });
+        }
+
+        if (util.isArray(req.body.redeSocial)) {
+            var redesSociais = req.body.redeSocial;
+            var tiposRedeSocial = req.body.tipoRedeSocial;
+            for (var i = 0; i < redesSociais.length; i++) {
+                if (redesSociais[i]) {
+                    artistaAlterado.redesSociais.push({
+                        link: redesSociais[i],
+                        tipo: tiposRedeSocial[i]
+                    });
+                }
+            }
+        } else {
+            if (redesSociais[i]) {
+                artistaAlterado.redesSociais.push({
+                    link: req.body.redeSocial,
+                    tipo: req.body.tipoRedeSocial
+                });
+            }
+        }
+
+        artistaAlterado = artistaGerente.alterarDadosPessoais(artistaAlterado);
+        resultado.sucesso = true;
+        resultado.mensagem = 'Artista incluído com sucesso';
+    } catch (error) {
+        artistaAlterado = artistaGerente.obterPorId(idArtista);
+        resultado.mensagem = 'Erro ao incluir artista: ' + error;
+    }
+
+    res.render('artistaAlteracao', { viewModel: artistaAlterado, resultado: resultado });
 };
 
 exports.alterarImagemPerfil = function (req, res) {
-    var idArtista = req.body.idArtista;
-    var nomeArquivoImagemPerfil = req.body.imagemPerfil;
+    var idArtista = req.body.idArtista,
+        nomeArquivoImagemPerfil = req.body.imagemPerfil,
+        resultado = { sucesso: false, mensagem: '' };
 
-    console.log(idArtista);
-    console.log(nomeArquivoImagemPerfil);
-    //var artista = artistaGerente.obterPorId(idArtista);
+    try {
+        artistaGerente.alterarNomeArquivoImagemPerfil(idArtista, nomeArquivoImagemPerfil);
 
-    //res.render('artistaAlteracao', { viewModel: artista });
+        resultado.sucesso = true;
+        resultado.mensagem = 'Imagem de perfil alterada com sucesso';
+    } catch (error) {
+        resultado.mensagem = 'Erro ao alterar imagem de perfil: ' + error;
+        console.log(error);
+        console.trace(error);
+    }
+
+    var artistaAlterado = artistaGerente.obterPorId(idArtista);
+
+    res.render('artistaAlteracao', { viewModel: artistaAlterado, resultado: resultado });
 };
 
 exports.alterarBackground = function (req, res) {
