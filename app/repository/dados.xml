@@ -156,11 +156,6 @@
           <arquivoMusica>mais_alto.mp3</arquivoMusica>
           <arquivoCapaAlbum>oficinag3_capa_cd.jpg</arquivoCapaAlbum>
         </musica>
-        <musica>
-          <nome>Eu Sou</nome>
-          <arquivoMusica>eu_sou.mp3</arquivoMusica>
-          <arquivoCapaAlbum>oficinag3_capa_cd.jpg</arquivoCapaAlbum>
-        </musica>
       </musicas>
     </artista>
   </artistas>
