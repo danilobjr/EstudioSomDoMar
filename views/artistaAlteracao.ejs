@@ -379,7 +379,7 @@
                         <div class="form-actions row-fluid">
                             <div class="span12">
                                 <a href="/admin/artistas" class="btn btn-large btn-secondary pull-right">Cancelar</a>
-                                <button type="submit" class="btn btn-large btn-success pull-right">Salvar</button>
+                                <button type="submit" class="btn btn-large btn-success pull-right" disabled>Salvar</button>
                             </div>
                         </div>
                     </form>
@@ -394,7 +394,7 @@
     <!-- End .span6 -->
 </div>
 
-<!-- Modal -->
+<!-- Modal Instruções -->
 
 <div id="instrucoesModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-header">
@@ -417,10 +417,12 @@
     </div>
 </div>
 
+<!-- Modal Mensagem -->
+
+<% include partial/mensagem %>
+
 <script src="/js/jquery.validate.min.js"></script>
 <script src="/js/jquery.meio.mask.min.js"></script>
 <script src="/js/app/formDadosPessoais.js"></script>
 <script src="/js/app/formImagemPerfil.js"></script>
 <script src="/js/app/formBackground.js"></script>
-
-<% include partial/mensagem %>

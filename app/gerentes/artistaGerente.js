@@ -39,6 +39,10 @@ module.exports = function () {
         return contexto.artistas.alterarNomeArquivoImagemPerfil(idArtista, nomeArquivoImagemPerfil);
     };
 
+    var alterarBackground = function (idArtista, corDeFundo, nomeArquivoImagemBackground) {
+
+    };
+
     var excluirPorId = function (id) {
         var artistaExcluido = contexto.artistas.excluirPorId(id);
 

@@ -39,6 +39,7 @@ $(function () {
 
     // campos 
 
+    var campoCorDeFundo = $('[name=corFundo]');
     var campoImagemBackground = $('[name=imagemBackground]');
 
     // eventos
@@ -48,7 +49,7 @@ $(function () {
         //haErro = gerarErroRequired(e);
 
         //if (!haErro) {
-            haErro = gerarErroMinlength(e, 5);
+        haErro = gerarErroMinlength(e, 5);
         //}
 
         if (!haErro) {
@@ -58,8 +59,16 @@ $(function () {
         return haErro;
     };
 
+    var habilitarBotaoSalvar = function (e) {
+        var _this = $(e.currentTarget);
+        var botaoSalvarDoForm = _this.closest('form').find('[type=submit]');
+        botaoSalvarDoForm.attr('disabled', false);
+    };
+
     // bind de eventos
 
+    campoCorDeFundo.on('change', habilitarBotaoSalvar);
+    campoImagemBackground.on('keyup', habilitarBotaoSalvar);
     campoImagemBackground.on('keyup', verificarErrosDoCampoImagemBackground);
 
     // disparar verificação de validação de campos no submit do form

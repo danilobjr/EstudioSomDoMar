@@ -147,8 +147,6 @@ exports.alterarImagemPerfil = function (req, res) {
         resultado.mensagem = 'Imagem de perfil alterada com sucesso';
     } catch (error) {
         resultado.mensagem = 'Erro ao alterar imagem de perfil: ' + error;
-        console.log(error);
-        console.trace(error);
     }
 
     var artistaAlterado = artistaGerente.obterPorId(idArtista);
@@ -157,10 +155,23 @@ exports.alterarImagemPerfil = function (req, res) {
 };
 
 exports.alterarBackground = function (req, res) {
-    //var idArtista = req.params.id;
-    //var artista = artistaGerente.obterPorId(idArtista);
+    var idArtista = req.body.idArtista,
+        corDeFundo = req.body.corFundo,
+        nomeArquivoImagemBackground = req.body.imagemBackground,
+        resultado = { sucesso: false, mensagem: '' };
 
-    //res.render('artistaAlteracao', { viewModel: artista });
+    try {
+        artistaGerente.alterarBackground(idArtista, corDeFundo, nomeArquivoImagemBackground);
+
+        resultado.sucesso = true;
+        resultado.mensagem = 'Background alterado com sucesso';
+    } catch (error) {
+        resultado.mensagem = 'Erro ao alterar background: ' + error;
+    }
+
+    var artistaAlterado = artistaGerente.obterPorId(idArtista);
+
+    res.render('artistaAlteracao', { viewModel: artistaAlterado, resultado: resultado });
 };
 
 exports.excluir = function (req, res) {
