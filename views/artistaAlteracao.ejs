@@ -228,7 +228,7 @@
 
                         <% if (typeof viewModel.musicas == 'undefined') { %>
 
-                            <div class="form-row control-group row-fluid">
+                            <!--<div class="form-row control-group row-fluid">
                                 <div class="row-fluid">
                                     <label class="control-label span2" for="nome">Músicas *</label>
                                     <div class="controls span3">
@@ -236,14 +236,14 @@
                                         <label class="error errorRequired" style="display: none;">Por favor, informe o nome da música</label>
                                     </div>
                                     <div class="controls span6">
-                                        <input type="text" id="nomeArquivoMusica" name="nomeArquivoMusica" class="row-fluid" placeholder="Nome do Arquivo (MP3) da Música. Ex.: minha_cancao.mp3" />
+                                        <input type="text" id="nomeArquivoMusica" name="nomeArquivoMusica" class="row-fluid" placeholder="Arquivo MP3. Ex.: minha_cancao.mp3" />
                                         <label class="error errorRequired" style="display: none;">Por favor, informe o nome do arquivo da música</label>
                                         <label class="error errorMinlength" style="display: none;">O telefone precisa ter pelo menos 5 caracteres</label>
                                     </div>
                                 </div>
                                 <div class="row-fluid offset2">
                                     <div class="controls span3">
-                                        <input type="text" id="nomeArquivoCapaAlbum" name="nomeArquivoCapaAlbum" class="row-fluid" placeholder="Nome do Arquivo (imagem) da Capa do Álbum. Ex.: capa_cd.jpg" />
+                                        <input type="text" id="nomeArquivoCapaAlbum" name="nomeArquivoCapaAlbum" class="row-fluid" placeholder="Arquivo imagem da Capa do CD. Ex.: capa_cd.jpg" />
                                         <label class="error errorRequired" style="display: none;">Por favor, informe o nome do arquivo da capa dp álbum</label>
                                         <label class="error errorMinlength" style="display: none;">O telefone precisa ter pelo menos 5 caracteres</label>
                                     </div>
@@ -253,6 +253,29 @@
                                         </a>
                                     </div>
                                 </div>
+                            </div>-->
+
+                            <div class="form-row control-group control-with-many-inputs row-fluid">
+                                    <label class="control-label span2" for="nome">Músicas *</label>
+                                    <div class="controls span8">
+                                        <input type="text" id="nomeMusica" name="nomeMusica" class="row-fluid" placeholder="Nome da Música" />
+                                        <label class="error errorRequired" style="display: none;">Por favor, informe o nome da música</label>
+                                    </div>
+                                    <div class="controls span8 offset2">
+                                        <input type="text" id="nomeArquivoMusica" name="nomeArquivoMusica" class="row-fluid" placeholder="Arquivo MP3. Ex.: minha_cancao.mp3" />
+                                        <label class="error errorRequired" style="display: none;">Por favor, informe o nome do arquivo da música</label>
+                                        <label class="error errorMinlength" style="display: none;">O telefone precisa ter pelo menos 5 caracteres</label>
+                                    </div>
+                                    <div class="controls span8 offset2">
+                                        <input type="text" id="nomeArquivoCapaAlbum" name="nomeArquivoCapaAlbum" class="row-fluid" placeholder="Arquivo imagem da Capa do CD. Ex.: capa_cd.jpg" />
+                                        <label class="error errorRequired" style="display: none;">Por favor, informe o nome do arquivo da capa dp álbum</label>
+                                        <label class="error errorMinlength" style="display: none;">O telefone precisa ter pelo menos 5 caracteres</label>
+                                    </div>
+                                    <div class="btn-controls btn-group inline span1">
+                                        <a class="btn adicionarMusica" href="#">
+                                            <span class="icon-plus"></span>
+                                        </a>
+                                    </div>
                             </div>
 
                         <% } else { %>

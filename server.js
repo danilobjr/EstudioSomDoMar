@@ -44,6 +44,7 @@ app.post('/admin/video/novo', video.incluir);
 app.get('/admin/video/excluir/:id', video.excluir);
 app.post('/admin/artista/novo', artista.incluir);
 app.post('/admin/artista/alterar/dados-pessoais', artista.alterarDadosPessoais);
+//app.post('/admin/artista/alterar/musicas', artista.alterarMusicas);
 app.post('/admin/artista/alterar/imagem-perfil', artista.alterarImagemPerfil);
 app.post('/admin/artista/alterar/background', artista.alterarBackground);
 app.get('/admin/artista/excluir/:id', artista.excluir);
