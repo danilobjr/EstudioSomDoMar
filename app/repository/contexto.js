@@ -106,15 +106,15 @@ var contexto = (function () {
                             {
                                 musica: {
                                     nome: 'Saudade',
-                                    nomeArquivoMusica: 'saudade.mp3',
-                                    nomeArquivoCapaAlbum: 'o_amor_e_suas_cancoes.jpg'
+                                    arquivoMusica: 'saudade.mp3',
+                                    arquivoCapaAlbum: 'o_amor_e_suas_cancoes.jpg'
                                 }
                             },
                             {
                                 musica: {
                                     nome: 'Ah, o amor',
-                                    nomeArquivoMusica: 'ah_o_amor.mp3',
-                                    nomeArquivoCapaAlbum: 'ensaio_sobre_a_dor.jpg'
+                                    arquivoMusica: 'ah_o_amor.mp3',
+                                    arquivoCapaAlbum: 'ensaio_sobre_a_dor.jpg'
                                 }
                             }
                         ]
@@ -152,8 +152,8 @@ var contexto = (function () {
                             {
                                 musica: {
                                     nome: 'Caminho Estreito',
-                                    nomeArquivoMusica: 'caminho estreito.mp3',
-                                    nomeArquivoCapaAlbum: 'caminho estreito.jpg'
+                                    arquivoMusica: 'caminho estreito.mp3',
+                                    arquivoCapaAlbum: 'caminho estreito.jpg'
                                 }
                             }
                         ]
@@ -307,7 +307,18 @@ var contexto = (function () {
 
             xml.salvar(contexto);
 
-            return obterArtistaPorId(artistaAlterado.id, contexto);
+            return obterArtistaPorId(artistaAlterado.id);
+        };
+
+        var alterarMusicas = function (idArtista, musicas) {
+            var contexto = xml.obterContexto();
+            var artistaExistente = obterArtistaPorId(idArtista, contexto);
+
+            artistaExistente.musicas = musicas;
+
+            xml.salvar(contexto);
+
+            return obterArtistaPorId(idArtista);
         };
 
         var alterarNomeArquivoImagemPerfil = function (idArtista, nomeArquivoImagemPerfil) {
@@ -439,6 +450,7 @@ var contexto = (function () {
                 obterPorNome: obterArtistaPorNome,
                 incluir: incluirNovoArtista,
                 alterarDadosPessoais: alterarDadosPessoais,
+                alterarMusicas: alterarMusicas,
                 alterarNomeArquivoImagemPerfil: alterarNomeArquivoImagemPerfil,
                 alterarBackground: alterarBackground,
                 excluirPorId: excluirArtistaPorId

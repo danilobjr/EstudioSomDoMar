@@ -135,6 +135,43 @@ exports.alterarDadosPessoais = function (req, res) {
     res.render('artistaAlteracao', { viewModel: artistaAlterado, resultado: resultado });
 };
 
+exports.alterarMusicas = function (req, res) {
+    var idArtista = req.body.idArtista,
+        musicas = [],
+        resultado = { sucesso: false, mensagem: '' };
+
+    try {
+        if (util.isArray(req.body.nomeMusica)) {
+            var nomesDasMusicas = req.body.nomeMusica;
+            var arquivosMusicas = req.body.nomeArquivoMusica;
+            var arquivosImagensCD = req.body.nomeArquivoCapaAlbum;
+
+            for (var i = 0; i < nomesDasMusicas.length; i++) {
+                musicas.push({
+                    nome: nomesDasMusicas[i],
+                    arquivoMusica: arquivosMusicas[i],
+                    arquivoCapaAlbum: arquivosImagensCD[i]
+                });
+            }
+        } else {
+            musicas.push({
+                nome: req.body.nomeMusica,
+                arquivoMusica: req.body.nomeArquivoMusica,
+                arquivoCapaAlbum: req.body.nomeArquivoCapaAlbum
+            });
+        }
+
+        artistaGerente.alterarMusicas(idArtista, musicas);
+        resultado.sucesso = true;
+        resultado.mensagem = 'Músicas incluídas/alteradas com sucesso';
+    } catch (error) {
+        resultado.mensagem = 'Erro ao incluir/alterar músicas: ' + error;
+    }
+
+    var artistaAlterado = artistaGerente.obterPorId(idArtista);
+    res.render('artistaAlteracao', { viewModel: artistaAlterado, resultado: resultado });
+};
+
 exports.alterarImagemPerfil = function (req, res) {
     var idArtista = req.body.idArtista,
         nomeArquivoImagemPerfil = req.body.imagemPerfil,

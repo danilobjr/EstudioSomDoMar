@@ -111,7 +111,7 @@ $(function () {
         //haErros = verificarErrosDoCampoNomeMusica({ currentTarget: campoNomeMusica });
         //if (haErros) { verificarErrosDoCampoNomeArquivoMusica({ currentTarget: campoNomeArquivoMusica }); } else { haErros = verificarErrosDoCampoSite({ currentTarget: campoNomeArquivoMusica }); }
         //if (haErros) { verificarErrosDoCampoNomeArquivoCapaAlbum({ currentTarget: campoNomaArquivoCapaAlbum }); } else { haErros = verificarErrosDoCampoEmail({ currentTarget: campoNomaArquivoCapaAlbum }); }
-            
+
         if (haErros) {
             $('[name=nomeMusica]').each(function (i, obj) {
                 var _this = $(obj);
@@ -166,10 +166,11 @@ $(function () {
         var controle = _this.parent().parent();
         var clone = controle.clone();
         //clone.addClass('offset3');
-        clone.children('label').remove();
+        clone.children('label').text('');
         //clone.find('.error').remove();
         var inputs = clone.find('input');
-        inputs.val('');
+        //inputs.val('');
+        inputs.removeAttr('value');
         inputs.filter('[name=nomeMusica]').on('keyup', verificarErrosDoCampoNomeMusica);
         inputs.filter('[name=nomeArquivoMusica]').on('keyup', verificarErrosDoCampoNomeArquivoMusica);
         inputs.filter('[name=nomeArquivoCapaAlbum]').on('keyup', verificarErrosDoCampoNomeArquivoCapaAlbum);

@@ -199,8 +199,9 @@ $(function () {
         var _this = $(e.currentTarget);
         var controle = _this.parent().parent();
         var clone = controle.clone();
-        clone.addClass('offset3');
-        clone.children('label').remove();
+        //clone.addClass('offset3');
+        //clone.children('label').remove();
+        clone.children('label').text('');
         //clone.find('.error').remove();
         var select = clone.find('select');
         select.children(':selected').removeAttr('selected');
@@ -229,8 +230,9 @@ $(function () {
         var _this = $(e.currentTarget);
         var controle = _this.parent().parent();
         var clone = controle.clone();
-        clone.addClass('offset3');
-        clone.children('label').remove();
+        //clone.addClass('offset3');
+        //clone.children('label').remove();
+        clone.children('label').text('');
         //clone.find('.error').remove();
         var select = clone.find('select');
         select.children(':selected').removeAttr('selected');

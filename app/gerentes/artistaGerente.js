@@ -35,6 +35,10 @@ module.exports = function () {
         return contexto.artistas.alterarDadosPessoais(artistaAlterado);
     };
 
+    var alterarMusicas = function (idArtista, musicas) {
+        return contexto.artistas.alterarMusicas(idArtista, musicas);
+    };
+
     var alterarNomeArquivoImagemPerfil = function (idArtista, nomeArquivoImagemPerfil) {
         return contexto.artistas.alterarNomeArquivoImagemPerfil(idArtista, nomeArquivoImagemPerfil);
     };
@@ -58,6 +62,7 @@ module.exports = function () {
         obterPorId: obterPorId,
         incluir: incluir,
         alterarDadosPessoais: alterarDadosPessoais,
+        alterarMusicas: alterarMusicas,
         alterarNomeArquivoImagemPerfil: alterarNomeArquivoImagemPerfil,
         alterarBackground: alterarBackground,
         excluirPorId: excluirPorId

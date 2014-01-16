@@ -71,7 +71,7 @@
                         <% if (i === 0) { %>
 
                             <div class="form-row control-group row-fluid">
-                                <label class="control-label span3" for="telefone">Telefones *</label>
+                                <label class="control-label span3" for="telefone">Telefone *</label>
                                 <div class="controls span3">
                                     <div class="input-prepend row-fluid">
                                         <select id="tipoTelefone" name="tipoTelefone" class="row-fluid">
@@ -99,7 +99,8 @@
 
                         <% } else { %>
 
-                            <div class="form-row control-group row-fluid offset3">
+                            <div class="form-row control-group row-fluid">
+                                <label class="control-label span3" for="telefone"></label>
                                 <div class="controls span3">
                                     <div class="input-prepend row-fluid">
                                         <select id="tipoTelefone" name="tipoTelefone" class="row-fluid">
@@ -169,7 +170,8 @@
 
                         <% } else { %>
 
-                        <div class="form-row control-group row-fluid offset3">
+                        <div class="form-row control-group row-fluid">
+                            <label class="control-label span3" for="redeSocial"></label>
                             <div class="controls span3">
                                 <div class="input-prepend row-fluid">
                                     <select id="tipoRedeSocial" name="tipoRedeSocial" class="row-fluid">
@@ -261,20 +263,20 @@
 
                             <% if (i === 0) { %>
 
-                                <div class="form-row control-group row-fluid">
-                                    <label class="control-label span1" for="nome">Músicas *</label>
+                                <div class="form-row control-group control-with-many-inputs row-fluid">
+                                    <label class="control-label span2" for="nome">Músicas *</label>
                                     <div class="controls span8">
-                                        <input type="text" id="nome" name="nome" class="row-fluid" placeholder="Nome da Música" value="<%= viewModel.musicas[i].nome %>" />
+                                        <input type="text" id="nomeMusica" name="nomeMusica" class="row-fluid" placeholder="Nome da Música" value="<%= viewModel.musicas[i].nome %>" />
                                         <label class="error errorRequired" style="display: none;">Por favor, informe o nome da música</label>
                                     </div>
                                     <div class="controls span8 offset2">
-                                        <input type="text" id="nomeArquivoMusica" name="nomeArquivoMusica" class="row-fluid" placeholder="Nome do Arquivo (MP3) da Música. Ex.: minha_cancao.mp3" value="<%= viewModel.musicas[i].nomeArquivoMusica %>" />
+                                        <input type="text" id="nomeArquivoMusica" name="nomeArquivoMusica" class="row-fluid" placeholder="Nome do Arquivo (MP3) da Música. Ex.: minha_cancao.mp3" value="<%= viewModel.musicas[i].arquivoMusica %>" />
                                         <label class="error errorRequired" style="display: none;">Por favor, informe o nome do arquivo da música</label>
                                         <label class="error errorMinlength" style="display: none;">O telefone precisa ter pelo menos 5 caracteres</label>
                                         <label class="error errorNomeArquivo" style="display: none;">Não é permitio espaços, apenas '-' e '_'. É necessário um '.' separando o nome da extensão do arquivo.</label>
                                     </div>
                                     <div class="controls span8 offset2">
-                                        <input type="text" id="nomeArquivoCapaAlbum" name="nomeArquivoCapaAlbum" class="row-fluid" placeholder="Nome do Arquivo (imagem) da Capa do Álbum. Ex.: capa_cd.jpg" value="<%= viewModel.musicas[i].nomeArquivoCapaAlbum %>" />
+                                        <input type="text" id="nomeArquivoCapaAlbum" name="nomeArquivoCapaAlbum" class="row-fluid" placeholder="Nome do Arquivo (imagem) da Capa do Álbum. Ex.: capa_cd.jpg" value="<%= viewModel.musicas[i].arquivoCapaAlbum %>" />
                                         <label class="error errorRequired" style="display: none;">Por favor, informe o nome do arquivo da capa dp álbum</label>
                                         <label class="error errorMinlength" style="display: none;">O telefone precisa ter pelo menos 5 caracteres</label>
                                         <label class="error errorNomeArquivo" style="display: none;">Não é permitio espaços, apenas '-' e '_'. É necessário um '.' separando o nome da extensão do arquivo.</label>
@@ -288,19 +290,20 @@
 
                             <% } else { %>
 
-                                <div class="form-row control-group row-fluid offset1">
+                                <div class="form-row control-group control-with-many-inputs row-fluid">
+                                    <label class="control-label span2" for="nome"></label>
                                     <div class="controls span8">
-                                        <input type="text" id="nome" name="nome" class="row-fluid" placeholder="Nome da Música" value="<%= viewModel.musicas[i].nome %>" />
+                                        <input type="text" id="nomeMusica" name="nomeMusica" class="row-fluid" placeholder="Nome da Música" value="<%= viewModel.musicas[i].nome %>" />
                                         <label class="error errorRequired" style="display: none;">Por favor, informe o nome da música</label>
                                     </div>
                                     <div class="controls span8 offset2">
-                                        <input type="text" id="nomeArquivoMusica" name="nomeArquivoMusica" class="row-fluid" placeholder="Nome do Arquivo (MP3) da Música. Ex.: minha_cancao.mp3" value="<%= viewModel.musicas[i].nomeArquivoMusica %>" />
+                                        <input type="text" id="nomeArquivoMusica" name="nomeArquivoMusica" class="row-fluid" placeholder="Nome do Arquivo (MP3) da Música. Ex.: minha_cancao.mp3" value="<%= viewModel.musicas[i].arquivoMusica %>" />
                                         <label class="error errorRequired" style="display: none;">Por favor, informe o nome do arquivo da música</label>
                                         <label class="error errorMinlength" style="display: none;">O telefone precisa ter pelo menos 5 caracteres</label>
                                         <label class="error errorNomeArquivo" style="display: none;">Não é permitio espaços, apenas '-' e '_'. É necessário um '.' separando o nome da extensão do arquivo.</label>
                                     </div>
                                     <div class="controls span8 offset2">
-                                        <input type="text" id="nomeArquivoCapaAlbum" name="nomeArquivoCapaAlbum" class="row-fluid" placeholder="Nome do Arquivo (imagem) da Capa do Álbum. Ex.: capa_cd.jpg" value="<%= viewModel.musicas[i].nomeArquivoCapaAlbum %>" />
+                                        <input type="text" id="nomeArquivoCapaAlbum" name="nomeArquivoCapaAlbum" class="row-fluid" placeholder="Nome do Arquivo (imagem) da Capa do Álbum. Ex.: capa_cd.jpg" value="<%= viewModel.musicas[i].arquivoCapaAlbum %>" />
                                         <label class="error errorRequired" style="display: none;">Por favor, informe o nome do arquivo da capa dp álbum</label>
                                         <label class="error errorMinlength" style="display: none;">O telefone precisa ter pelo menos 5 caracteres</label>
                                         <label class="error errorNomeArquivo" style="display: none;">Não é permitio espaços, apenas '-' e '_'. É necessário um '.' separando o nome da extensão do arquivo.</label>
