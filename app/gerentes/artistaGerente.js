@@ -40,7 +40,7 @@ module.exports = function () {
     };
 
     var alterarBackground = function (idArtista, corDeFundo, nomeArquivoImagemBackground) {
-
+        return contexto.artistas.alterarBackground(idArtista, corDeFundo, nomeArquivoImagemBackground);
     };
 
     var excluirPorId = function (id) {
@@ -59,6 +59,7 @@ module.exports = function () {
         incluir: incluir,
         alterarDadosPessoais: alterarDadosPessoais,
         alterarNomeArquivoImagemPerfil: alterarNomeArquivoImagemPerfil,
+        alterarBackground: alterarBackground,
         excluirPorId: excluirPorId
     };
 } ();

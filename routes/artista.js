@@ -160,6 +160,9 @@ exports.alterarBackground = function (req, res) {
         nomeArquivoImagemBackground = req.body.imagemBackground,
         resultado = { sucesso: false, mensagem: '' };
 
+    console.log(corDeFundo);
+    console.log(nomeArquivoImagemBackground);
+
     try {
         artistaGerente.alterarBackground(idArtista, corDeFundo, nomeArquivoImagemBackground);
 
@@ -170,7 +173,7 @@ exports.alterarBackground = function (req, res) {
     }
 
     var artistaAlterado = artistaGerente.obterPorId(idArtista);
-
+    console.log(artistaAlterado);
     res.render('artistaAlteracao', { viewModel: artistaAlterado, resultado: resultado });
 };
 

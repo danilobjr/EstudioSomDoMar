@@ -144,9 +144,10 @@
       </redesSociais>
       <imagens>
         <background>
-          <cor>#ffffff</cor>
+          <cor>#b5c1b8</cor>
+          <imagem>teste.jpg</imagem>
         </background>
-        <perfil>imagem_perfil.jpg</perfil>
+        <perfil>imagem_perfil.jpeg</perfil>
       </imagens>
       <id>3</id>
     </artista>

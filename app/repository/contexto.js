@@ -321,6 +321,21 @@ var contexto = (function () {
             return obterArtistaPorId(idArtista);
         };
 
+        var alterarBackground = function (idArtista, corDeFundo, nomeArquivoImagemBackground) {
+            var contexto = xml.obterContexto();
+            var artistaExistente = obterArtistaPorId(idArtista, contexto);
+
+            artistaExistente.imagens.background.cor = corDeFundo;
+
+            if (nomeArquivoImagemBackground) {
+                artistaExistente.imagens.background.imagem = nomeArquivoImagemBackground;
+            }
+
+            xml.salvar(contexto);
+
+            return obterArtistaPorId(idArtista);
+        };
+
         var excluirArtistaPorId = function (id) {
             var contexto = xml.obterContexto();
 
@@ -425,6 +440,7 @@ var contexto = (function () {
                 incluir: incluirNovoArtista,
                 alterarDadosPessoais: alterarDadosPessoais,
                 alterarNomeArquivoImagemPerfil: alterarNomeArquivoImagemPerfil,
+                alterarBackground: alterarBackground,
                 excluirPorId: excluirArtistaPorId
             },
             videos: {
