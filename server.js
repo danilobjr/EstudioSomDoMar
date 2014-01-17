@@ -37,6 +37,7 @@ app.get('/admin/video/novo', video.novo);
 app.get('/admin/artistas', artista.index);
 app.get('/admin/artista/novo', artista.novo);
 app.get('/admin/artista/alterar/:id', artista.editar);
+app.get('/artista/:id', artista.exibir);
 
 // actions
 

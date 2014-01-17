@@ -1,12 +1,15 @@
-var videoGerente = require('./../app/gerentes/videoGerente');
+var videoGerente = require('./../app/gerentes/videoGerente'),
+    artistaGerente = require('./../app/gerentes/artistaGerente');
 
 exports.index = function (req, res) {
     var videos = videoGerente.obterTodos();
-    console.log(videos);
+    var artistas = artistaGerente.obterTodos();
+    
     res.render('index',
         {
             _layoutFile: false,
             viewModel: {
+                artistas: artistas,
                 videos: videos
             }
         });

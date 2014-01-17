@@ -39,7 +39,7 @@
                         <td class="ms ">
                             <div class="btn-group"> 
                                 <% if (typeof viewModel[index].imagens.perfil != 'undefined' && typeof viewModel[index].musicas != 'undefined') { %>
-                                    <a href="#" target="_blank" class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Visualizar"><i class="gicon-eye-open"></i></a> 
+                                    <a href="/artista/<%= viewModel[index].id %>" target="_blank" class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Visualizar"><i class="gicon-eye-open"></i></a> 
                                 <% } %>
                                 <a href="/admin/artista/alterar/<%= viewModel[index].id %>" class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Editar"><i class="gicon-edit"></i></a> 
                                 <a href="#exclusaoModal" class="btn btn-small" data-url-exclusao="/admin/artista/excluir/<%= viewModel[index].id %>" data-toggle="modal" rel="tooltip" data-placement="top" data-original-title="Excluir"><i class="gicon-remove "></i></a> 

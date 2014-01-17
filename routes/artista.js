@@ -6,6 +6,15 @@ exports.index = function (req, res) {
     res.render('artistaIndex', { viewModel: artistas });
 };
 
+exports.exibir = function (req, res) {
+    var idArtista = req.params.id;
+    var artista = artistaGerente.obterPorId(idArtista);
+
+    console.log(artista);
+
+    res.render('artista', { _layoutFile: false, viewModel: artista});
+};
+
 exports.novo = function (req, res) {
     res.render('artistaNovo');
 };
