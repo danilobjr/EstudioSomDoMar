@@ -104,7 +104,7 @@
         </redeSocial>
       </redesSociais>
       <imagens>
-        <perfil>imagem.jpg</perfil>
+        <perfil>artistas_flavinho.jpg</perfil>
         <background>
           <cor>#ffffff</cor>
           <imagem>imagem.jpg</imagem>
@@ -113,8 +113,53 @@
       <musicas>
         <musica>
           <nome>Caminho Estreito</nome>
-          <arquivoMusica>caminho estreito.mp3</arquivoMusica>
-          <arquivoCapaAlbum>caminho estreito.jpg</arquivoCapaAlbum>
+          <arquivoMusica>cd_flavinho_sousa-caminho_estreito.mp3</arquivoMusica>
+          <arquivoCapaAlbum>capa_flavinho_250x250.jpg</arquivoCapaAlbum>
+        </musica>
+      </musicas>
+    </artista>
+    <artista>
+      <nome>Rodrigo Cardozo</nome>
+      <site></site>
+      <email>digoblues@hotmail.com</email>
+      <telefones>
+        <telefone>
+          <numero>(85) 9101-9105</numero>
+          <tipo>tim</tipo>
+        </telefone>
+      </telefones>
+      <redesSociais>
+        <redeSocial>
+          <link>http://www.facebook.com/profile.php?id=1817432635</link>
+          <tipo>facebook</tipo>
+        </redeSocial>
+        <redeSocial>
+          <link>http://www.myspace.com/rodrigocardozo</link>
+          <tipo>myspace</tipo>
+        </redeSocial>
+      </redesSociais>
+      <imagens>
+        <background>
+          <cor>#ffffff</cor>
+        </background>
+        <perfil>artistas_rodrigo_cardozo.jpg</perfil>
+      </imagens>
+      <id>3</id>
+      <musicas>
+        <musica>
+          <nome>Novos Horizontes</nome>
+          <arquivoMusica>rodrigo_cardozo_novoshori.mp3</arquivoMusica>
+          <arquivoCapaAlbum>cd_rodrigo_cardozo_novoshori.jpg</arquivoCapaAlbum>
+        </musica>
+        <musica>
+          <nome>Pegada Eletrônica</nome>
+          <arquivoMusica>cd_rodrigo_cardozo-pegada_eletronica.mp3</arquivoMusica>
+          <arquivoCapaAlbum>cd_rodrigo_cardozo_pegada_eletronica_250x250.jpg</arquivoCapaAlbum>
+        </musica>
+        <musica>
+          <nome>No Meu Lugar</nome>
+          <arquivoMusica>rodrigo_cardozo_no_meu_lugar.mp3</arquivoMusica>
+          <arquivoCapaAlbum>cd_rodrigo_cardozo_no_meu_lugar.jpg</arquivoCapaAlbum>
         </musica>
       </musicas>
     </artista>

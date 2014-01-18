@@ -62,17 +62,25 @@
                         </div>
                     <% } %>
 
-                    <% for (var i = 0; i < viewModel.redesSociais.length; i++) { %>
-                        <div>
-                            <span><%= viewModel.redesSociais[i].tipo %>:</span>
-                            <span><a href="<%= viewModel.redesSociais[i].link %>" target="_blank">Acessar perfil</a></span>
-                        </div>
+                    <% if (typeof viewModel.redesSociais != 'undefined') { %>
+
+                        <% for (var i = 0; i < viewModel.redesSociais.length; i++) { %>
+                            <div>
+                                <span><%= viewModel.redesSociais[i].tipo %>:</span>
+                                <span><a href="<%= viewModel.redesSociais[i].link %>" target="_blank" class="site">Acessar perfil</a></span>
+                            </div>
+                        <% } %>
+
                     <% } %>
+
+                    <% if (typeof viewModel.site != 'undefined' && viewModel.site != '') { %>
 
                     <div>
                         <span>Site:</span>
                         <span><a href="<%= viewModel.site %>" target="_blank" class="site"><%= viewModel.site %></a></span>
                     </div>
+
+                    <% } %>
                 </footer>
             </section>
             <footer>

@@ -74,7 +74,9 @@
         window.app.configureSongPlayer();
         $('.song').on('click', window.app.switchCdCover);
         window.app.caseUpFirstLetter($('section footer > div > span:first-child'));
-        window.app.putHttpInHref($('.site'));
+        if ($('.site').length) {
+            window.app.putHttpInHref($('.site'));
+        }
     });
 
 })(jQuery);

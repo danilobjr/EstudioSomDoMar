@@ -48,7 +48,7 @@
                             <label class="control-label span3" for="site">Site</label>
                             <div class="controls span8">
                                 <div class="input-prepend row-fluid"> <span class="add-on"><i class="icon-link"></i></span>
-                                    <input class="row-fluid" type="text" id="site" name="site" value="<%= viewModel.site %>" />
+                                    <input class="row-fluid" type="text" id="site" name="site" <% if (typeof viewModel.site != 'undefined') { %> value="<%= viewModel.site %>" <% } %>/>
                                     <label class="error errorMinlength" style="display: none;">O site precisa ter pelo menos 5 caracteres</label>
                                     <label class="error errorUrl" style="display: none;">A URL informada não é válida</label>
                                 </div>
@@ -137,72 +137,105 @@
 
                         <!-- Campo RedeSocial -->
 
-                        <% for (var i = 0; i < viewModel.redesSociais.length; i++) { %>
+                        <% if (typeof viewModel.redesSociais == 'undefined') { %>
 
-                        <% if (i === 0) { %>
-
-                        <div class="form-row control-group row-fluid">
-                            <label class="control-label span3" for="redeSocial">Rede Social</label>
-                            <div class="controls span3">
-                                <div class="input-prepend row-fluid">
-                                    <select id="tipoRedeSocial" name="tipoRedeSocial" class="row-fluid">
-                                        <option value="facebook" <%= (viewModel.redesSociais[i].tipo === 'facebook') ? 'selected' : '' %>>Facebook</option>
-                                        <option value="twitter" <%= (viewModel.redesSociais[i].tipo === 'twitter') ? 'selected' : '' %>>Twitter</option>
-                                        <option value="googleplus" <%= (viewModel.redesSociais[i].tipo === 'googleplus') ? 'selected' : '' %>>Google+</option>
-                                        <option value="myspace" <%= (viewModel.redesSociais[i].tipo === 'myspace') ? 'selected' : '' %>>MySpace</option>
-                                        <option value="soundcloud" <%= (viewModel.redesSociais[i].tipo === 'soundcloud') ? 'selected' : '' %>>SoundCloud</option>
-                                    </select>
+                            <div class="form-row control-group row-fluid">
+                                <label class="control-label span3" for="redeSocial">Rede Social</label>
+                                <div class="controls span3">
+                                    <div class="input-prepend row-fluid">
+                                        <select id="tipoRedeSocial" name="tipoRedeSocial" class="row-fluid">
+                                            <option value="facebook">Facebook</option>
+                                            <option value="twitter">Twitter</option>
+                                            <option value="googleplus">Google+</option>
+                                            <option value="myspace">MySpace</option>
+                                            <option value="soundcloud">SoundCloud</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="controls span4">
+                                    <div class="input-prepend row-fluid"> <span class="add-on"><i class="icon-facebook"></i></span>
+                                        <input type="text" id="redeSocial" name="redeSocial" class="row-fluid" placeholder="Link de acesso ao perfil" />
+                                        <label class="error errorMinlength" style="display: none;">O link precisa ter pelo menos 10 caracteres</label>
+                                        <label class="error errorUrl" style="display: none;">O link informado não é válido</label>
+                                    </div>
+                                </div>
+                                <div class="btn-controls btn-group inline span1">
+                                    <a class="btn adicionarSocial" href="#">
+                                        <span class="icon-plus"></span>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="controls span4">
-                                <div class="input-prepend row-fluid"> <span class="add-on"><i class="icon-facebook"></i></span>
-                                    <input type="text" id="redeSocial" name="redeSocial" class="row-fluid" placeholder="Link de acesso ao perfil" value="<%= viewModel.redesSociais[i].link %>" />
-                                    <label class="error errorMinlength" style="display: none;">O link precisa ter pelo menos 10 caracteres</label>
-                                    <label class="error errorUrl" style="display: none;">O link informado não é válido</label>
-                                </div>
-                            </div>
-                            <div class="btn-controls btn-group inline span1">
-                                <a class="btn adicionarSocial" href="#">
-                                    <span class="icon-plus"></span>
-                                </a>
-                            </div>
-                        </div>
 
                         <% } else { %>
 
-                        <div class="form-row control-group row-fluid">
-                            <label class="control-label span3" for="redeSocial"></label>
-                            <div class="controls span3">
-                                <div class="input-prepend row-fluid">
-                                    <select id="tipoRedeSocial" name="tipoRedeSocial" class="row-fluid">
-                                        <option value="facebook" <%= (viewModel.redesSociais[i].tipo === 'facebook') ? 'selected' : '' %>>Facebook</option>
-                                        <option value="twitter" <%= (viewModel.redesSociais[i].tipo === 'twitter') ? 'selected' : '' %>>Twitter</option>
-                                        <option value="googleplus" <%= (viewModel.redesSociais[i].tipo === 'googleplus') ? 'selected' : '' %>>Google+</option>
-                                        <option value="myspace" <%= (viewModel.redesSociais[i].tipo === 'myspace') ? 'selected' : '' %>>MySpace</option>
-                                        <option value="soundcloud" <%= (viewModel.redesSociais[i].tipo === 'soundcloud') ? 'selected' : '' %>>SoundCloud</option>
-                                    </select>
+                            <% for (var i = 0; i < viewModel.redesSociais.length; i++) { %>
+
+                            <% if (i === 0) { %>
+
+                            <div class="form-row control-group row-fluid">
+                                <label class="control-label span3" for="redeSocial">Rede Social</label>
+                                <div class="controls span3">
+                                    <div class="input-prepend row-fluid">
+                                        <select id="tipoRedeSocial" name="tipoRedeSocial" class="row-fluid">
+                                            <option value="facebook" <%= (viewModel.redesSociais[i].tipo === 'facebook') ? 'selected' : '' %>>Facebook</option>
+                                            <option value="twitter" <%= (viewModel.redesSociais[i].tipo === 'twitter') ? 'selected' : '' %>>Twitter</option>
+                                            <option value="googleplus" <%= (viewModel.redesSociais[i].tipo === 'googleplus') ? 'selected' : '' %>>Google+</option>
+                                            <option value="myspace" <%= (viewModel.redesSociais[i].tipo === 'myspace') ? 'selected' : '' %>>MySpace</option>
+                                            <option value="soundcloud" <%= (viewModel.redesSociais[i].tipo === 'soundcloud') ? 'selected' : '' %>>SoundCloud</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="controls span4">
+                                    <div class="input-prepend row-fluid"> <span class="add-on"><i class="icon-facebook"></i></span>
+                                        <input type="text" id="redeSocial" name="redeSocial" class="row-fluid" placeholder="Link de acesso ao perfil" value="<%= viewModel.redesSociais[i].link %>" />
+                                        <label class="error errorMinlength" style="display: none;">O link precisa ter pelo menos 10 caracteres</label>
+                                        <label class="error errorUrl" style="display: none;">O link informado não é válido</label>
+                                    </div>
+                                </div>
+                                <div class="btn-controls btn-group inline span1">
+                                    <a class="btn adicionarSocial" href="#">
+                                        <span class="icon-plus"></span>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="controls span4">
-                                <div class="input-prepend row-fluid"> <span class="add-on"><i class="icon-facebook"></i></span>
-                                    <input type="text" id="redeSocial" name="redeSocial" class="row-fluid" placeholder="Link de acesso ao perfil" value="<%= viewModel.redesSociais[i].link %>" />
-                                    <label class="error errorMinlength" style="display: none;">O link precisa ter pelo menos 10 caracteres</label>
-                                    <label class="error errorUrl" style="display: none;">O link informado não é válido</label>
+
+                            <% } else { %>
+
+                            <div class="form-row control-group row-fluid">
+                                <label class="control-label span3" for="redeSocial"></label>
+                                <div class="controls span3">
+                                    <div class="input-prepend row-fluid">
+                                        <select id="tipoRedeSocial" name="tipoRedeSocial" class="row-fluid">
+                                            <option value="facebook" <%= (viewModel.redesSociais[i].tipo === 'facebook') ? 'selected' : '' %>>Facebook</option>
+                                            <option value="twitter" <%= (viewModel.redesSociais[i].tipo === 'twitter') ? 'selected' : '' %>>Twitter</option>
+                                            <option value="googleplus" <%= (viewModel.redesSociais[i].tipo === 'googleplus') ? 'selected' : '' %>>Google+</option>
+                                            <option value="myspace" <%= (viewModel.redesSociais[i].tipo === 'myspace') ? 'selected' : '' %>>MySpace</option>
+                                            <option value="soundcloud" <%= (viewModel.redesSociais[i].tipo === 'soundcloud') ? 'selected' : '' %>>SoundCloud</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="controls span4">
+                                    <div class="input-prepend row-fluid"> <span class="add-on"><i class="icon-facebook"></i></span>
+                                        <input type="text" id="redeSocial" name="redeSocial" class="row-fluid" placeholder="Link de acesso ao perfil" value="<%= viewModel.redesSociais[i].link %>" />
+                                        <label class="error errorMinlength" style="display: none;">O link precisa ter pelo menos 10 caracteres</label>
+                                        <label class="error errorUrl" style="display: none;">O link informado não é válido</label>
+                                    </div>
+                                </div>
+                                <div class="btn-controls btn-group inline span1">
+                                    <a class="btn adicionarSocial" href="#">
+                                        <span class="icon-plus"></span>
+                                    </a>
+                                    <a class="btn removerSocial" href="#">
+                                        <span class="icon-minus"></span>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="btn-controls btn-group inline span1">
-                                <a class="btn adicionarSocial" href="#">
-                                    <span class="icon-plus"></span>
-                                </a>
-                                <a class="btn removerSocial" href="#">
-                                    <span class="icon-minus"></span>
-                                </a>
-                            </div>
-                        </div>
+
+                            <% } %> <!-- END if -->
+
+                            <% } %> <!-- END for -->
 
                         <% } %> <!-- END if -->
-
-                        <% } %> <!-- END for -->
 
                         <!-- END Campo Telefones -->
 
