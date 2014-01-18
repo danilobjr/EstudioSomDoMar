@@ -68,22 +68,22 @@
         </redeSocial>
       </redesSociais>
       <imagens>
-        <perfil>imagem.jpg</perfil>
+        <perfil>artistas_priscila_ribeiro.jpg</perfil>
         <background>
-          <cor>#ffffff</cor>
-          <imagem>imagem.jpg</imagem>
+          <cor>#c0c0c0</cor>
+          <imagem>priscila_ribeiro_background.jpg</imagem>
         </background>
       </imagens>
       <musicas>
         <musica>
           <nome>Saudade</nome>
-          <nomeArquivoMusica>saudade.mp3</nomeArquivoMusica>
-          <nomeArquivoCapaAlbum>o_amor_e_suas_cancoes.jpg</nomeArquivoCapaAlbum>
+          <arquivoMusica>cd_priscila_ribeiro_saudade.mp3</arquivoMusica>
+          <arquivoCapaAlbum>o_amor_e_suas_cancoes_250x250.jpg</arquivoCapaAlbum>
         </musica>
         <musica>
           <nome>Ah, o amor</nome>
-          <nomeArquivoMusica>ah_o_amor.mp3</nomeArquivoMusica>
-          <nomeArquivoCapaAlbum>ensaio_sobre_a_dor.jpg</nomeArquivoCapaAlbum>
+          <arquivoMusica>cd_priscila_ribeiro_ah_o_amor.mp3</arquivoMusica>
+          <arquivoCapaAlbum>ensaio_sobre_a_dor_250x250.jpg</arquivoCapaAlbum>
         </musica>
       </musicas>
     </artista>
@@ -113,53 +113,8 @@
       <musicas>
         <musica>
           <nome>Caminho Estreito</nome>
-          <nomeArquivoMusica>caminho estreito.mp3</nomeArquivoMusica>
-          <nomeArquivoCapaAlbum>caminho estreito.jpg</nomeArquivoCapaAlbum>
-        </musica>
-      </musicas>
-    </artista>
-    <artista>
-      <nome>Danilo Jr.</nome>
-      <site>www.minhamarcaonline.com</site>
-      <email>danilobjr@gmail.com</email>
-      <telefones>
-        <telefone>
-          <numero>(85) 3281-5661</numero>
-          <tipo>residencial</tipo>
-        </telefone>
-        <telefone>
-          <numero>(85) 8809-3634</numero>
-          <tipo>oi</tipo>
-        </telefone>
-      </telefones>
-      <redesSociais>
-        <redeSocial>
-          <link>http://www.facebook.com/danilo.juniorr</link>
-          <tipo>facebook</tipo>
-        </redeSocial>
-        <redeSocial>
-          <link>http://www.twitter.com/danilojrr</link>
-          <tipo>twitter</tipo>
-        </redeSocial>
-      </redesSociais>
-      <imagens>
-        <background>
-          <cor>#d7c49f</cor>
-          <imagem>teste.jpg</imagem>
-        </background>
-        <perfil>imagem_perfil.jpeg</perfil>
-      </imagens>
-      <id>3</id>
-      <musicas>
-        <musica>
-          <nome>Hora de Dormir - Trechos</nome>
-          <arquivoMusica>cd_hora_de_dormir-mix.mp3</arquivoMusica>
-          <arquivoCapaAlbum>anfrisio_rocha_hora_de_dormir_player.jpg</arquivoCapaAlbum>
-        </musica>
-        <musica>
-          <nome>Caminho Estreito</nome>
-          <arquivoMusica>cd_flavinho_sousa-caminho_estreito.mp3</arquivoMusica>
-          <arquivoCapaAlbum>flavinho_sousa.jpg</arquivoCapaAlbum>
+          <arquivoMusica>caminho estreito.mp3</arquivoMusica>
+          <arquivoCapaAlbum>caminho estreito.jpg</arquivoCapaAlbum>
         </musica>
       </musicas>
     </artista>

@@ -34,20 +34,47 @@
                 }
             };
 
+            var caseUpFirstLetter = function (elements) {
+                elements.each(function (i, obj) {
+                    var _this = $(obj);
+                    var palavraComPrimeiraLetraMaiuscula = _this.text().toLowerCase().replace(/\b[a-z]/g, function (letra) {
+                        return letra.toUpperCase();
+                    });
+                    _this.text(palavraComPrimeiraLetraMaiuscula);
+                });
+            };
+
+            var checkExistHttpInHref = function (sentenca) {
+                if (sentenca.indexOf('http://') <= 0) {
+                    return false;
+                }
+
+                return true;
+            };
+
+            var putHttpInHref = function (element) {
+                if (!checkExistHttpInHref(element.attr('href'))) {
+                    element.attr('href', 'http://' + element.attr('href'));
+                }
+            };
+
             return {
                 prepareScrollables: prepareScrollables,
                 configureSongPlayer: configureSongPlayer,
-                switchCdCover: switchCdCover
+                switchCdCover: switchCdCover,
+                caseUpFirstLetter: caseUpFirstLetter,
+                putHttpInHref: putHttpInHref
             }
 
-        }();
+        } ();
 
         // Running App Function
 
         window.app.prepareScrollables();
         window.app.configureSongPlayer();
         $('.song').on('click', window.app.switchCdCover);
-
+        window.app.caseUpFirstLetter($('section footer > div > span:first-child'));
+        window.app.putHttpInHref($('.site'));
     });
 
 })(jQuery);

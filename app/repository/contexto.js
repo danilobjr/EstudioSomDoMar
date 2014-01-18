@@ -96,10 +96,10 @@ var contexto = (function () {
                             }
                         ],
                         imagens: {
-                            perfil: 'imagem.jpg',
+                            perfil: 'artistas_priscila_ribeiro.jpg',
                             background: {
                                 cor: '#ffffff',
-                                imagem: 'imagem.jpg'
+                                imagem: 'priscila_ribeiro_background.jpg'
                             }
                         },
                         musicas: [
